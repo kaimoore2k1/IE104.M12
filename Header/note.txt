@@ -1,0 +1,6 @@
+1. Hình bị vỡ
+2. Thanh gạch chân màu xanh #0074FF
+3. Lần sau code đặt tên theo chuẩn BEM.
+
+T đã sửa 1 vài cái trong file CSS
+    Dòng 110, 66, 62, 36, 25

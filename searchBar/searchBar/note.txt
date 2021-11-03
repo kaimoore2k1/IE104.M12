@@ -1,0 +1,2 @@
+T mới thêm phần reset css giống phần của bạn Chiến.
+T chỉnh lại phần shadow ở dòng 24 cho nó mờ lại

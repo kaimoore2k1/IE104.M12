@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="chatbox.js"></script>
+    <link rel="stylesheet" href="chatbox.css">
+    <!-- Smartsupp Live Chat script -->
+    <!--<script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = '1f92d0a60fa790aa9fd1a2e10debc46d2fcb58f9';
+        window.smartsupp || (function (d) {
+            var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+            s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+            c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+            c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+        })(document);
+    </script> -->
+</head>
+
+<body>
+    <div class="chatting__positioning">
+        <div id="showChatBox">
+            <header class="showChatBox__tittle">
+                <div class="showChatBox__tittle--avt">
+                    <img class="showChatBox__tittle--pic" src="default-avatar.png">
+                    <img class="showChatBox__tittle--pic" src="default-avatar.png">
+                </div>
+                <div class="showChatBox__tittle--content">
+                    <p class="showChatBox__tittle--hello">Kính chào quý khách</p>
+                    <div class="showChatBox__tittle--status">
+                        <div class="showChatBox__tittle--status--circle">
+                        </div>
+                        <p>Tư vấn dịch vụ</p>
+                    </div>
+                </div>
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-angle-down" onclick="hideChatBox()"></i>
+            </header>
+            <main class="showChatBox__main">
+                <p class="showChatBox__main--content">Chào mừng quý khách đến với UITour.
+                    Chúng tôi rất hân hạnh được phục vụ quý khách.
+                    Chúng tôi có thể hỗ trợ được gì cho bạn không?
+                </p>
+                <p class="showChatBox__main--status">Vừa xong</p>
+            </main>
+            <form action="chatBox.php" method="post" class="showChatBox__footer">
+                <input class="showChatBox__footer--texting" type="text" placeholder="Đặt câu hỏi tại đây!" name="ChatContent" required>
+                <div class="showChatBox__footer--icon">
+                    <i class="far fa-grin"></i>
+                    <input class="showChatBox__footer--icon--submit" type="submit" name="ChatSubmit" value="">
+                </div>
+            </form>
+        </div>
+        <form action="chatBox.php"method="post" id="chatbox_wapper" onclick="showChatBox()">
+            <input type="submit" name="open_chatbox" value = "">
+            <i class="fas fa-comment"></i>
+            <p>Trò chuyện</p>
+        </form>
+    </div>
+</body>
+
+</html>

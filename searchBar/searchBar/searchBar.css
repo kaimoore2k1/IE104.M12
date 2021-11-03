@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 14px;
+    background-color: white;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    width: 36px;
+    height: 36px;
+}
+
+.searchBar {
+    display: flex;
+    width: 1146px;
+    height: 96px;
+    box-shadow: 3px 7px 8px #dedede;
+}
+
+.searchBar__location {
+    display: flex;
+    width: 300px;
+    height: 96px;
+    flex: 2;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #DEDEDE;
+}
+
+.searchBar__date {
+    display: flex;
+    width: 300px;
+    height: 96px;
+    flex: 2;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #DEDEDE;
+}
+
+.searchBar__tour {
+    display: flex;
+    width: 300px;
+    height: 96px;
+    flex: 2;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #DEDEDE;
+}
+
+.searchBar__button {
+    width: 163.72px;
+    height: 96px;
+    flex: 1;
+    background-color: #3FD0D4;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.searchBar__location--img {
+    margin-right: 20px;
+}
+
+.searchBar__date--img {
+    margin-right: 20px;
+}
+
+.searchBar__tour--img {
+    margin-right: 20px;
+}
+
+

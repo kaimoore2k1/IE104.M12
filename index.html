@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="/themify-icons/themify-icons.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>UITour</title>
+</head>
+<!--#include virtual = "Footer/footer.html"-->
+<body>
+    <!--HEADER-->
+    <header class="header__searchBar">
+        <nav class="header_menu">
+            <img id="logo_uitour" src="/Header/logo_header.png" alt="logo_uitour">
+            <a href="#">Trang chủ</a>
+            <ul>
+                <li><a href="#">Du lịch</a>
+                    <ul>
+                        <li><a href="#">Du lịch trong nước</a></li>
+                        <li><a href="#">Du lịch nước ngoài</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#">Khách sạn</a>
+                    <ul>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#">Traval tips</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+            <a id="sign_in" href="#">Đăng nhập</a>
+            <a id="sign_up" href="#">Đăng ký</a>
+        </nav>
+        <p id="h_p1">ĐIỂM ĐẾN THÚ VỊ</p>
+        <p id="h_p2">Tận hưởng hành trình của bạn trong từng khoảnh khắc</p>
+        <p id="h_link"><a href="#">TÌM HIỂU</a></p>
+        <img id="logo_header" src="/Header/Picture_header.png" alt="Header_picture_Home">
+    </header>
+    <!--SEARCH BAR-->
+    <div class="searchBar">
+        <div class="searchBar__location">
+            <img class="searchBar__location--img" src="/searchBar/searchBar/location.svg">
+            <p>
+                <strong>Địa điểm</strong>
+                <br>
+                Bạn muốn đi đâu?
+            </p>
+        </div>
+        <div class="searchBar__date">
+            <img class="searchBar__date--img" src="/searchBar/searchBar/human.svg">
+            <p>
+                <strong>Bắt đầu - Kết thúc</strong>
+                <br>
+                Chọn ngày
+            </p>
+        </div>
+        <div class="searchBar__tour">
+            <img class="searchBar__tour--img" src="/searchBar/searchBar/date.svg">
+            <p>
+                <strong>Loại Tour</strong>
+                <br>
+                Cá nhân - gia đình
+            </p>
+        </div>
+        <button class="searchBar__button">TÌM KIẾM</button>
+        </div>
+    </div>
+    <!--CHATTING-->
+    <div class="chatting__positioning">
+        <div id="showChatBox">
+            <header class="showChatBox__tittle">
+                <div class="showChatBox__tittle--avt">
+                    <img class="showChatBox__tittle--pic" src="default-avatar.png">
+                    <img class="showChatBox__tittle--pic" src="default-avatar.png">
+                </div>
+                <div class="showChatBox__tittle--content">
+                    <p class="showChatBox__tittle--hello">Kính chào quý khách</p>
+                    <div class="showChatBox__tittle--status">
+                        <div class="showChatBox__tittle--status--circle">
+                        </div>
+                        <p>Tư vấn dịch vụ</p>
+                    </div>
+                </div>
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-angle-down" onclick="hideChatBox()"></i>
+            </header>
+            <main class="showChatBox__main">
+                <p class="showChatBox__main--content">Chào mừng quý khách đến với UITour.
+                    Chúng tôi rất hân hạnh được phục vụ quý khách.
+                    Chúng tôi có thể hỗ trợ được gì cho bạn không?
+                </p>
+                <p class="showChatBox__main--status">Vừa xong</p>
+            </main>
+            <form action="index.php" method="post" class="showChatBox__footer">
+                <input class="showChatBox__footer--texting" type="text" placeholder="Đặt câu hỏi tại đây!" name="ChatContent" required>
+                <div class="showChatBox__footer--icon">
+                    <i class="far fa-grin"></i>
+                    <input class="showChatBox__footer--icon--submit" type="submit" name="ChatSubmit" value="">
+                </div>
+            </form>
+        </div>
+        <form action="index.php"method="post" id="chatbox_wapper" onclick="showChatBox()">
+            <input type="submit" name="open_chatbox" value = "">
+            <i class="fas fa-comment"></i>
+            <p>Trò chuyện</p>
+        </form>
+    </div>
+
+    <!--2 sections-->
+    <section class="section1">
+        <h2 class="section1__heading">Các dịch vụ được cung cấp</h2>
+        <div class="section1__list">
+            <a href="#" class="section1__list__item">
+                <img src="/SectionTrangChu/DuLich.png" alt="Du lịch" >
+            </a>
+            <a href="#" class="section1__list__item">
+                <img src="/SectionTrangChu/LuuTru.png" alt="Lưu trú">
+            </a>
+            <a href="#" class="section1__list__item">
+                <img src="/SectionTrangChu/GiaiTri.png" alt="Giải trí">
+            </a>
+        </div>
+    </section>
+    <section class="section2">
+        <h2 class="section1__heading section2__heading">Danh mục đề xuất</h2>
+        <div class="section2__slideshow">
+            <div class = "section2__cricle">
+                <span class = "dot" onclick="currenSlide(0)"></span>
+                <span class = "dot" onclick="currenSlide(1)"></span>
+                <span class = "dot" onclick="currenSlide(2)"></span>
+                <span class = "dot" onclick="currenSlide(3)"></span>
+            </div>
+            <div class = "slide__wapper">
+                <div href="#" class="slides">
+                    <img src="/SectionTrangChu/Slide1.png" alt="Paris-Pháp">
+                </div>
+                <div href="#" class="slides">
+                    <img src="/SectionTrangChu/Slide2.png" alt="Paris-Pháp">
+                </div>
+                <div href="#" class="slides">
+                    <img src="/SectionTrangChu/Slide3.png" alt="Paris-Pháp">
+                </div>
+                <div href="#" class="slides">
+                    <img src="/SectionTrangChu/Slide4.png" alt="Paris-Pháp">
+                </div>
+            </div>           
+        </div>
+        <script>
+            var slideIndex = 0;  
+                   
+            function showSlide()
+            {
+                var i;
+                var slides = document.getElementsByClassName("slides");
+                var dots = document.getElementsByClassName("dot");
+                
+                for(i = 0; i < slides.length; i++)
+                {
+                    slides[i].style.display = "none";
+                }
+                for(i = 0; i < dots.length; i++)
+                {
+                    dots[i].className = dots[i].className.replace(" active", "")
+                }
+                slides[slideIndex].style.display = "block";
+                dots[slideIndex].className += " active";
+                //chuyển silde
+                slideIndex++;
+                //nếu chuyển tới slide cuối cùng thì quay lại slide đầu tiên
+                if (slideIndex > slides.length - 1) {
+                    slideIndex = 0;
+                }              
+            } 
+            setInterval(showSlide,3000);
+            showSlide(slideIndex = 0);  
+            function currenSlide(n)
+            {
+                showSlide(slideIndex = n);
+            }
+            
+        </script>
+    </section>
+</body>
+    
+</html>
