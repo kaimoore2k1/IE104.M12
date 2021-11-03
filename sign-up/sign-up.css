@@ -1,0 +1,86 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+main{
+    width: 392px;
+    height: 600px;
+    background: #f1f1f1;
+    border-radius: 15px;
+    position: absolute;
+    left: 500px;
+}
+
+main h1{
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.information{
+    position: relative;
+    width: 350px;
+    margin-left: 5%;
+    top: 20px;
+}
+
+.information input{
+    height: 30px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-bottom: #8f8f8f 2px solid;
+    background: none;
+}
+
+#last-name{
+    width: 35%;
+}
+
+#first-name{
+    width: 57%;
+    margin-left: 2%;
+}
+
+#username, #password, #retype-password{
+    width: 96%;
+}
+
+.confirmed-code{
+    margin-left: 20%;
+    display: inline;
+    background: rgb(0, 89, 255);
+    padding: 15px;
+    color: white;
+    vertical-align: middle;
+    text-decoration-line: line-through;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.term{
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+}
+
+#check{
+    margin: 0 20px 0 50px;
+}
+
+.sign-up{
+    width: 209px;
+    height: 51px;
+    background: linear-gradient(90deg, #12A9D9, #D608DA);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin-left: 90px;
+    margin-top: 25px;
+}
+
+.sign-in{
+    margin-top: 40px;
+    text-align: center;
+}
