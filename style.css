@@ -396,13 +396,13 @@ html
 }
 .section1__list
 {
-    width: 90%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 0 0 20px 0;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 6em;
+    gap: 7em;
     
 }
 
@@ -414,7 +414,7 @@ html
 }
 
 .section2__slideshow{
-    width: 1085px;
+    width: 1152px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -422,7 +422,7 @@ html
  
 .slide__wapper .slides img
 {
-    width: 1085px; 
+    width: 1152px; 
     
 }
 
