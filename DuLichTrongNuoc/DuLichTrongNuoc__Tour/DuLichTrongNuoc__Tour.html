@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch nước ngoài - trang chủ</title>
+    <link rel="stylesheet" href="DuLichTrongNuoc__Tour.css">
+</head>
+<body>
+    <header>
+        <nav class="header_menu">
+            <img id="logo_uitour" src="logo_header.png" alt="logo_uitour">
+            <a href="#">Trang chủ</a>
+            <ul>
+                <li><a href="#" id="itemSelected">Du lịch</a>
+                    <ul>
+                        <li><a href="#">Du lịch trong nước</a></li>
+                        <li><a href="#">Du lịch nước ngoài</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#">Khách sạn</a>
+                    <ul>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#">Traval tips</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+            <a id="sign_in" href="#">Đăng nhập</a>
+            <a id="sign_up" href="#">Đăng ký</a>
+        </nav>
+        <img id="logo_header" src="banner_trongnuoc.jpg" alt="Header_picture_Home">
+        <div class="Header__title">
+            <div class="Header__title--layer"></div>
+            <p class="Header__title--p">DU LỊCH TRONG NƯỚC</p>
+            <div class="searchBar">
+                <div class="searchBar__location">
+                    <img class="searchBar__location--img" src="searchBar_location.svg">
+                    <p>
+                        <strong>Địa điểm</strong>
+                        <br>
+                        Bạn muốn đi đâu?
+                    </p>
+                </div>
+                <div class="searchBar__date">
+                    <img class="searchBar__date--img" src="searchBar_date.svg">
+                    <p>
+                        <strong>Bắt đầu - Kết thúc</strong>
+                        <br>
+                        Chọn ngày
+                    </p>
+                </div>
+                <div class="searchBar__tour">
+                    <img class="searchBar__tour--img" src="searchBar_tour.svg">
+                    <p>
+                        <strong>Loại Tour</strong>
+                        <br>
+                        Cá nhân - gia đình
+                    </p>
+                </div>
+                <button class="searchBar__button">TÌM KIẾM</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="tourType">
+            <p>Sắp xếp:</p>
+            <button class="tourType__latest" id="tourType--selected" onclick="latest_selected()">[ Mới nhất ]</button>
+            <button class="tourType__goodPrice" onclick="goodPrice_selected()">[ Giá thấp nhất ]</button>
+            <button class="tourType__highRate" onclick="highRate_selected()">[ Đánh giá cao nhất ]</button>
+        </div>
+
+        <div class="aTour">
+            <div class="aTour__image">
+                <img src="dalat01.jpg" id="aTour__image--tour" alt="Tour image">
+                <img src="speacialTag.svg" id="aTour__image--tag" alt="Tour image">
+            </div>
+
+            <div class="aTour__infor">
+                <p class="aTour__infor--tittle">DU LỊCH ĐÀ LẠT - THUNG THĂNG PHỐ NÚI</p>
+                <p class="aTour__infor--departure">TP.HCM - ĐÀ LẠT</p>
+                <p class="aTour__infor--detail">Thời gian: 3 ngày 2 đêm <br>Phương tiện: Đi về bằng ô tô <br>Check-in và chụp hình siêu đẹp tại Quê Garden</p>
+            </div>
+
+            <div class="aTour_box">
+                <div class="aTour_box--price">
+                    <p>Giá từ <strong>1.990.000</strong></p>
+                </div>
+    
+                <div class="aTour_box--departDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>10/10/2021</p>
+                </div>
+    
+                <div class="aTour_box--backDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>13/10/2021</p>
+                </div>
+                <div class="aTour_box--viewMore">
+                    <button> <a href="../DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.html">Xem thêm >></a> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="aTour hidden">
+            <div class="aTour__image">
+                <img src="halong01.jpg" id="aTour__image--tour" alt="Tour image">
+                <img src="hotTag.svg" id="aTour__image--tag" alt="Tour image">
+            </div>
+
+            <div class="aTour__infor">
+                <p class="aTour__infor--tittle">DU LỊCH HẠ LONG - NỤ CƯỜI HẠ LONG</p>
+                <p class="aTour__infor--departure">HẢI PHÒNG - HẠ LONG</p>
+                <p class="aTour__infor--detail">Thời gian: 1 ngày <br>Phương tiện: Đi, về bằng ô tô <br>Tham quan Cảng tàu Tuần Châu, Hòn Chó Đá, Hòn Đinh Hương, Hòn Gà Chọi,...</p>
+            </div>
+
+            <div class="aTour_box">
+                <div class="aTour_box--price">
+                    <p>Giá từ <strong>2.000.000</strong></p>
+                </div>
+    
+                <div class="aTour_box--departDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>20/10/2021</p>
+                </div>
+    
+                <div class="aTour_box--backDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>21/10/2021</p>
+                </div>
+                <div class="aTour_box--viewMore">
+                    <button> <a href="#">Xem thêm >></a> </button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="aTour hidden">
+            <div class="aTour__image">
+                <img src="phuquoc01.jpg" id="aTour__image--tour" alt="Tour image">
+                <img src="hotTag.svg" id="aTour__image--tag" alt="Tour image">
+            </div>
+
+            <div class="aTour__infor">
+                <p class="aTour__infor--tittle">DU LỊCH PHÚ QUỐC - ĐẢO NGỌC THIÊN ĐƯỜNG</p>
+                <p class="aTour__infor--departure">HẢI PHÒNG - PHÚ QUỐC</p>
+                <p class="aTour__infor--detail">Thời gian: 3 ngày 2 đêm <br>Phương tiện: Đi, về bằng máy bay <br>Du lịch Phú Quốc Quý khách thỏa sức vẫy vùng trong làn nước xanh</p>
+            </div>
+
+            <div class="aTour_box">
+                <div class="aTour_box--price">
+                    <p>Giá từ <strong>5.500.000</strong></p>
+                </div>
+    
+                <div class="aTour_box--departDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>15/10/2021</p>
+                </div>
+    
+                <div class="aTour_box--backDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>18/10/2021</p>
+                </div>
+                <div class="aTour_box--viewMore">
+                   <button> <a href="#">Xem thêm >></a> </button>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <script src="DuLichTrongNuoc__Tour.js"></script>
+</body>
+</html>

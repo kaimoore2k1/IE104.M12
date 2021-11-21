@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DuLichTrongNuoc__ChiTiet.css">
+    <title>Du lịch trong nước</title>
+</head>
+
+<body>
+    <header>
+        <nav class="header_menu">
+            <img id="logo_uitour" src="logo_header.png" alt="logo_uitour">
+            <a href="#">Trang chủ</a>
+            <ul>
+                <li><a href="#" id="itemSelected">Du lịch</a>
+                    <ul>
+                        <li><a href="#">Du lịch trong nước</a></li>
+                        <li><a href="#">Du lịch nước ngoài</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#">Khách sạn</a>
+                    <ul>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#">Traval tips</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+            <a id="sign_in" href="#">Đăng nhập</a>
+            <a id="sign_up" href="#">Đăng ký</a>
+        </nav>
+        <img id="logo_header" src="DaLatBanner.jpg" alt="Header_picture_Home">
+        <div class="Header__title">
+            <div class="Header__title--layer">
+
+            </div>
+            <p>DU LỊCH ĐÀ LẠT - THUNG THĂNG PHỐ NÚI</p>
+        </div>
+    </header>
+    <div class="Dulich_Help">
+        <p id="help_support">Hỗ trợ khách hàng</p>
+        <p class="infor">
+            <img src="phone_support.svg">
+            Hotline: 12345 67890 <br>
+            <img src="mail_support.svg">
+            Email: kemkapi_chipu@gmail.com
+        </p>
+        <button>Đặt tour ngay</button>
+    </div>
+    <div class="overlay_pdf">
+        
+    </div>
+    <form id="bookingForm" name="bookingForm">
+        <h1>THÔNG TIN LIÊN HỆ</h1>
+        <div class="bookTourInfor">
+            <img src="dalat1.jpg" alt="dalat picture">
+            <div class="bookTourInfor__detail">
+                <p id="bookTourInfor__detail--code">Mã tour: UITDL01</p>
+                <p id="bookTourInfor__detail--time">Thời gian: 3 ngày 2 đêm</p>
+                <p id="bookTourInfor__detail--transport" >Phương tiện: Đi về bằng ô tô</p>
+                <p id="bookTourInfor__detail--des">Điếm đến: Đà Lạt</p>
+                <p id="bookTourInfor__detail--price">Giá: 1.990.000 VNĐ</p>
+            </div>
+
+            <div class="bookTourInfor__cus">
+                <label for="bookTourInfor__cus--name">Họ và tên</label><br>
+                <input type="text" name="bookTourInfor__cus--name" id="bookTourInfor__cus--name" required><br>
+                <label for="bookTourInfor__cus--phonenum">Số điện thoại</label><br>
+                <input type="text" name="bookTourInfor__cus--phonenum" id="bookTourInfor__cus--phonenum" required><br>
+                <label for="bookTourInfor__cus--email">Email</label><br>
+                <input type="text" name="bookTourInfor__cus--email" id="bookTourInfor__cus--email" required><br>
+                <input id="submit__exitOverlay" type="submit" value="GỬI THÔNG TIN" onclick="on()">
+            </div>
+        </div>
+    </form>
+
+    <div class="responseBox--background"></div>
+
+    <div class="responseBox" id="responseBox">
+        <div class="responseBox_tittle">
+        <img src="checked_tick.svg" alt="checked_tick">
+        <p>BẠN ĐÃ ĐĂNG KÝ TOUR THÀNH CÔNG</p>
+        </div>
+        <p class="responseBox--message">Chúng tôi sẽ liên hệ để xác nhận thông tin của bạn trong vòng <strong>24 giờ</strong> , chân thành cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</p>
+    </div>
+    <script src="DuLichTrongNuoc__Booking.js"></script>
+    <iframe seamless="seamless" class="InTour__PDF" src="../DuLichTrongNuoc__PDF/DuLichTrongNuoc__PDF.html" frameborder="0"></iframe>
+    <article class="article__wapper">
+
+        <div class="wapper__intro">
+            <div class="wapper__intro--infor">
+                <p>
+                    THỜI GIAN: 3 ngày 2 đêm <br>
+                    ĐIỂM XUẤT PHÁT: TP. Hồ Chí Minh
+                </p>
+                <p>
+                    PHƯƠNG TIỆN: Đi về bằng ô tô <br>
+                    ĐIỂM ĐẾN: Đà Lạt
+                </p>
+            </div>
+            <div class="wapper__intro--descript">
+                <p> <strong>Tour này có gì hay</strong> <br>
+                    - Check-in và chụp hình siêu đẹp tại Quê Garden - tọa độ sống ảo thần thái,
+                    một khu vườn với lối kiến trúc đậm chất Nhật Bản nằm giữa cao nguyên Lâm viên mộng mơ. <br>
+                    - Khám phá Khu Du lịch Kim Ngân Hills- một địa điểm mới và cực chất hiện nay tại Đà Lạt,
+                    một ngôi làng theo phong cách châu Âu nằm ngay trong lòng thành phố cùng thế giới thú cưng dễ
+                    thương. <br>
+                    - Tham quan Nông trại Cún- Puppy Farm với hơn 100 cá thể thuộc 36 loài cún đáng yêu. <br>
+                    - Chiêm ngưỡng Nhà thờ Domaine de Marie với kiến trúc pha trộn giữa phong cách kiến trúc Pháp cuối
+                    thế kỷ 17 và
+                    hệ thống mái nhà rông truyền thống của dân tộc Tây Nguyên. <br>
+                    - Dừng chân tại Khu Du lịch Thúy Thuận đầy cuốn hút giữa đất trời Đà Lạt với không gian thơ mộng vốn
+                    có,
+                    cùng những công trình ấn tượng với vô số góc chụp lung linh, ảo diệu. <br>
+                    - Chiêm bái Linh Ẩn Tự, nổi tiếng với tượng Phật Quán Thế Âm lộ thiên cao nhất Việt Nam.</p>
+            </div>
+        </div>
+
+        <button class="wapper__inTour">
+            <p>In chương trình tour</p>
+            <img src="print.svg" alt="print">
+        </button>
+
+        <div class="wapper__gallery">
+
+        </div>
+
+        <div class="wapper__content">
+
+            <div class="wapper__content__nav">
+                <button class="btn_chuongtrinh" id="wapper__content__nav--selected" onclick="chuongtrinh_selected()">
+                    <p>Chương trình Tour</p>
+                </button>
+                <button class="btn_chinhsach" onclick="chinhsach_selected()">
+                    <p>Chính sách Tour</p>
+                </button>
+                <button class="btn_thacmac" onclick="thacmac_selected()">
+                    <p>Thắc mắc</p>
+                </button>
+            </div>
+
+            <hr class="wapper__content--hr">
+
+            <div class="wapper__content--content">
+                <p class="day1--title"><strong>Liên hệ tư vấn: Anh Kim Soo Huyn - 0908 251 152 // Chị La Lisa - 0988
+                        356996</strong></p>
+                <p class="day1">
+                    <strong>NGÀY 1 : TP. HỒ CHÍ MINH – ĐÀ LẠT (Ăn sáng, trưa, tối)</strong> <br>
+                    05h45: Quý khách tập trung tại văn phòng Lữ hành Saigontourist (102 Nguyễn Huệ, Quận 1, TP. Hồ Chí
+                    Minh),
+                    xe đưa đoàn khởi hành đi Đà Lạt. <br>
+                    07h00: Quý khách dùng điểm tâm sáng tại Long Khánh, sau đó tiếp tục hành trình theo cung đường Quốc
+                    lộ 20
+                    đến với Bảo Lộc - vùng đất trù phú trên cao nguyên Di Linh, là thủ phủ của trà B’Lao và tơ lụa nổi
+                    tiếng. <br>
+                    11h30: Quý khách dùng cơm trưa tại thành phố Bảo Lộc. <br>
+                    12h30: Tiếp tục hành trình đến với Xứ sở ngàn hoa. <br>
+                    15h00: Đoàn tham quan Quê Garden, tọa lạc trên vùng đồi thơ mộng trên cung đường đèo Mimosa xinh
+                    đẹp,
+                    được thiết kế tỉ mỉ theo phong cách Nhật Bản trong một không gian thoáng đãng vô cùng lãng mạn.
+                    Quê Garden được mệnh danh là khu vườn bonsai lá kim lớn nhất Việt Nam,
+                    những chậu bonsai đủ mọi kích thước được uốn nắn nghệ thuật thật đẹp mắt, kết hợp cùng nhiều loài
+                    hoa đặc trưng
+                    rực rỡ sắc màu của Đà Lạt. Ngoài ra, hồ cá Koi ở vị trí trung tâm khu vườn kết hợp với các tiểu cảnh
+                    non bộ
+                    tạo nên một không gian “sống ảo” đậm chất xứ sở mặt trời mọc. <br>
+                    16h30: Xe đưa quý khách về trung tâm thành phố Đà Lạt, nhận phòng tại khách sạn và nghỉ ngơi. <br>
+                    18h00: Quý khách dùng cơm tối tại nhà hàng địa phương. Sau đó chương trình tự do.
+                    Nghỉ đêm tại Đà Lạt.
+                </p>
+                <div class="img__center">
+                    <img src="quegarden.jpg" alt="Que Garden">
+                    <p class="description">
+                        <strong>Quê Garden</strong>
+                    </p>
+                </div>
+                <p class="Day2">
+                    <strong>NGÀY 2: ĐÀ LẠT (Ăn sáng, trưa; tự túc ăn tối)</strong> <br>
+                    07h00: Quý khách ăn sáng tại khách sạn, <br>
+                    08h00: Đoàn khởi hành đi tham quan Quảng trường Lâm Viên, một công trình nổi bật với không gian rộng
+                    lớn hướng ra
+                    hồ Xuân Hương dịu mát, cùng tuyệt tác kiến trúc khối hoa Dã quỳ và khối nụ hoa Atiso khổng lồ bằng
+                    kính màu lung linh
+                    đẹp mắt. <br>
+                    08h45: Đoàn tham quan Nhà Ga Xe lửa Đà Lạt, một trong hai di tích cấp quốc gia được chính phủ công
+                    nhận tại Đà Lạt.
+                    Đây là Nhà Ga Xe lửa tọa lạc tại độ cao hơn 1500m so với mực nước biển và là một trong những nhà Ga
+                    cổ kính nhất
+                    Đông Dương. <br>
+                    09h30: Quý khách tham quan Khu du lịch Kim Ngân Hills, ngôi làng được xây dựng theo phong cách kiến
+                    trúc Châu Âu,
+                    thiết kế phù hợp với cảnh quan và môi trường sinh thái Đà Lạt. Đến với Kim Ngân Hills quý khách
+                    không chỉ được
+                    tận hưởng cảnh quan thiên nhiên thơ mộng của một "Châu Âu" thu nhỏ mà còn được gặp gỡ nhiều loại thú
+                    cưng thân thiện
+                    đến từ nhiều nơi trên thế giới như: chó Corgi (Anh), cừu Valais (Thụy Sĩ), lạc đà Alpaca (Nam Mỹ),
+                    ngựa lùn,
+                    công, thỏ, dê, … Ngoài ra, nơi đây còn sở hữu vườn chim Avira lớn nhất tỉnh Lâm Đồng với hơn 50 loài
+                    chim bản địa và
+                    vùng miền khác. <br>
+                    11h30: Quý khách dùng cơm trưa tại nhà hàng địa phương.<br>
+                    13h00: Quý khách tham quan Nông trại Cún – Puppy Farm với hơn 100 cá thể thuộc 36 loài cún đáng yêu
+                    và
+                    trải nghiệm 3 khu tham quan: đồi hoa khổng lồ gồm nhiều loài hoa như lavender, cánh bướm, nữ hoàng
+                    xanh, thạch thảo,
+                    cúc họa mi…; vườn sen đá, xương rồng nghệ thuật và vườn nông sản công nghệ cao xanh mát. <br>
+                    15h30: Quý khách tiếp tục tham quan Nhà thờ Domaine de Marie, tọa lạc trên ngọn đồi Mai Anh lộng
+                    gió.
+                    Nhà thờ màu hồng được thiết kế xây dựng theo lối kiến trúc Châu Âu cuối thế kỷ XVII
+                    pha trộn một số nét kiến trúc dân gian của vùng đất cao nguyên tạo nên một công trình kiến trúc nghệ
+                    thuật thật độc đáo,
+                    khác lạ.<br>
+                    16h30: Trở về khách sạn nghỉ ngơi và chương trình tự do (Ăn tối tự túc). Quý khách có thể tự do dạo
+                    phố, thưởng thức ẩm thực nổi tiếng Đà Lạt: Lẩu gà lá é Tao Ngộ, Lẩu bò quán Gỗ, Bánh ướt lòng gà,
+                    Bánh tráng nướng, Sữa đậu nành, Kem bơ, … và khám phá Đà Lạt về đêm theo cách của riêng mình.
+                    Nghỉ đêm tại Đà Lạt.
+                </p>
+                <div class="img__center">
+                    <img src="nongtraicun.jpg" alt="Nong trai cun">
+                    <p class="description">
+                        <strong>Nông trại cún</strong>
+                    </p>
+                </div>
+                <p class="day3">
+                    <strong>Ngày 3: ĐÀ LẠT – TP. HỒ CHÍ MINH (Ăn sáng, trưa)</strong> <br>
+                    07h00: Quý khách ăn sáng tại khách sạn, <br>
+                    08h00: Đoàn khởi hành về TP. Hồ Chí Minh theo hướng Tà Nung. <br>
+                    08h30: Quý khách dừng chân tại Khu Du lịch Thúy Thuận đầy cuốn hút giữa đất trời Đà Lạt với không
+                    gian thơ mộng
+                    vốn có cùng những công trình ấn tượng với vô số góc chụp lung linh, ảo diệu. Quý khách có thể thưởng
+                    thức những thức
+                    uống hấp dẫn tại đây (chi phí tự túc) <br>
+                    09h45: Tiếp tục hành trình đến thị trấn Nam Ban, viếng Linh Ẩn Tự - ngôi chùa tọa lạc yên bình
+                    trên ngọn đồi cao,
+                    phía sau được bao bọc bởi cánh rừng thông xanh bát ngát, phía trước là thác Voi ngày đêm
+                    tuôn chảy tạo nên một vị thế
+                    đắc địa “tọa sơn ngoạ thủy”. Quý khách chiêm bái tượng Phật Bà Quan Âm lộ thiên cao nhất Việt
+                    Nam và tượng Phật Di Lặc
+                    lớn nhất tỉnh Lâm Đồng. <br>
+                    11h45: Quý khách dùng cơm trưa tại Bảo Lộc. <br>
+                    12h45: Khởi hành về TP. Hồ Chí Minh. <br>
+                    18h00: Về tới TP. Hồ Chí Minh, đưa quý khách về văn phòng Lữ hành Saigontourist. Kết thúc chương
+                    trình. <br> <br>
+                    * Ghi chú:<br>
+                    - Điểm tham quan có thể sắp xếp lại cho phù hợp mà vẫn bảo đảm đầy đủ nội dung của từng chương
+                    trình.<br>
+                    - Đây là tour khách lẻ ghép đoàn, mỗi đợt khởi hành phải có tối thiểu 25 người đăng ký. Trong trường
+                    hợp không
+                    đủ số lượng khách đăng ký, chúng tôi xin phép dời quý khách sang đợt khởi hành tiếp theo.
+                </p>
+            </div>
+
+            <div class="wapper__content--content wapper__hidden__content">
+                <p class="day1">
+                    <strong>* Giá tour bao gồm: </strong> <br>
+                    - Chi phí xe máy lạnh phục vụ theo chương trình. <br>
+                    - Chi phí ăn theo chương trình (3 bữa sáng, 3 bữa trưa & 1 bữa tối) <br>
+                    - Chi phí khách sạn 3* tiêu chuẩn 2 khách/phòng, lẻ khác ngủ giường phụ hoặc chịu chi phí phụ thu
+                    phòng đơn:
+                    + 550.000 đ/ khách <br>
+                    - Chi phí tham quan, hướng dẫn viên tiếng Việt. <br>
+                    - Quà tặng: Nón, nước suối, khăn lạnh. <br> <br>
+
+                    <strong>* Giá tour không bao gồm: </strong> <br>
+                    - Ăn uống ngoài chương trình, giặt ủi, điện thoại và các chi phí cá nhân.<br>
+                    - Chi phí phụ thu phòng đơn: + 550.000 đ/ khách.<br> <br>
+
+                    <strong>THÔNG TIN HƯỚNG DẪN</strong><br>
+                    <strong>* Vé trẻ em: </strong> <br>
+                    - Vé tour: Trẻ em từ 6 đến 11 tuổi mua một nửa giá vé người lớn, trẻ em trên 11 tuổi mua vé như
+                    người lớn.<br>
+                    - Đối với trẻ em dưới 6 tuổi, gia đình tự lo cho bé ăn ngủ và tự trả phí tham quan (nếu có).
+                    Hai người lớn chỉ được kèm một trẻ em. Từ trẻ thứ 2 trở lên, mỗi em phải trả 50% giá vé tour người
+                    lớn.<br>
+                    - Tiêu chuẩn 50% giá tour bao gồm: Suất ăn, ghế ngồi và ngủ ghép chung với gia đình.<br>
+                    <strong>* Hành lý và giấy tờ tùy thân: </strong> <br>
+                    - Du khách mang theo giấy Chứng Minh Nhân Dân hoặc Hộ chiếu. Đối với du khách là Việt kiều,
+                    Quốc tế nhập cảnh Việt Nam bằng visa rời, vui lòng mang theo visa khi đăng ký và đi tour.<br>
+                    - Khách lớn tuổi (từ 70 tuổi trở lên), khách tàn tật tham gia tour, phải có thân nhân đi kèm và
+                    cam kết đảm bảo đủ sức khỏe khi tham gia tour du lịch.<br>
+                    - Trẻ em dưới 14 tuổi khi đi tour phải mang theo Giấy khai sinh hoặc Hộ chiếu.
+                    Trẻ em từ 14 tuổi trở lên phải mang theo giấy Chứng Minh Nhân Dân hoặc Hộ chiếu riêng<br>
+                    - Tất cả giấy tờ tùy thân mang theo đều phải bản chính<br>
+                    - Du khách mang theo hành lý gọn nhẹ và phải tự bảo quản hành lý, tiền bạc,
+                    tư trang trong suốt thời gian đi du lịch.<br>
+                    - Khách Việt Nam ở cùng phòng với khách Quốc tế hoặc Việt kiều yêu cầu phải có giấy hôn thú.<br>
+                    <br>
+
+                    <strong>* Đây là chương trình Siêu khuyến mãi vì thế hủy vé tour,
+                        quý khách vui lòng thanh toán các khoản sau:</strong> <br>
+                    - Hủy vé trong vòng 24- 72 giờ hoặc ngay ngày khởi hành, chịu phạt 100% tiền tour.<br>
+                    - Hủy vé trước ngày khởi hành từ 4- 15 ngày, chịu phạt 70% tiền tour.<br>
+                    - Hủy vé trước ngày khởi hành từ 15- 20 ngày, chịu phạt 50% tiền tour.<br>
+                    - Hủy vé trước ngày khởi hành 20 ngày, chịu phạt 40% tiền tour.<br>
+                    - Hủy vé ngay sau khi đăt tour, chịu phạt 30% giá tour.<br> <br>
+
+                    - Sau khi hủy tour, du khách vui lòng đến nhận tiền trong vòng 15 ngày kể từ ngày kết thúc tour.
+                    Chúng tôi chỉ thanh toán trong khỏang thời gian nói trên.<br>
+                    - Trường hợp hủy tour do sự cố khách quan như thiên tai, dịch bệnh hoặc do tàu thủy, xe lửa,
+                    máy bay hoãn/hủy chuyến, Lữ hành Saigontourist sẽ không chịu trách nhiệm bồi thường thêm bất kỳ chi
+                    phí
+                    nào khác ngoài việc hoàn trả chi phí những dịch vụ chưa được sử dụng của tour đó. <br> <br>
+
+                    <strong>* Ghi chú khác:</strong><br>
+                    - Công ty xuất hóa đơn cho du khách có nhu cầu (Trong thời hạn 7 ngày sau khi kết thúc chương trình
+                    du lịch).<br>
+                    - Du khách có mặt tại điểm đón trước 15 phút.
+                    Du khách đến trễ khi xe đã khởi hành hoặc hủy tour không báo trước vui lòng chịu phí như ‘hủy vé
+                    ngay ngày khởi hành'.<br>
+                </p>
+            </div>
+
+            <div class="wapper__content--content wapper__hidden__content">
+                <div class="danhgiachung">
+                    <div class="danhgia__title">
+                        <p>Đánh giá của khách hàng về Tour</p>
+                    </div>
+                    <div class="danhgia__voting">
+                        <img id="dalat_danhgia" src="dalat_danhgia.jpg" alt="Hình ảnh Đà Lạt">
+                        <div class="hihiandhehe">
+                            <div class="dalat_danhgia_hihi">
+                                <img src="5star.png" id="fivesao_img">
+                                <div class="count_voting">
+                                    <p>142 đánh giá</p>
+                                </div>
+                                <p class="huhu">5.0</p>
+                            </div>
+                            <div class="dalat_danhgia_hehe">
+                                <div id="one_sao" class="voting full__voting"><p class="huhu">1.0</p></div>
+                                <div id="two_sao" class="voting"><p class="huhu">2.0</p></div>
+                                <div id="three_sao" class="voting"><p class="huhu">3.0</p></div>
+                                <div id="four_sao" class="voting"><p class="huhu">4.0</p></div>
+                                <div id="five_sao" class="voting"><p class="huhu">5.0</p></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="btn_insert">
+                    <button class="btn_insert--write">
+                        Viết đánh giá
+                    </button>
+                    <button class="btn_insert--more">
+                        Xem thêm đánh giá
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </article>
+
+    <script>
+        let overlay = document.querySelector('.overlay_pdf')
+        let pdf = document.querySelector('.InTour__PDF')
+        let bookTour = document.querySelector('.Dulich_Help')
+        let bookTourForm = document.querySelector('#bookingForm')
+        let btn_inPDF = document.querySelector('.wapper__inTour')
+        let submit__exitOverlay = document.querySelector('#submit__exitOverlay')
+        submit__exitOverlay.addEventListener('click', exitOverlay)
+        overlay.addEventListener('click', exitOverlay)
+        function exitOverlay() {
+            overlay.style.display = 'none'
+            pdf.style.display = 'none'
+            bookTourForm.style.display = 'none'
+        }
+        btn_inPDF.addEventListener('click', showOverlay)
+        function showOverlay() {
+            overlay.style.display = 'block'
+            pdf.style.display = 'block'
+        }
+        bookTour.addEventListener('click', bookingTour)
+        function bookingTour() {
+            overlay.style.display = 'block'
+            bookTourForm.style.display = 'block'
+        }
+
+        function on() {
+            document.getElementById("responseBox").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("responseBox").style.display ="none";
+            }, 3000);
+        }
+    </script>
+    <script src="DuLichTrongNuoc__ChiTiet.js"></script>
+</body>
+
+</html>
