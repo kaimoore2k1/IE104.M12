@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du lịch nước ngoài - trang chủ</title>
+    <link rel="stylesheet" href="DuLichNuocNgoai__Tour.css">
+</head>
+<body>
+    <header>
+        <nav class="header_menu">
+            <img id="logo_uitour" src="logo_header.png" alt="logo_uitour">
+            <a href="#">Trang chủ</a>
+            <ul>
+                <li><a href="#" id="itemSelected">Du lịch</a>
+                    <ul>
+                        <li><a href="#">Du lịch trong nước</a></li>
+                        <li><a href="#">Du lịch nước ngoài</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#">Khách sạn</a>
+                    <ul>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#">Traval tips</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+            <a id="sign_in" href="#">Đăng nhập</a>
+            <a id="sign_up" href="#">Đăng ký</a>
+        </nav>
+        <img id="logo_header" src="foreign_banner.png" alt="Header_picture_Home">
+        <div class="Header__title">
+            <div class="Header__title--layer"></div>
+            <p class="Header__title--p">DU LỊCH TRONG NƯỚC</p>
+            <div class="searchBar">
+                <div class="searchBar__location">
+                    <img class="searchBar__location--img" src="searchBar_location.svg">
+                    <p>
+                        <strong>Địa điểm</strong>
+                        <br>
+                        Bạn muốn đi đâu?
+                    </p>
+                </div>
+                <div class="searchBar__date">
+                    <img class="searchBar__date--img" src="searchBar_date.svg">
+                    <p>
+                        <strong>Bắt đầu - Kết thúc</strong>
+                        <br>
+                        Chọn ngày
+                    </p>
+                </div>
+                <div class="searchBar__tour">
+                    <img class="searchBar__tour--img" src="searchBar_tour.svg">
+                    <p>
+                        <strong>Loại Tour</strong>
+                        <br>
+                        Cá nhân - gia đình
+                    </p>
+                </div>
+                <button class="searchBar__button">TÌM KIẾM</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="tourType">
+            <p>Sắp xếp:</p>
+            <button class="tourType__latest" id="tourType--selected" onclick="latest_selected()">[ Mới nhất ]</button>
+            <button class="tourType__goodPrice" onclick="goodPrice_selected()">[ Giá thấp nhất ]</button>
+            <button class="tourType__highRate" onclick="highRate_selected()">[ Đánh giá cao nhất ]</button>
+        </div>
+
+        <div class="aTour">
+            <div class="aTour__image">
+                <img src="taiwan.png" id="aTour__image--tour" alt="Tour image">
+                <img src="speacialTag.svg" id="aTour__image--tag" alt="Tour image">
+            </div>
+
+            <div class="aTour__infor">
+                <p class="aTour__infor--tittle">DU LỊCH ĐÀI LOAN [CAO HÙNG - ĐÀI BẮC - ĐÀI TRUNG]</p>
+                <p class="aTour__infor--departure">TP.HCM - ĐÀI LOAN</p>
+                <p class="aTour__infor--detail">Thời gian: 5 ngày 4 đêm <br>Phương tiện: Hàng không Vietjet (VJ) <br>Khám phá vùng đất mãnh hổ kinh tế châu Á</p>
+            </div>
+
+            <div class="aTour_box">
+                <div class="aTour_box--price">
+                    <p>Giá từ <strong>6.000.000</strong></p>
+                </div>
+    
+                <div class="aTour_box--departDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>15/10/2021</p>
+                </div>
+    
+                <div class="aTour_box--backDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>20/10/2021</p>
+                </div>
+                <div class="aTour_box--viewMore">
+                    <button> <a href="../DuLichNuocNgoai__ChiTiet/DuLichNuocNgoai__ChiTiet.html">Xem thêm >></a> </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="aTour hidden">
+            <div class="aTour__image">
+                <img src="seoul.png" id="aTour__image--tour" alt="Tour image">
+                <img src="hotTag.svg" id="aTour__image--tag" alt="Tour image">
+            </div>
+
+            <div class="aTour__infor">
+                <p class="aTour__infor--tittle">DU LỊCH HÀN QUỐC [SEOUL - JEJU - EVERLAND - CHIÊM NGƯỠNG LỄ HỘI HOA GOYANG]</p>
+                <p class="aTour__infor--departure">HÀ NỘI - HÀN QUỐC</p>
+                <p class="aTour__infor--detail">Thời gian: 6 ngày 5 đêm <br>Phương tiện: Hàng không Vietnam (VN)<br>Khám phá vùng đất thú vị Hàn Quốc</p>
+            </div>
+
+            <div class="aTour_box">
+                <div class="aTour_box--price">
+                    <p>Giá từ <strong>5.000.000</strong></p>
+                </div>
+    
+                <div class="aTour_box--departDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>25/10/2021</p>
+                </div>
+    
+                <div class="aTour_box--backDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>21/10/2021</p>
+                </div>
+                <div class="aTour_box--viewMore">
+                    <button> <a href="#">Xem thêm >></a> </button>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="aTour hidden">
+            <div class="aTour__image">
+                <img src="tokyo.png" id="aTour__image--tour" alt="Tour image">
+                <img src="hotTag.svg" id="aTour__image--tag" alt="Tour image">
+            </div>
+
+            <div class="aTour__infor">
+                <p class="aTour__infor--tittle">DU LỊCH NHẬT BẢN MÙA THU [OSAKA - KYOTO - FUJI - TOKYO]</p>
+                <p class="aTour__infor--departure">TP.HCM - NHẬT BẢN</p>
+                <p class="aTour__infor--detail">Thời gian: 5 ngày 4 đêm <br>Phương tiện: Hàng không Vietjet (VJ)y <br>Khám phá xử sở mặt trời mọc mùa thu</p>
+            </div>
+
+            <div class="aTour_box">
+                <div class="aTour_box--price">
+                    <p>Giá từ <strong>7.500.000</strong></p>
+                </div>
+    
+                <div class="aTour_box--departDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>15/10/2021</p>
+                </div>
+    
+                <div class="aTour_box--backDate">
+                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <p>20/10/2021</p>
+                </div>
+                <div class="aTour_box--viewMore">
+                   <button> <a href="#">Xem thêm >></a> </button>
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    <script src="DuLichNuocNgoai__Tour.js"></script>
+</body>
+</html>

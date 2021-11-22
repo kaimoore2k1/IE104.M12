@@ -1,0 +1,414 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 14px;
+    background-color: white;
+}
+
+header {
+    height: 600px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#tourType--selected {
+    color:#0066FF;
+}
+
+.header_menu {
+    margin-left: 300px;
+}
+
+.header_menu a {
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    font-size: 20px;
+    padding: 20px;
+    display: inline-block;
+}
+
+.header_menu a:hover {
+    color: #0047FF;
+}
+
+.header_menu ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.header_menu ul li {
+    display: inline-block;
+}
+
+.header_menu ul li:hover {
+    color: #0047FF;
+}
+
+.header_menu ul li:hover ul {
+    display: block;
+}
+
+.header_menu ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none;
+}
+
+.header_menu ul li ul li {
+    background: white;
+    display: block;
+}
+
+.header_menu ul li ul li a {
+    display: block !important;
+    margin: 1px 0px 1px 0px;
+}
+
+#itemSelected {
+    border-bottom: 3px solid rgb(64, 64, 255);
+    border-radius: 1px;
+    color: rgb(64, 64, 255);
+}
+
+#sign_in {
+    font-size: 15px;
+    margin-left: 5em;
+    border-radius: 5em;
+    padding: 10px;
+}
+
+#sign_in:hover {
+    color: #484848;
+}
+
+#sign_up {
+    background-color: rgb(64, 64, 255);
+    color: white;
+    font-size: 15px;
+    border-radius: 5em;
+    padding: 10px;
+}
+
+#logo_uitour {
+    position: absolute;
+    left: 10rem;
+    top: 0.7rem;
+}
+
+#logo_header {
+    width: 100%;
+    height: 439px;
+    object-fit: fill;
+}
+
+#h_p1 {
+    position: absolute;
+    color: white;
+    font-size: 4em;
+    top: 2.5em;
+    left: 15em;
+    padding-right: 2em;
+    border-bottom: 5px solid white;
+}
+
+#h_p2 {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    width: 40%;
+    top: 5em;
+    left: 20em;
+}
+
+#h_link {
+    position: absolute;
+    border: 2px solid white;
+    font-size: 2em;
+    padding: 5px;
+    top: 11.5em;
+    left: 30em;
+}
+
+#h_link a {
+    text-decoration: none;
+    color: white;
+}
+
+#h_link a:active {
+    color: rgb(57, 57, 247);
+    background-color: rgb(235, 235, 255);
+}
+
+.Header__title {
+    width: 1300px;
+    height: 176px;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    bottom: 180px;
+}
+
+.Header__title--p {
+    font-size: 36px;
+    z-index: 3;
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 26px;
+}
+
+.Header__title--layer {
+    background-color: #000000;
+    opacity: 60%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.searchBar img {
+    width: 36px;
+    height: 36px;
+}
+
+.searchBar {
+    position: absolute;
+    top: 80px;
+    left: 77px;
+    text-align: center;
+    display: flex;
+    width: 1146px;
+    height: 96px;
+    box-shadow: 0px 5px #dedede;
+    z-index: 3;
+}
+
+.searchBar__location {
+    display: flex;
+    width: 300px;
+    height: 96px;
+    flex: 2;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #DEDEDE;
+}
+
+.searchBar__date {
+    display: flex;
+    width: 300px;
+    height: 96px;
+    flex: 2;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #DEDEDE;
+}
+
+.searchBar__tour {
+    display: flex;
+    width: 300px;
+    height: 96px;
+    flex: 2;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #DEDEDE;
+}
+
+.searchBar__button {
+    width: 163.72px;
+    height: 96px;
+    flex: 1;
+    background-color: #3FD0D4;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.searchBar__location--img {
+    margin-right: 20px;
+}
+
+.searchBar__date--img {
+    margin-right: 20px;
+}
+
+.searchBar__tour--img {
+    margin-right: 20px;
+}
+
+.tourType {
+    display: flex;
+    width: 1000px;
+    font-size: 24px;
+    margin-left: 93px;
+    margin-bottom: 84px;
+}
+
+.tourType button {
+    flex: 1;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.aTour {
+    display: flex;
+    position: relative;
+    width: 1440px;
+    height: 470px;
+    margin-left: 50px;
+    border-bottom: 1px solid black;
+
+}
+
+#aTour__image--tour {
+    width: 490px;
+    height: 425px;
+    position: absolute;
+    left: 30px;
+}
+
+#aTour__image--tag {
+    width: 166px;
+    height: 63px;
+    position: absolute;
+    top: 390px;
+    left: 30px;
+}
+
+
+
+
+.aTour__infor--tittle {
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #0060F1;
+    cursor: pointer;
+}
+
+.aTour__infor--departure {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.aTour__infor--detail {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.aTour__infor {
+    position: absolute;
+    left: 550px;
+    top: 30px;
+    width: 547px;
+    height: 424px;
+    text-align: center;
+}
+
+.aTour__infor--tittle, .aTour__infor--departure {
+    margin-bottom: 50px;
+}
+
+
+
+.aTour_box {
+    position: absolute;
+    right: 49px;
+}
+
+.aTour_box--price {
+    width: 266px;
+    height: 84px;
+    background-color: #EEB700;
+    margin-top: 30px;
+}
+
+.aTour_box--price p {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.aTour_box--departDate, .aTour_box--backDate {
+    display: flex;
+    width: 228px;
+    height: 58px;
+    border: 1px solid black;
+    font-size: 24px;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 19px;
+}
+
+.aTour_box--departDate img, .aTour_box--backDate img {
+    position: absolute;
+    margin-left: 14px;
+    margin-top: 12px;
+}
+
+.aTour_box--departDate p, .aTour_box--backDate p {
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 15px;
+}
+
+
+.aTour_box--viewMore button {
+    color: #2887A9;
+    font-size: 24px;
+    border: none;
+    width: 166px;
+    height: 66px;
+    background-color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.aTour_box--viewMore button a {
+    text-decoration: none;
+}
+.aTour_box--viewMore button a:visited {
+    text-decoration: none;
+    color: #2887A9;
+}
+.aTour_box--viewMore button a:active {
+    text-decoration: none;
+    color: #2887A9;
+}
+.aTour_box--viewMore button a:link {
+    text-decoration: none;
+    color: #2887A9;
+}
+.aTour_box--viewMore button a:hover {
+    text-decoration: none;
+    color: #2887A9;
+}
+
+.hidden {
+    display: none;
+}
+
+.tourType button:hover {
+    color: #8bb4d6;
+}
+
+.tourType button:active {
+    color: aqua;
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DuLichNuocNgoai__ChiTiet.css">
+    <title>Du lịch nước ngoài</title>
+</head>
+
+<body>
+    <header>
+        <nav class="header_menu">
+            <img id="logo_uitour" src="logo_header.png" alt="logo_uitour">
+            <a href="#">Trang chủ</a>
+            <ul>
+                <li><a href="#" id="itemSelected">Du lịch</a>
+                    <ul>
+                        <li><a href="#">Du lịch trong nước</a></li>
+                        <li><a href="#">Du lịch nước ngoài</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#">Khách sạn</a>
+                    <ul>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                        <li><a href="#">Khách sạn trong nước</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a href="#">Traval tips</a>
+            <a href="#">Giới thiệu</a>
+            <a href="#">Liên hệ</a>
+            <a id="sign_in" href="#">Đăng nhập</a>
+            <a id="sign_up" href="#">Đăng ký</a>
+        </nav>
+        <img id="logo_header" src="DaLatBanner.jpg" alt="Header_picture_Home">
+        <div class="Header__title">
+            <div class="Header__title--layer">
+
+            </div>
+            <p>DU LỊCH ĐÀI LOAN [CAO HÙNG - ĐÀI BẮC - ĐÀI TRUNG]</p>
+        </div>
+    </header>
+    <div class="Dulich_Help">
+        <p id="help_support">Hỗ trợ khách hàng</p>
+        <p class="infor">
+            <img src="phone_support.svg">
+            Hotline: 12345 67890 <br>
+            <img src="mail_support.svg">
+            Email: kemkapi_chipu@gmail.com
+        </p>
+        <button>Đặt tour ngay</button>
+    </div>
+    <div class="overlay_pdf">
+        
+    </div>
+    <form id="bookingForm" name="bookingForm">
+        <h1>THÔNG TIN LIÊN HỆ</h1>
+        <div class="bookTourInfor">
+            <img src="taiwan1.jpg" alt="dalat picture">
+            <div class="bookTourInfor__detail">
+                <p id="bookTourInfor__detail--code">Mã tour: UITDL01</p>
+                <p id="bookTourInfor__detail--time">Thời gian: 5 ngày 4 đêm</p>
+                <p id="bookTourInfor__detail--transport" >Phương tiện: Hàng không VN</p>
+                <p id="bookTourInfor__detail--des">Điếm đến: Đài Loan</p>
+                <p id="bookTourInfor__detail--price">Giá: 6.000.000 VNĐ</p>
+            </div>
+
+            <div class="bookTourInfor__cus">
+                <label for="bookTourInfor__cus--name">Họ và tên</label><br>
+                <input type="text" name="bookTourInfor__cus--name" id="bookTourInfor__cus--name" required><br>
+                <label for="bookTourInfor__cus--phonenum">Số điện thoại</label><br>
+                <input type="text" name="bookTourInfor__cus--phonenum" id="bookTourInfor__cus--phonenum" required><br>
+                <label for="bookTourInfor__cus--email">Email</label><br>
+                <input type="text" name="bookTourInfor__cus--email" id="bookTourInfor__cus--email" required><br>
+                <input id="submit__exitOverlay" type="submit" value="GỬI THÔNG TIN" onclick="on()">
+            </div>
+        </div>
+    </form>
+
+    <div class="responseBox--background"></div>
+
+    <div class="responseBox" id="responseBox">
+        <div class="responseBox_tittle">
+        <img src="checked_tick.svg" alt="checked_tick">
+        <p>BẠN ĐÃ ĐĂNG KÝ TOUR THÀNH CÔNG</p>
+        </div>
+        <p class="responseBox--message">Chúng tôi sẽ liên hệ để xác nhận thông tin của bạn trong vòng <strong>24 giờ</strong> , chân thành cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</p>
+    </div>
+    <script src="DuLichNuocNgoai__Booking.js"></script>
+    <iframe seamless="seamless" class="InTour__PDF" src="../DuLichNuocNgoai__PDF/DuLichNuocNgoai__PDF.html" frameborder="0"></iframe>
+    <article class="article__wapper">
+
+        <div class="wapper__intro">
+            <div class="wapper__intro--infor">
+                <p>
+                    THỜI GIAN: 5 ngày 4 đêm<br>
+                    ĐIỂM XUẤT PHÁT: TP. Hồ Chí Minh
+                </p>
+                <p>
+                    PHƯƠNG TIỆN: Hàng không Việt Nam (VN) <br>
+                    ĐIỂM ĐẾN: Đài Loan
+                </p>
+            </div>
+            <div class="wapper__intro--descript">
+                <p> <strong>Tour này có gì hay</strong> <br>
+                    - Khám phá mãnh hổ kinh tế của châu Á với nhiều dấu ấn lịch sử, pha trộn hài hòa giữa văn hóa hiện đại và truyền thống. <br>
+                    - Tham gia hoạt động thả đèn trời, viếng các đền chùa linh thiêng cầu may mắn, bình an cho gia đình. br
+                    - Thỏa sức mua sắm và thưởng thức những món ăn địa phương nức tiếng tại những khu chợ đêm sầm uất.</p>
+            </div>
+        </div>
+
+        <button class="wapper__inTour">
+            <p>In chương trình tour</p>
+            <img src="print.svg" alt="print">
+        </button>
+
+        <div class="wapper__gallery">
+
+        </div>
+
+        <div class="wapper__content">
+
+            <div class="wapper__content__nav">
+                <button class="btn_chuongtrinh" id="wapper__content__nav--selected" onclick="chuongtrinh_selected()">
+                    <p>Chương trình Tour</p>
+                </button>
+                <button class="btn_chinhsach" onclick="chinhsach_selected()">
+                    <p>Chính sách Tour</p>
+                </button>
+                <button class="btn_thacmac" onclick="thacmac_selected()">
+                    <p>Thắc mắc</p>
+                </button>
+            </div>
+
+            <hr class="wapper__content--hr">
+
+            <div class="wapper__content--content">
+                <p class="day1--title"><strong>Liên hệ tư vấn: Anh Kim Soo Huyn - 0908 251 152 // Chị La Lisa - 0988
+                        356996</strong></p>
+                        <p class="day1">
+                            <strong>NGÀY 1: TP.HCM - CAO HÙNG (Ăn tối)</strong> <br>
+                            Tập trung tại lầu 2 - Ga đi Quốc tế Tân Sơn Nhất làm thủ tục chuyến bay VN582 (09:55-13:50) đi Cao Hùng. 
+                            Ăn nhẹ trên máy bay. Đến Cao Hùng, tham quan Núi Phật Quang (Fo Guang Shan) - ngôi chùa nổi tiếng nhất Cao Hùng với tượng Phật ngoài trời cao 36m, 
+                            cùng với quần thể hơn 480 tượng Phật nhỏ chung quanh.
+                            Tự do mua sắm và khám phá Chợ đêm Lục Hợp. Nghỉ đêm.
+                        </p>
+                        <div class="img__center">
+                            <img src="TaiwanDetail1.png" alt="TaiwanDetail1">
+                            <p class="description">
+                                <strong>Chùa Phật Quang</strong>
+                            </p>
+                        </div>
+                        <p class="Day2">
+                            <strong>NGÀY 2: CAO HÙNG – ĐÀI TRUNG (Ăn sáng, trưa, tối)</strong> <br>
+                            Trả phòng. Tham quan Hồ Nhật Nguyệt (Sun Moon Lake) bằng thuyền - hồ nằm tại độ cao hơn 700m so với mực nước biển,
+                             xung quanh là trập trùng núi non, phong cảnh hữu tình. Mua sắm tại Cửa hàng nấm linh chi. 
+                            Tham quan Đền Văn Võ (Wenwu Temple) nằm phía Bắc của hồ Nhật Nguyệt, nơi thờ Quan Công, Nhạc Phi và Khổng Tử. Mua sắm tại Cửa hàng Trà Ô Long.
+                             Tự do mua sắm và khám phá Chợ đêm Phụng Giáp. Nghỉ đêm.
+                        </p>
+                        <div class="img__center">
+                            <img src="TaiwanDetail2.png" alt="TaiwanDetail2">
+                            <p class="description">
+                                <strong>Hồ Nhật Nguyệt</strong>
+                            </p>
+                        </div>
+                        <p class="day3">
+                            <strong>NGÀY 3: ĐÀI TRUNG – ĐÀI BẮC (Ăn sáng, trưa, tối)</strong> <br>
+                            Trả phòng. Mua sắm tại Cửa hàng bánh dứa. Tham quan Công viên Dương Minh Sơn là một trong 8 vườn quốc gia lớn của Đài Loan, với địa hình núi lửa đặc thù, xen lẫn những thung lũng yên bình và quần thể động thực vật phong phú.
+                            Mua sắm tại Cửa hàng Tỳ Hưu. Tham quan Thư viện Beitou được thiết kế giống như một ngôi nhà trên cây. 
+                            Tham quan Viện Bảo Tàng Cố Cung - được công nhận là 1 trong 4 viện bảo tàng lớn nhất thế giới với hơn 620.000 hiện vật vô cùng quý báu, nằm trong bộ sưu tập của Hoàng gia Trung Quốc được mang sang Đài Loan cất giữ. Tham quan Tòa nhà Taipei 101 tầng - quý khách có thể mua vé lên tầng 89 để tham quan và ngắm toàn cảnh Đài Bắc (chi phí tự túc). 
+                            Tự do mua sắm và khám phá Chợ đêm Nhiêu Hà. Nghỉ đêm.xin phép dời quý khách sang đợt khởi hành tiếp theo.
+                        </p>
+                        <div class="img__center">
+                            <img src="TaiwanDetail3.png" alt="TaiwanDetail3">
+                            <p class="description">
+                                <strong>Viện Bảo Tàng Cổ Cung</strong>
+                            </p>
+                        </div>
+                
+                        <p class="day4">
+                            <strong>NGÀY 4: ĐÀI BẮC (Ăn sáng, trưa, tối)</strong> <br>
+                            Tham quan Công viên địa chất Dã Liễu là nơi có những mõm đá với hình thù kỳ lạ.
+                            Tham quan Phố cổ Thập Phần với không khí lãng mạn hoài cổ, nhiều dãy hàng lưu niệm đan xen và thả đèn trời ước nguyện (04 khách/đèn) - thả đèn riêng, tự túc khoảng 160.000đ/đèn.
+                            Tham quan Phố núi Cửu Phần. 
+                            Mua sắm tại Trung tâm đá quý. Tự do mua sắm và khám phá Khu phố đi bộ Ximen. Nghỉ đêm.
+                        </p>
+                        <div class="img__center">
+                            <img src="TaiwanDetail4.png" alt="TaiwanDetail4">
+                            <p class="description">
+                                <strong>Phố núi Cửu Phần</strong>
+                            </p>
+                        </div>
+                
+                        <p class="day5">
+                            <strong>NGÀY 5: ĐÀI BẮC - TP.HCM (Ăn sáng)</strong> <br>
+                            Trả phòng. Ra sân bay, làm thủ tục chuyến bay VN571 (07:45-10:25) về Tp.HCM. 
+                            Đến sân bay Tân Sơn Nhất. Kết thúc chương trình du lịch.
+                        </p>
+            </div>
+
+            <div class="wapper__content--content wapper__hidden__content">
+                <p class="day1">
+                    <strong>Lịch khởi hành: <br>
+                        Đợt 1: 16 – 18/4 <br>
+                        Đợt 2: 23 – 25/4 <br>
+                    </strong> <br>
+                    <strong>* Giá trẻ em (không bao gồm vé máy bay):</strong> <br>
+                    - Trẻ em từ 0 tuổi – 5 tuổi (or dưới 1,0m): miễn phí TOUR <br>
+                    - Trẻ em từ 6 tuổi – 11 tuổi (1,0m- 1,4m):  tính 60% giá tour ( ngủ ghép với Ba mẹ) <br>
+                    - Trẻ em trên 11 tuổi trở lên: tính như nguời lớn. <br> <br>
+
+                    <strong>* Giá tour bao gồm:</strong><br>
+                    - Xe oto du lich đời mới máy lạnh tốt phục vụ theo chương trình <br>
+                    - Khách sạn 3 sao (02 khách//phòng) <br>
+                    - 02 bữa sáng buffet
+                    01 bữa buffet 200k/suất; 3 bữa chính khác * 150k/s <br>
+                    - Vé cáp treo và vui chơi Công viên nước Hòn Thơm 400k/vé <br>
+                    -  Tàu câu cá + dụng cụ câu cá và lặn ngắm san hô <br>
+                    - Vé tham quan các điểm theo chương trình. <br>
+                    - Hướng dẫn viên phục vụ tại Phú Quốc và đón – tiễn sân bay Vinh <br>
+                    - Mũ Saigontourist, khăn, nước suối Saigontourist – 02 chai 0.5 lít/khách/ngày <br>
+                    - VAT 10% <br> <br>
+                    
+                    <strong>* Giá tour không bao gồm:</strong> <br>
+                        - Vé máy bay khứ hồi Vinh//Phú Quốc dự tính <br>
+                        - Vinwonder và  Safari <br>
+                        - Chi phí cá nhân, điện thoại, giặt ủi. <br>
+                        - Chi phí tham quan ngoài chương trình <br>
+                        - Chi phí bia, nước ngọt trong các bữa ăn. <br> <br>
+
+                    <strong>* Lưu ý:</strong><br>
+                    Khi đăng ký vui lòng cung cấp tên chính xác, đầy đủ trên Passport/CMND/ Giấy khai sinh bản chính (trẻ em dưới 14 tuổi). <br>
+                    Quý khách khi đi cần đem theo CMND (còn hạn 15 năm)/ Passport/ Giấy khai sinh (trẻ em dưới 14 tuổi)/ 
+                    Trẻ em không đi cùng cha mẹ phải có giấy ủy quyền của cha hoặc mẹ có xác nhận của chính quyền địa phương cho người dẫn trẻ em đi. Thời gian và điểm tham quan trong chương trình linh động thay đổi theo điều kiện thực tế
+                </p>
+            </div>
+
+            <div class="wapper__content--content wapper__hidden__content">
+                <div class="danhgiachung">
+                    <div class="danhgia__title">
+                        <p>Đánh giá của khách hàng về Tour</p>
+                    </div>
+                    <div class="danhgia__voting">
+                        <img id="dalat_danhgia" src="taiwan1.jpg" alt="Hình ảnh Đà Lạt">
+                        <div class="hihiandhehe">
+                            <div class="dalat_danhgia_hihi">
+                                <img src="5star.png" id="fivesao_img">
+                                <div class="count_voting">
+                                    <p>142 đánh giá</p>
+                                </div>
+                                <p class="huhu">5.0</p>
+                            </div>
+                            <div class="dalat_danhgia_hehe">
+                                <div id="one_sao" class="voting full__voting"><p class="huhu">1.0</p></div>
+                                <div id="two_sao" class="voting"><p class="huhu">2.0</p></div>
+                                <div id="three_sao" class="voting"><p class="huhu">3.0</p></div>
+                                <div id="four_sao" class="voting"><p class="huhu">4.0</p></div>
+                                <div id="five_sao" class="voting"><p class="huhu">5.0</p></div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đài Loan lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Phan Thanh Nhàn</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đài Loan lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Nguyễn Thị Hồng Hân</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đài Loan lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong>Lâm Tâm Như</strong></p>
+                        <img src="5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đài Loan lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
+                    </div>
+                </div>
+                <div class="btn_insert">
+                    <button class="btn_insert--write">
+                        Viết đánh giá
+                    </button>
+                    <button class="btn_insert--more">
+                        Xem thêm đánh giá
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </article>
+
+    <script>
+        let overlay = document.querySelector('.overlay_pdf')
+        let pdf = document.querySelector('.InTour__PDF')
+        let bookTour = document.querySelector('.Dulich_Help')
+        let bookTourForm = document.querySelector('#bookingForm')
+        let btn_inPDF = document.querySelector('.wapper__inTour')
+        let submit__exitOverlay = document.querySelector('#submit__exitOverlay')
+        submit__exitOverlay.addEventListener('click', exitOverlay)
+        overlay.addEventListener('click', exitOverlay)
+        function exitOverlay() {
+            overlay.style.display = 'none'
+            pdf.style.display = 'none'
+            bookTourForm.style.display = 'none'
+        }
+        btn_inPDF.addEventListener('click', showOverlay)
+        function showOverlay() {
+            overlay.style.display = 'block'
+            pdf.style.display = 'block'
+        }
+        bookTour.addEventListener('click', bookingTour)
+        function bookingTour() {
+            overlay.style.display = 'block'
+            bookTourForm.style.display = 'block'
+        }
+
+        function on() {
+            document.getElementById("responseBox").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("responseBox").style.display ="none";
+            }, 3000);
+        }
+    </script>
+    <script src="DuLichNuocNgoai__ChiTiet.js"></script>
+</body>
+
+</html>
