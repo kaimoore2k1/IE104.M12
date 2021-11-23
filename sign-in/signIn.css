@@ -1,0 +1,125 @@
+
+.signIn {
+    width: 393px;
+    height: 600px;
+    background-color: #f1f1f1;
+    position: relative;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    /*font-family ?*/
+    padding: 22px 0px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.signIn__quickSignI {
+    position: relative;
+}
+
+.signIn__quickSignIn__facebook {
+    position: relative;
+
+}
+
+.signIn__quickSignIn__google {
+    position: relative;
+    bottom: 15px;
+}
+
+
+
+.signIn__quickSignIn__facebook--img {
+    position: absolute;
+    left: 63px;
+    top: 8px;
+    width: 34px;
+    height: 34px;
+}
+
+.signIn__quickSignIn__google--img {
+    position: absolute;
+    left: 63px;
+    top: 8px;
+    width: 34px;
+    height: 34px;
+}
+
+
+.signIn__quickSignIn--button {
+    font-weight: bold;
+    background-color: #e0e1e9;
+    width: 334px;
+    height: 50px;
+    margin-bottom: 30px; 
+    border: none;
+    border-radius: 10px;
+    margin-left: 29.5px;
+    margin-right: 29.5px;
+
+}
+
+#accountName {
+    width: 334px;
+    height: 42px;
+    margin-bottom: 12px;
+    background-color: #f1f1f1;
+    margin-left: 29.5px;
+    margin-right: 29.5px;
+    border: 1px solid #8f8f8f;
+    border-radius: 5px;
+    
+}
+
+#psw {
+    width: 334px;
+    height: 42px;
+    background-color: #f1f1f1;
+    margin-left: 29.5px;
+    margin-right: 29.5px;
+    margin-bottom: 20px;
+    border: 1px solid #8f8f8f;
+    border-radius: 5px;
+}
+
+#Reme {
+    margin-left: 44px;
+    margin-bottom: 30px;
+}
+
+.singIn__further {
+    position: relative;
+    display: flex;
+}
+
+.singIn__further--a {
+    position: absolute;
+    margin-left: 250px;
+}
+
+
+#signInSubmit {
+    width: 209px;
+    height: 51px;
+    background-image: linear-gradient(90deg, #12A9D9, #D608DA);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin: 0px 92px;
+}
+
+.singIn__signUp {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+p {
+    margin-left: 30px;
+}

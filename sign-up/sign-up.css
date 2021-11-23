@@ -9,7 +9,7 @@ main{
     background: #f1f1f1;
     border-radius: 15px;
     position: absolute;
-    left: 500px;
+    padding-top: 1px;
 }
 
 main h1{
@@ -43,11 +43,11 @@ main h1{
     margin-left: 2%;
 }
 
-#username, #password, #retype-password{
+#username, #password, #retype-password, #email{
     width: 96%;
 }
 
-.confirmed-code{
+/* .confirmed-code{
     margin-left: 20%;
     display: inline;
     background: rgb(0, 89, 255);
@@ -57,7 +57,7 @@ main h1{
     text-decoration-line: line-through;
     text-align: center;
     border-radius: 15px;
-}
+} */
 
 .term{
     margin-top: 35px;

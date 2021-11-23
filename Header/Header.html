@@ -12,35 +12,42 @@
 <body>
     <header>
         <nav class="header_menu">
-            <img id="logo_uitour" src="logo_header.png" alt="logo_uitour">
-            <a href="#">Trang chủ</a>
+            <img id="logo_uitour" src="/Trangchu/File/logo_header.png" alt="logo_uitour">
+            <a href="/Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
             <ul>
                 <li><a href="#">Du lịch</a>
                     <ul>
-                        <li><a href="#">Du lịch trong nước</a></li>
-                        <li><a href="#">Du lịch nước ngoài</a></li>
+                        <li><a href="/DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
+                        <li><a href="/DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>
             <ul>
                 <li><a href="#">Khách sạn</a>
                     <ul>
-                        <li><a href="#">Khách sạn trong nước</a></li>
-                        <li><a href="#">Khách sạn trong nước</a></li>
+                        <li><a href="/KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
+                        <li><a href="#">Khách sạn nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="#">Traval tips</a>
+            <a href="/Code-TravelTips/index.html">Traval tips</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
-            <a id="sign_in" href="#">Đăng nhập</a>
-            <a id="sign_up" href="#">Đăng ký</a>
+            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
         </nav>
         <p id="h_p1">ĐIỂM ĐẾN THÚ VỊ</p>
         <p id="h_p2">Tận hưởng hành trình của bạn trong từng khoảnh khắc</p>
         <p id="h_link"><a href="#">TÌM HIỂU</a></p>
-        <img id="logo_header" src="Picture_header.png" alt="Header_picture_Home">
+        <img id="logo_header" src="/Trangchu/File/Picture_header.svg" alt="Header_picture_Home">
+        </div>
     </header>
+    <div id="overlay">
+        <div id="overlay-background"></div>
+        <iframe id="sign-in__overlay" src="../sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>
+        <iframe id="sign-up__overlay" src="../sign-up/sign-up.html" width="420px" height="620px" frameborder="0"></iframe>
+    </div>
+    <script src="/Trangchu/Trangchu.js"></script>
 </body>
 
 </html>

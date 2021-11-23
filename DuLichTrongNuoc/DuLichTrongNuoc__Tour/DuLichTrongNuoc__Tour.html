@@ -31,8 +31,8 @@
             <a href="/Code-TravelTips/index.html">Traval tips</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
-            <a id="sign_in" href="#">Đăng nhập</a>
-            <a id="sign_up" href="#">Đăng ký</a>
+            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
         </nav>
         <img id="logo_header" src="banner_trongnuoc.jpg" alt="Header_picture_Home">
         <div class="Header__title">
@@ -68,6 +68,11 @@
             </div>
         </div>
     </header>
+    <div id="overlay">
+        <div id="overlay-background"></div>
+        <iframe id="sign-in__overlay" src="/sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>
+        <iframe id="sign-up__overlay" src="/sign-up/sign-up.html" width="420px" height="620px" frameborder="0"></iframe>
+    </div>
     <section>
         <div class="tourType">
             <p>Sắp xếp:</p>
@@ -176,5 +181,6 @@
 
     </section>
     <script src="DuLichTrongNuoc__Tour.js"></script>
+    <script src="/Trangchu/Trangchu.js"></script>
 </body>
 </html>

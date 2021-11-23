@@ -75,11 +75,43 @@ body {
     margin-left: 5em;
     border-radius: 5em;
     padding: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
 }
-
-#sign_in:hover {
+#sign_in:hover{
     color: #484848;
 }
+
+#sign_up {
+    background-color: rgb(64, 64, 255);
+    color: white;
+    font-size: 15px;
+    border-radius: 5em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+iframe{
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+  }
+  #overlay-background{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
 
 #sign_up {
     background-color: rgb(64, 64, 255);
