@@ -126,16 +126,14 @@ body{
 }
 .nav__links{
     width: 1140px;
-    margin: 0 auto;
     height: 56px;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 184px;
+    position: relative;
+    left: 200px;
+    bottom: 59px;
 }
 
 .nav__links >li{
