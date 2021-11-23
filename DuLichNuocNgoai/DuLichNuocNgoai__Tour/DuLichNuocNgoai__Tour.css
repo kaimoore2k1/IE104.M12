@@ -72,10 +72,10 @@ body {
     margin: 1px 0px 1px 0px;
 }
 
-#itemSelected {
+.itemSelected {
     border-bottom: 3px solid rgb(64, 64, 255);
     border-radius: 1px;
-    color: rgb(64, 64, 255);
+    color: rgb(64, 64, 255) !important;
 }
 
 #sign_in {

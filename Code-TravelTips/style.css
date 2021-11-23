@@ -136,6 +136,12 @@ body{
     bottom: 59px;
 }
 
+.itemSelected {
+    border-bottom: 3px solid rgb(64, 64, 255);
+    border-radius: 1px;
+    color: rgb(64, 64, 255) !important;
+}
+
 .nav__links >li{
     width: 204px;
     text-align: center;  

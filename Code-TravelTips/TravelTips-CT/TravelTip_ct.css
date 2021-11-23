@@ -52,6 +52,11 @@ body{
     padding-right: 10px;
     padding-left: 2px;
 }
+.itemSelected {
+    border-bottom: 3px solid rgb(64, 64, 255);
+    border-radius: 1px;
+    color: rgb(64, 64, 255) !important;
+}
 .element-likeshare:last-child{
     width: 85px;
 }

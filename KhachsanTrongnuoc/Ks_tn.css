@@ -24,6 +24,11 @@ body {
 .header_menu a:hover {
     color: #0047FF;
 }
+.itemSelected {
+    border-bottom: 3px solid rgb(64, 64, 255);
+    border-radius: 1px;
+    color: rgb(64, 64, 255) !important;
+}
 .header_menu ul {
   display: inline;
   margin: 0;
