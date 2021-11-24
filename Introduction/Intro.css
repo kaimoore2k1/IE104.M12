@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+
+}
+
+header #background{
+    width: 100%;
+}
+
+
+.header_menu {
+    margin-left: 300px;
+}
+.header_menu a {
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  font-size: 20px;
+  padding: 20px;
+  display:inline-block;
+}
+.header_menu a:hover {
+    color: #0047FF;
+}
+.header_menu ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.header_menu ul li {
+    display: inline-block;
+}
+.header_menu ul li:hover {
+    color: #0047FF;
+}
+.header_menu ul li:hover ul {
+    display: block;
+}
+.header_menu ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+.header_menu ul li ul li { 
+  background: white; 
+  display: block; 
+}
+.header_menu ul li ul li a {
+    display:block !important;
+    margin: 5px 0px -4px 0px;
+} 
+
+#sign_in {
+    font-size: 15px;
+    margin-left: 5em;
+    border-radius: 5em;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+#sign_in:hover{
+    color: #484848;
+}
+
+#sign_up {
+    background-color: rgb(64, 64, 255);
+    color: white;
+    font-size: 15px;
+    border-radius: 5em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+#logo_uitour {
+    position: absolute;
+    left: 10rem;
+    top: 0.7rem;
+}
+#logo_header {
+    width: 100%;
+}
+#h_p1 {
+    position: absolute;
+    color: white;
+    font-size: 4em;
+    top: 2.5em;
+    left: 15em;
+    padding-right: 2em;
+    border-bottom: 5px solid white;
+}
+#h_p2 {
+    position: absolute;
+    color: white;
+    font-size: 3em;
+    width: 40%;
+    top: 5em;
+    left: 20em;
+}
+#h_link {
+    position: absolute;
+    border: 2px solid white;
+    font-size: 2em;
+    padding: 5px;
+    top: 11.5em;
+    left: 30em;
+}
+#h_link a {
+    text-decoration: none;
+    color: white;
+}
+#h_link a:active {
+    color: rgb(57, 57, 247);
+    background-color: rgb(235, 235, 255);
+}
+
+.itemSelected {
+    border-bottom: 3px solid rgb(64, 64, 255);
+    border-radius: 1px;
+    color: rgb(64, 64, 255) !important;
+}
+
+iframe{
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 6;
+  }
+  #overlay-background{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  main{
+      width: 1519.5px;
+      margin: 0 auto;
+  }
+
+  main .information{
+      display: flex;
+      justify-items: center;
+      padding: 50px 100px;
+      flex-direction: row;
+      align-items: center;
+  }
+
+  main .information img{
+      margin-right: 50px;
+  }
+
+  main .information>div{
+      margin-left: 50px;
+  }
+
+  main .information>div *{
+      margin: 25px 0;
+  }
+
+  main .feature{
+      height: 300px;
+      display: grid;
+      grid-template-columns: 250px 250px 250px;
+      justify-content: space-evenly;
+      background: #f1f1f1;
+      padding: 50px;
+  }
+
+  main .feature div{
+      text-align: center;
+  }
+
+  main .feature div>p{
+      margin: 50px auto;
+  }
+
+ main .reason-for-choice{
+   position: relative;
+   height: 604px;
+ }
+
+ main .reason-for-choice>img{
+     position: relative;
+     width: 100%;
+ }
+
+ main .reason-for-choice .transparent-shape{
+     height: 100%;
+     width: 100%;
+     background: black;
+     position: absolute;
+     left: 0;
+     top: 0;
+     opacity: 0.5;
+     z-index: 2;
+ }
+
+ main .reason-for-choice .content{
+     position: absolute;
+     left: 0;
+     top: 0;
+     z-index: 3;
+     color: white;
+     display: grid;
+     grid-template-columns: 200px 200px 200px;
+     text-align: center;
+     align-items: center;
+     justify-content: space-evenly;
+     width: 100%;
+     margin: 100px auto;
+ }
+
+ main .reason-for-choice .content *{
+     margin: 25px 0;
+ }
+
+ main .reason-for-choice .content div:nth-of-type(1){
+     grid-column: 1/4;
+     font-size: 35px;
+     font-weight: bold;
+ }
+
+ main .staffs{
+     display: grid;
+     width: 100%;
+     grid-template-columns: 220px 220px;
+     justify-content: space-evenly;
+     margin: 50px auto;
+     text-align: center;
+    }
+
+ main .staffs>p{
+     grid-column: 1/3;
+     margin: 0 20px 20px 30px;
+     font-size: 35px;
+     font-weight: bold;
+ }
+
+
+ 
+footer h2{
+    font-size: 1.5em;
+    
+}
+
+footer {
+  max-width: 100%;
+  height: auto;
+  letter-spacing: 0.1em;
+  position: relative;
+}
+
+footer>img{
+    width: 100%;
+}
+
+footer .transparent-shape{
+    width: 100%;
+    height: 484px;
+    background: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+footer .content{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    color: rgb(238, 234, 234);
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px  auto;
+}
+
+footer .content .information>h2, .working-time>h2, .support>h2{
+    margin: 10px auto;
+}
+
+footer .content .information{
+    width: 20%;
+}
+
+footer .content .information>p, .working-time>p, .support>p{
+    margin: 10px auto;
+   line-height: 1.2em;
+}
+
+footer .content .working-time{
+    width: 20%;
+}
+
+footer .contact{
+    width: 26%;
+}
+
+footer .content .contact p{
+    margin: 10px auto;
+}
+
+footer .ti-location-pin, .ti-mobile, .ti-email{
+    font-size: 1.5em;
+    float: left;
+    margin: 10px;
+}
+
+footer .content .contact>p{
+    float: left;
+}
+
+footer .contact>hr{
+    height: 2px;
+    max-width: 100%;
+    background-color: rgb(238, 234, 234);
+    margin: 20px auto;
+}
+
+footer .ti-facebook, .ti-google, .ti-linkedin{
+    position: relative;
+    top: 10px;
+}
+
+#copyright {
+  max-width: 100%;
+  color: white;
+  background: #363131;
+  position: relative;
+  padding: 10px 0 10px 100px;
+  top: -5px;
+}
