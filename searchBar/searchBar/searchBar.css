@@ -76,25 +76,48 @@ img {
     outline: none;
 }
 
+.number_box-decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 50px;
+    margin-right: 25px;
+    display: none;
+}
+
+.number_box-decor.active {
+    display: block;
+}
+
+.treemPlus {
+    margin-left: 20px;
+}
+
 .searchBar__tour {
     display: flex;
     width: 300px;
     flex-direction: column;
-    height: 96px;
+    height: 76px;
     flex: 2;
     background-color: white;
     justify-content: center;
     align-items: center;
     border-right: 1px solid #DEDEDE;
+    padding-top: 10px;
+    position: relative;
 }
 
 #tour__input {
+    margin-top: 7px;
     border: none;
     outline: none;
+    width: 120px;
 }
 
 .searchBar__tour--input {
     display: flex;
+    align-items: center;
+    justify-content: space-between
 }
 
 .searchBar__button {

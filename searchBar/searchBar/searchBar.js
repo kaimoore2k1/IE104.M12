@@ -65,25 +65,30 @@ const buttonClose = document.querySelector('.fa-times')
 inputNumber.addEventListener ('click', function(){
     numberBox.classList.add('active')
 })
-buttonClose.addEventListener('click', function() {
-    numberBox.classList.remove('active')
-})
-
 
 const numberPlus = document.querySelector('.treemPlus')
 const numberMinus = document.querySelector('.treemMinus')
-let personal = document.querySelector('.number-left p')
+let personal = document.querySelector('#searbar-person')
+let people = document.querySelector('#searbar-people')
+let decor = document.querySelector('.number_box-decor')
 let number_people = document.querySelector('.number_box-decor span')
 let i=0
 
 personal.addEventListener('click', function() {
     inputNumber.value = 'Cá nhân'
+    i = 0
+    numberBox.classList.remove('active')
+    decor.classList.remove('active')
+})
+
+people.addEventListener('click', function() {
+    decor.classList.add('active')
+    inputNumber.value = '0 người'
     numberBox.classList.remove('active')
 })
 
 numberPlus.addEventListener('click',function(){
     i = i+1
-    number_people.innerHTML = i
     totalNumber () 
 })
 numberMinus.addEventListener('click',function(){
@@ -92,7 +97,6 @@ numberMinus.addEventListener('click',function(){
     } 
     else {
         i = i-1
-        number_people.innerHTML = i
         totalNumber () 
     }
 
