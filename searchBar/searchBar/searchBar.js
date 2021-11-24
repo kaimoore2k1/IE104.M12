@@ -57,7 +57,6 @@ let recomentlist =[
     'Đà Lạt',
 ]
 
-
 const inputNumber = document.querySelector('#tour__input')
 const numberBox = document.querySelector('.number-box')
 const buttonClose = document.querySelector('.fa-times')
@@ -105,3 +104,17 @@ numberMinus.addEventListener('click',function(){
 function totalNumber () {
     inputNumber.value = i + ' ' + 'Người'
 }
+
+document.addEventListener("click", (evt) => {
+    let targetElement = evt.target; // clicked element
+    let uaalo = document.querySelector('#tour__input')
+    do {
+        if (targetElement == numberBox || targetElement == uaalo) {
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    // This is a click outside.
+    numberBox.classList.remove('active')
+});
