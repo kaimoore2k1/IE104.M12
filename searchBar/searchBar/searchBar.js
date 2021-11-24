@@ -75,14 +75,13 @@ let i=0
 
 personal.addEventListener('click', function() {
     inputNumber.value = 'Cá nhân'
-    i = 0
     numberBox.classList.remove('active')
     decor.classList.remove('active')
 })
 
 people.addEventListener('click', function() {
     decor.classList.add('active')
-    inputNumber.value = '0 người'
+    inputNumber.value = i + ' Người'
     numberBox.classList.remove('active')
 })
 
