@@ -4,37 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="searchBar.css">
     <title>Document</title>
 </head>
 <body>
     <div class="searchBar">
         <div class="searchBar__location">
-            <img class="searchBar__location--img" src="location.svg">
-            <p>
-                <strong>Địa điểm</strong>
-                <br>
-                Bạn muốn đi đâu?
-            </p>
+            <p><strong>Địa điểm</strong></p>
+            <div class="searchBar__location--input">
+                <img class="searchBar__location--img" src="location.svg">     
+                <input id="location__input" type="text" placeholder="Bạn muốn đi đâu?">
+            </div>
+            <div class="autobox">
+
+            </div>
         </div>
         <div class="searchBar__date">
-            <img class="searchBar__date--img" src="human.svg">
-            <p>
-                <strong>Bắt đầu - Kết thúc</strong>
-                <br>
-                Chọn ngày
-            </p>
+            <p><strong>Ngày đi</strong></p>
+            <div class="searchBar__date--input">
+                <img class="searchBar__date--img" src="human.svg">
+                <input id="myID" type="text" placeholder="Chọn ngày">
+            </div>
+        </div>
+        <div class="searchBar__date">
+            <p><strong>Ngày về</strong></p>
+            <div class="searchBar__date--input">
+                <img class="searchBar__date--img" src="human.svg">
+                <input id="myID" type="text" placeholder="Chọn ngày">
+            </div>
         </div>
         <div class="searchBar__tour">
-            <img class="searchBar__tour--img" src="date.svg">
-            <p>
-                <strong>Loại Tour</strong>
-                <br>
-                Cá nhân - gia đình
-            </p>
+            <p><strong>Loại Tour</strong></p>
+            <div class="searchBar__tour--input">
+                <img class="searchBar__tour--img" src="date.svg">
+                <input id="tour__input" type="value" placeholder="Cá nhân - gia đình">
+            </div>
+            <div class="number-box">
+                <li>
+                    <div class="number-left">
+                        <p>Cá nhân</p>
+                    </div>
+                </li>
+                <li id="decor_number_box">
+                    <i class="fas fa-times"></i>
+                    <div class="number-left">
+                        <p>Nhiều người</p>
+                    </div>
+                    <div class="number-right treem number_box-decor">
+                        <i class="fas fa-minus treemMinus"></i>
+                        <span>0</span>
+                        <i class="fas fa-plus treemPlus"></i>
+                    </div>
+                </li>
+            </div>
         </div>
         <button class="searchBar__button">TÌM KIẾM</button>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="searchBar.js"></script>
+    <script>
+        flatpickr("#myID", {
+            dateFormat: "d-m-Y",
+        });
+    </script>
+
+
 </body>
 </html>

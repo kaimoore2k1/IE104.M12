@@ -27,6 +27,7 @@ img {
 .searchBar__location {
     display: flex;
     width: 300px;
+    flex-direction: column;
     height: 96px;
     flex: 2;
     background-color: white;
@@ -35,26 +36,65 @@ img {
     border-right: 1px solid #DEDEDE;
 }
 
-.searchBar__date {
+.searchBar__location--input {
     display: flex;
+}
+#location__input {
+    border: none;
+    outline: none;
+}
+
+
+.searchBar__date {
     width: 300px;
-    height: 96px;
+    display: flex;
+    flex-direction: column;
+    height: 86px;
     flex: 2;
     background-color: white;
-    justify-content: center;
-    align-items: center;
     border-right: 1px solid #DEDEDE;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.searchBar__date--input {
+    display: flex;
+    margin-left: 48px;
+}
+
+
+.searchBar__date p {
+    margin-top: 10px;
+}
+
+.searchBar__date--input input {
+    border: none;
+    padding-top: 10px;
+}
+
+.searchBar__date--input input {
+    outline: none;
 }
 
 .searchBar__tour {
     display: flex;
     width: 300px;
+    flex-direction: column;
     height: 96px;
     flex: 2;
     background-color: white;
     justify-content: center;
     align-items: center;
     border-right: 1px solid #DEDEDE;
+}
+
+#tour__input {
+    border: none;
+    outline: none;
+}
+
+.searchBar__tour--input {
+    display: flex;
 }
 
 .searchBar__button {
@@ -79,4 +119,71 @@ img {
     margin-right: 20px;
 }
 
+.autobox {
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    position: absolute;
+    background-color: #FFFEFE;
+    color: rgba(51, 51, 51, 0.8);
+    overflow-y: auto;
+    box-shadow: 3px 7px 8px #dedede;
+}
 
+.autobox li {
+    list-style: none;
+    padding: 6px 0 6px 36px;
+    cursor: pointer;
+    width: 60%;
+    display: none !important;
+    margin-left: 10px;
+}
+
+.autobox li:hover {
+    color: #0066FF;
+    /* border-bottom: 1px solid #0066FF; */
+}
+.autobox.active li {
+    display: block !important;
+}
+
+.number-box {
+    position: absolute;
+    top: 100px;
+    width: 250px;
+    position: absolute;
+    background-color: #FFFEFE;
+    color: rgba(51, 51, 51, 0.8);
+    overflow-y: auto;
+    box-shadow: 3px 7px 8px #dedede;
+}
+
+.number-box li {
+    list-style: none;
+    padding: 6px 0 6px 36px;
+    cursor: pointer;
+    width: 60%;
+    display: none !important;
+    margin-left: 10px;
+}
+
+#decor_number_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number-box.active li:hover {
+    display: flex !important;
+}
+
+.number-box.active li {
+    display: flex !important;
+}
+
+.fa-times {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
