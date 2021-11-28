@@ -1,3 +1,25 @@
+<?php
+            $host = "localhost";
+            $host_user ="root";
+            $host_password = "";
+            $database = "ie104.m12";
+            $port = "8111";
+        
+            $conn = new mysqli($host, $host_user, $host_password, $database, $port);
+            if(!$conn)
+            {
+                die ("Kết nối thất bại" . $conn->connect_error);
+            }
+            $sql = "SELECT * FROM blog, img_source WHERE title = 'CẨM NANG DU LỊCH' and blog.Blog_Id = img_source.Blog_Id";
+            if(isset($_POST["timkiem"]))
+            {
+                $result = $_POST["timkiem"];
+                $sql = "SELECT * FROM blog, img_source WHERE title = 'CẨM NANG DU LỊCH' and blog.Blog_Id = img_source.Blog_Id and Name_Blog Like '%$result%' ";
+                
+            }
+            $kq = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +32,12 @@
 </head>
 <body>
     <header>
-        <nav class="header_menu">
-            <img id="logo_uitour" src="/Trangchu/File/logo_header.png" alt="logo_uitour">
-            <a id="header_home" href="/Trangchu/Trangchu.html">Trang chủ</a>
+    <nav class="header_menu">
+            <img id="logo_uitour" src="../Trangchu/File/logo.svg" alt="logo_uitour">
+            <div id="header_menu__nav">
+                <a href="../Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
             <ul>
-                <li><a href="#">Du lịch</a>
+                <li><a href="#">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
                         <li><a href="/DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
                         <li><a href="/DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
@@ -22,21 +45,22 @@
                 </li>
             </ul>
             <ul>
-                <li><a href="#">Khách sạn</a>
+                <li><a href="#">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
                         <li><a href="/KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
                         <li><a href="#">Khách sạn nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="/Code-TravelTips/index.html" class="itemSelected">Traval tips</a>
+            <a href="/Code-TravelTips/index.html">Traval tips</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
             <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
             <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+            </div>
         </nav>
         <nav>
-            <img src="/Code-TravelTips/2dulich.png" alt="Travel Tips" class="header__img">
+            <img src="../Code-TravelTips/2dulich.png" alt="Travel Tips" class="header__img">
             <ul class="nav__links">
                 <li class="nav__li">
                     <a href="#" class="nav__links-text">
@@ -359,24 +383,21 @@
     </div>
     <main>
         <section class="main-sidebar">
-            <div class="main-sidebar__search">
-                <div class="content-background">
+            <form class="main-sidebar__search" name ="timkiem" method="post"> 
+            <div class="content-background">
                     <h3 class="content-p">Tìm kiếm địa danh</h3>
-                </div>
-                
+                </div>               
                 <div class="search-content">
-                    <div class="search-content-warning">
-                        <p id ="warning">*Vui lòng nhập thông tin</p>
-                    </div>
+                    <div class="search-content-wrapper">
+                        <input type="text" name="timkiem" class="search-content__input" placeholder="Khách sạn, Địa danh..." require>
+                        <input type="submit" class="search-content__button"  name="submit" value="">
+                        <span class="search-content__search"><i class="fas fa-search"></i></span>
+                    </div>                    
                     
-                    <input type="text" name="" class="search-content__input" placeholder="Khách sạn, Địa danh..." value="">
-                    <span>
-                        <button class="search-content__button" onclick="Sreach()">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </span>
                 </div>
-            </div>
+            </form>
+                
+
             <div class="main-sidebar__categories">
                 <div class="content-background">
                     <h3 class="content-p">Chuyên mục</h3>
@@ -396,33 +417,34 @@
             </div>
         </section>
         <section class="main-content">
-            <h2 class="main-content__h2">cẩm nang du lịch</h2>
+            <h2 class="main-content__h2">CẨM NANG DU LỊCH </h2>
             <div class="main-content__borderbottom"></div>
             <div class="main-content__block">
-                <div class="block-element">
+                <?php while($row = $kq->fetch_assoc()) { ?>
+                    <div class="block-element">
                     <div>
                         <a href="/Code-TravelTips/TravelTips-CT/TravelTips_ct.html">
-                            <img src="/Code-TravelTips/Ảnh cắm trại.jpg" alt="Cắm trại" class="block-element__img">
+                            <img src="<?php echo $row["Img_Src"] ?>" alt="<?php echo $row["Titile"] ?>" class="block-element__img">
                         </a>
                         
                     </div>
                     <div class="block-element__title">
                         <p>
-                            Top 5 Điểm Cắm Trại Quanh Hà Nội Siêu hấp dẫn...
+                            <?php echo $row["Name_Blog"] ?>
                         </p>
                     </div>
                     <div class="block-element__icon">
                         <div class="element-icon">
                             <i class="far fa-calendar-alt"></i>
-                            <span>30/09/2020</span>
+                            <span><?php echo $row["Write_Time"] ?></span>
                         </div>
                         <div class="element-icon">
                             <i class="far fa-eye"></i>
-                            <span>5342</span>
+                            <span><?php echo $row["View"] ?></span>
                         </div>
                     </div>
                     <div class="block-element__discription">
-                        <p>Không cần cầu kì cũng có thể vui  tới bến cùng hội bạn thân, bởi vậy cắm được ngày càng được nhiều người bạn.....</p>
+                        <p><?php echo $row["Description_Blog"] ?></p>
                     </div>
                     <div class="block-element__more">
                         <a href="/Code-TravelTips/TravelTips-CT/TravelTips_ct.html">Xem thêm
@@ -433,77 +455,8 @@
                         
                     </div>
                 </div>
-                <div class="block-element">
-                    <div>
-                        <a href="#">
-                            <img src="/Code-TravelTips/Ảnh cắm trại.jpg" alt="Cắm trại" class="block-element__img">
-                        </a>
-                        
-                    </div>
-                    <div class="block-element__title">
-                        <p>
-                            Top 5 Điểm Cắm Trại Quanh Hà Nội Siêu hấp dẫn...
-                        </p>
-                    </div>
-                    <div class="block-element__icon">
-                        <div class="element-icon">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>30/09/2020</span>
-                        </div>
-                        <div class="element-icon">
-                            <i class="far fa-eye"></i>
-                            <span>5342</span>
-                        </div>
-                    </div>
-                    <div class="block-element__discription">
-                        <p>Không cần cầu kì cũng có thể vui  tới bến cùng hội bạn thân, bởi vậy cắm được ngày càng được nhiều người bạn.....</p>
-                    </div>
-                    <div class="block-element__more">
-                        <a href="#">Xem thêm
-                            <span>
-                                <i class="fas fa-angle-double-right"></i>
-                            </span>
-                        </a>
-                        
-                    </div>
-                </div>
-                <div class="block-element">
-                    <div>
-                        <a href="#">
-                            <img src="/Code-TravelTips/Ảnh cắm trại.jpg" alt="Cắm trại" class="block-element__img">
-                        </a>
-                        
-                    </div>
-                    <div class="block-element__title">
-                        <p>
-                            Top 5 Điểm Cắm Trại Quanh Hà Nội Siêu hấp dẫn...
-                        </p>
-                    </div>
-                    <div class="block-element__icon">
-                        <div class="element-icon">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>30/09/2020</span>
-                        </div>
-                        <div class="element-icon">
-                            <i class="far fa-eye"></i>
-                            <span>5342</span>
-                        </div>
-                    </div>
-                    <div class="block-element__discription">
-                        <p>Không cần cầu kì cũng có thể vui  tới bến cùng hội bạn thân, bởi vậy cắm được ngày càng được nhiều người bạn.....</p>
-                    </div>
-                    <div class="block-element__more">
-                        <a href="#">Xem thêm
-                            <span>
-                                <i class="fas fa-angle-double-right"></i>
-                            </span>
-                        </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-            <div class="main-content__changepages">
+                <?php } ?>
+                <div class="main-content__changepages">
                 <div class="changepages-backpage">
                     <a href="#">
                         <i class="fas fa-angle-double-left"></i>
@@ -592,7 +545,7 @@
             <span class="ti-linkedin"></span>
         </section>
     </footer>
-    <script src="/Code-TravelTips/main.js"></script>
-    <script src="/Trangchu/Trangchu.js"></script>
+    <script src="../Code-TravelTips/main.js"></script>
+    <script src="../Trangchu/Trangchu.js"></script>
 </body>
 </html>

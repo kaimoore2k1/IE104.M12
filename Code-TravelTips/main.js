@@ -18,22 +18,22 @@ document.getElementById('categories-ul').innerHTML = content.join('');
 var listMostView = [
     {
         title: '5 Điểm Đến ở Việt Nam Không Thể Bỏ Lỡ Trong Nằm 2016',
-        src: '/Code-TravelTips/Image1.jpg',
+        src: '../Code-TravelTips/Image1.jpg',
         alt: 'Đà lạt'
     },
     {
         title: 'Núi ở Đồng Nai phát hiện hang dung nham dài nhất Đông Nam Á',
-        src: '/Code-TravelTips/Image2.jpg',
+        src: '../Code-TravelTips/Image2.jpg',
         alt: 'Hang dung nham'
     },
     {
         title: '11 quốc gia mà ai cũng có thể du lịch vì ví tiền sinh viên',
-        src: '/Code-TravelTips/Image3.jpg',
+        src: '../Code-TravelTips/Image3.jpg',
         alt: 'Sri lanka'
     },
     {
         title: 'Hướng dẫn phượt Phan Thiết bằng cung đường ven biển',
-        src: '/Code-TravelTips/Image4.jpg',
+        src: '../Code-TravelTips/Image4.jpg',
         alt: 'Phan Thiết'
     },
 ];

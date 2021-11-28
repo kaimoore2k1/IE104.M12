@@ -36,6 +36,20 @@ CREATE TABLE `blog` (
   `View` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+INSERT INTO `blog` (`Blog_Id`, `Title`, `Name_Blog`, `Write_Time`, `Description_Blog`, `View`) VALUES
+(1, 'CẨM NANG DU LỊCH', 'Top 5 Điểm Cắm Trại Quanh Hà Nội Siêu Hấp Dẫn Phải Rủ “Cạ Cứng” Đi Ngay', '2021-09-30', 'Không cần cầu kỳ cũng có thể vui tới bến cùng hội bạn thân, bởi vậy cắm trại ngày càng được nhiều bạn trẻ Việt Nam yêu thích, đặc biệt ở những thành phố lớn, và trong khoảng thời gian dịch bệnh, khiến việc di chuyển, đi du lịch dài ngày trở nên khó khăn hơn. Một buổi camping có thể giúp bạn refresh lại bản thân, gắn kết bạn bè mà không cần chuẩn bị quá cầu kỳ. Mytour sẽ giới thiệu đến bạn 5 địa điểm cắm trại quanh Hà Nội cực hấp dẫn, nhớ lưu lại để rủ hội bạn thân cùng đi nhé.', 5342),
+(2, 'CẨM NANG DU LỊCH', 'Bộ Sưu Tập Bánh Trung Thu Khách Sạn Lotte - Delightful Lotte 2021', '2021-09-17', 'Một mùa trăng nữa lại cận kề, bạn đã chuẩn bị được món quà nào cho những người thân yêu, trân trọng chưa? Những chiếc bánh trung thu sẽ mang ý nghĩa trọn vẹn, đủ đầy. Bánh Trung thu Khách sạn Lotte Hà Nội với bộ sưu tập Delightful Lotte, sẽ là thức quà ý nghĩa hội tụ  tinh hoa đất trời thể hiện trọn vẹn tấm chân tình của bạn đến gia đình, bạn bè trong mùa trăng này.', 201),
+(3, 'CẨM NANG DU LỊCH', 'Bánh Trung Thu Khách Sạn Intercontinental Hanoi Landmark 72', '2021-09-17', 'Cứ mỗi năm đến hội trăng rằm, người ta lại thường tặng nhau những chiếc bánh trung thu, với ý nghĩa như lời chúc cho cuộc sống tròn đầy, viên mãn. Bởi vậy mà chiếc bánh không chỉ là một món ăn và mà còn mang giá trị tinh thần không thể thiếu trong ngày Tết Trung Thu. Mùa trăng năm nay hãy cùng khám phá những giá trị truyền thống hòa quyện cùng màu sắc ngọt ngào trong bộ sưu tập Bánh Trung Thu của khách sạn InterContinental Hanoi Landmark72.', 255),
+(4, 'CẨM NANG DU LỊCH', 'Chương Trình Mua 1 Tặng 1 Cực Hấp Dẫn Từ Thương Hiệu Bánh Trung Thu Khách Sạn Sheraton Hanoi', '2021-09-17', 'Một mùa Trung thu nữa lại đang đến gần, bỏ lại những bận rộn, lo lắng trong cuộc sống, các gia đình lại cùng nhau quây quần. Trên mâm cỗ trông trăng của mỗi gia đình chắc chắn đều không thể thiếu những chiếc bánh Trung thu. Đến hẹn lại lên, khách sạn Sheraton Hanoi đã cho ra mắt bộ sưu tập Bánh trung thu cao cấp cực hấp dẫn cùng nhiều ưu đãi thu hút. ', 224),
+(5, 'CẨM NANG DU LỊCH', 'Bộ Sưu Tập Bánh Trung Thu 2021 Từ Intercontinental Westlake Hanoi - “Vĩnh Bảo Sắc Họa” Đầy Độc Đáo', '2021-09-16', 'Mùa Trung thu đến gần, không chỉ những hãng bánh quen thuộc mà nhiều khách sạn 5 sao đẳng cấp cũng lần lượt cho ra mắt nhiều bộ sưu tập bánh trung thu hấp dẫn. Năm nay, khách sạn Intercontinental Westlake Hanoi cũng cho ra mắt từ sớm bộ sưu tập bánh trung thu của riêng mình. Sản phẩm ngay khi ra mắt đã nhận được sự yêu thích và quan tâm lớn của khách hàng. Bộ sưu tập bánh trung thu Intercontinental Westlake Hanoi năm 2021 có điều gì đặc biệt đến vậy?', 215),
+(6, 'CẨM NANG DU LỊCH', 'Top Những Mẫu Bánh Trung Thu Khách Sạn Hot Nhất Năm 2021', '2021-09-15', 'Tết Trung Thu là một hoạt động văn hóa truyền thống lâu đời tại Việt Nam. Là thời điểm mà các gia đình chuẩn bị những mâm cỗ cúng gia tiên, tạ ơn cho một mùa màng bội thu. Vào thời điểm mặt Trăng tròn nhất và tỏa ra những ánh sáng ấm áp, người ta hay quây quần bên nhau, cùng thưởng bánh, uống trà và ngắm trăng.\r\n\r\nBánh trung thu không chỉ là một loại bánh truyền thống thơm ngon được dùng vào mỗi dịp rằm tháng Tám, mà nó còn là thức quà mang ý nghĩa về sự may mắn, đoàn viên, hạnh phúc. \r\n\r\nNăm 2021 là một năm đặc biệt, mặc dù tình hình Covid 19 vẫn đang diễn biến phức tạp, nhưng một số khách sạn vẫn cho ra những mẫu bánh trung thu cao cấp, thiết kế riêng cho mùa đoàn viên năm nay, phục vụ nhu cầu biếu tặng và thưởng thức của khách hàng. \r\n\r\nCùng Mytour điểm qua top những mẫu bánh Trung Thu khách sạn hot nhất năm 2021 này nhé!', 172),
+(7, 'CẨM NANG DU LỊCH', 'Du Lịch Tại Chỗ - Xu Hướng Du Lịch Mùa Covid', '2021-09-10', 'Hình thức du lịch tại chỗ được cho là ra đời từ năm 2008 tại Mỹ, khi mà thời điểm này các cuộc khủng hoảng thị trường khiến nhiều người Mỹ bị cắt giảm thu nhập và rơi vào tình cảnh khó khăn. Thời điểm đó nhiều gia đình ở Mỹ phải giới hạn ngân sách cho các chuyến nghỉ mát dài ngày. Thay vì những chuyến đi chơi xa, họ lựa chọn những địa điểm gần làm nơi nghỉ ngơi, thư giãn cùng người thân, gia đình. Xu hướng du lịch này lại càng ngày càng phát triển đặc biệt đối với những bạn trẻ, hay dân văn phòng không có quá nhiều thời gian và muốn tiết kiệm chi phí.\r\n\r\nTrong thời điểm Covid-19 vẫn đang còn diễn biến phức tạp, làm ảnh hưởng không nhỏ đến kinh tế và việc đi lại, du lịch tại chỗ lại càng được ưa chuộng hơn bao giờ hết.', 174),
+(8, 'CẨM NANG DU LỊCH', 'Mua Bánh Trung Thu Cao Cấp Ngay Giữa Mùa Dịch Siêu Dễ Dàng, Lại Còn Được Giao Hàng Miễn Phí', '2021-08-18', 'Một mùa Tết Trung thu lại sắp cận kề, những chiếc bánh Trung thu lại trở thành mặt hàng được nhiều người quan tâm tìm mua. Tuy nhiên, dịch COVID-19 bùng phát căng thẳng, nhiều tỉnh thành đều phải đóng cửa, giãn cách xã hội, nhiều người lo ngại khó tìm mua được những thương hiệu bánh Trung thu cao cấp, chất lượng. Đừng lo, có Mytour, việc mua bánh đã trở nên thật dễ dàng', 326),
+(9, 'CẨM NANG DU LỊCH', 'Điểm Du Lịch Pleiku Khiến Bạn Muốn Xách Balo Lên Và Đi Ngay', '2021-07-03', 'Có người từng nói “đừng ai hỏi tôi ở Pleiku có gì đẹp, bởi vẻ đẹp ở đây là không kể hết”. Có lẽ vì vậy, có những người đã tới Pleiku vài lần nhưng vẫn muốn đi thêm. Vùng đất đỏ bazan, mang nhiều nét văn hóa đặc sắc, thiên nhiên trù phú, cảnh sắc lại càng tuyệt vời. Nơi có những cánh đồng cà phê bạt ngàn, Biển Hồ mênh mông, thác Chín Tầng Mây hùng vĩ... Khám phá Pleiku còn nhiều điều thú vị hơn bạn nghĩ. Trong bài viết này Mytour sẽ dẫn bạn đi khám phá những địa điểm du lịch Pleiku khiến bạn muốn xách balo lên và đi ngay.', 692),
+(10, 'CẨM NANG DU LỊCH', 'Kết Hợp Du Lịch Và Chụp Ảnh Cưới, The Memories Liệu Có Gỡ Rối Cho Các Cặp Đôi?', '2021-07-02', 'Dịch vụ cưới dù đa dạng nhưng để tỉ mỉ, hài lòng từng khách hàng thì vẫn rất khó tìm. Vì thế, khi một doanh nghiệp du lịch như UITour tính đường kết duyên cho nghỉ dưỡng và chụp ảnh cưới bằng các sản phẩm trọn vẹn, nhiều người cảm thấy vừa mới mẻ vừa băn khoăn về khả năng có thể \"gỡ rối\" cho các cặp đôi hay không?', 497),
+(11, 'CẨM NANG DU LỊCH', 'Sáng Tạo Hay Là Chết, Mytour Liều Lĩnh Mở Tour Trải Nghiệm Khám Phá', '2021-07-02', 'Khởi điểm là một nền tảng du lịch trực tuyến, \"nhà\" UITour – một OTA nội địa vừa có thêm những thành viên mới – Đó là UITour Event với một dòng sản phẩm chuyên biệt mang tên Adventures chuyên về khám phá. Lấn sân vào địa hạt của các công ty truyền thống, Adventures giống như một phép thử thời hậu Covid-19: Sáng tạo hay là chết?', 404),
+(12, 'CẨM NANG DU LỊCH', 'Câu Chuyện Của Làng Nương', '2021-06-01', 'Nằm trong quần thể Trung tâm văn hóa Trúc Lâm, đối diện với khu tĩnh dưỡng Legacy Yên Tử - MGallery mang dáng dấp cung đình là Làng Nương nhộn nhịp, sống động và không kém phần cổ kính cho những du khách tìm đến một hành trình bình dị, tiết kiệm mà vẫn thoải mái, an vui.\r\n\r\nLàng Nương lấy cảm hứng từ thời khắc quan trọng trong cuộc đời Phật hoàng Trần Nhân Tông, khi Ngài vào núi Yên Tử tu theo hạnh đầu đà, các thị hầu, bà mụ, cung phi không thể theo Ngài đã ở lại và lập làng dưới chân núi. Kiến trúc của làng tái hiện không gian văn hóa truyền thống của người Việt với gạch thẻ xếp nghiêng dọc, lớp nhà nhấp nhô, ngói mũi sen, tường trình đất xen kẽ tường đá ong, các nông cụ truyền thống… Thấp thoáng đâu đó là họa tiết trang trí cách điệu hình lá sen, lá đề, ống trúc,… mang đậm tinh thần Phật giáo Trúc Lâm.', 1026);
+
 -- --------------------------------------------------------
 
 --
@@ -77,12 +91,70 @@ CREATE TABLE `ct_blog` (
   `Blog_Id` int(11) NOT NULL,
   `Content` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `ct_blog` (`CT_Blog_Id`, `Blog_Id`, `Title`, `Content`, `Address`) VALUES
+(1, 1, 'Cắm trại miễn phí trên bãi cỏ xanh mượt tại công viên Yên Sở', 'Đặc biệt thu hút bởi khuôn viên rộng với diện tích lên tới 323ha, với diện tích hồ nước và cây xanh là 280ha, trung tâm là hồ điều hòa rộng lớn, bao quanh hồ là những đồi cây cỏ xanh mát, thoáng đạt. \r\n\r\nNằm cách trung tâm thành phố chỉ khoảng 10km, bạn có thể dễ dàng di chuyển bằng xe máy hoặc xe bus. Tận hưởng bầu không khí trong lành, bao quanh bởi màu xanh mát của cây cối, của hồ nước. Cắm trại ở công viên yên sở bạn không cần lo chuẩn bị đồ vì ở đây sẽ cho bạn thuê đầy đủ từ lều cắm trại đến bếp nướng, than củi….\r\n\r\nTới đây bạn cũng có thể thuê xe đạp đôi, xe đạp đơn và có cả xe đạp dành cho các bé.\r\n', '{\"Address\": \"QL1A, Hoàng Liệt - Hoàng Mai - Hà Nội\",\r\n\"Price\": \"Miễn phí\", \r\n\"Distance\": \"10km\"}'),
+(2, 1, 'Vườn Quốc Gia Ba Vì - Địa điểm cắm trại cuối tuần thú vị', 'Là một trong những địa điểm cắm trại nổi tiếng, thuộc ba huyện là Bà Vì, Hà Nội và Lương Sơn, Kỳ Sơn tỉnh Hòa Bình. Cách thị xã Sơn Tây khoảng 15km và cách trung tâm thành phố Hà Nội khoảng 50km về phía Tây. Vườn quốc gia Ba Vì được nhiều bạn trẻ yêu thích bởi không gian lãng mạn, xung quanh được bao phủ bời đồi thông xanh cùng với khí hậu mát mẻ quanh năm. Tới đây bạn cũng có thể kết hợp tham gia nhiều hoạt động thú vị khác như:  tham quan khu quân sự Pháp, đền thờ Tản Viên, tháp Bảo Thiên, khu trại hè Pháo, di tích lịch sử....\r\n\r\nBên trong vườn quốc gia Bà Vì có rất nhiều cảnh đẹp, khi màn đêm buông xuống, nơi đây được bao phủ trong màn sương tạo cảm giác ma mị, cũng sẽ làm cho buổi cắm trại của bạn thêm phần thú vị đấy.', '{\"Address\":\"núi Ba Vì - Huyện Ba Vì - TP. Hà Nội\",\r\n\"Price\":\"60k/người\",\r\n\"Distance\":\"50km\"}'),
+(3, 1, 'Cắm trại Khu Đô Thị Ecopark - Hòa mình với thiên nhiên', 'Cách trung tâm thành phố Hà Nội khoảng 13km về phía Đông Nam, thuộc huyện Văn Giang, Hưng Yên. Nằm rất gần trung tâm thành phố nên bạn có thể thoải mái di chuyển bằng phương tiện cá nhân hoặc xe bus đều rất thuận tiện. Là một địa điểm thoáng mát, khu đô thị Ecopark thích hợp cho chuyến cắm ở mọi độ tuổi từ trẻ em đén người già. Đến đây bạn sẽ bị cuốn hút bởi không gian trong lành và bầu không khí mát mẻ.\r\n\r\nBật mí với bạn, đây cũng là địa điểm chụp hình vô cùng lý tưởng, bạn có thể tới tham quan thêm công viên mùa xuân, công viên mùa hạ, công viên mùa thu hay hồ Thiên Nga cũng rất ấn tượng.', '{\"Address\":\"Xã Xuân Quang - Huyện Văn Giang - Tỉnh Hưng Yên\",\r\n\"Price\":\"Miễn phí\",\r\n\"Distance\":\"13km\"}'),
+(4, 1, 'Địa điểm cắm trại cực chill tại Hồ Đại Lải', 'Hồ Đại Lại là một trong những điểm đến gần Hà Nội chưa bao giờ hết hot. Là hồ nước nhân tạo có diện tích rất lớn với diện tích mặt nước là 525ha, chứa khoảng 26,4 triệu mét khối nước. Xung quanh hồ là cánh rừng phòng hộ rộng lớn lên đến 9.000ha. Thảm thực vật xanh mướt bao quanh hồ tạo nên một không gian cực chill. \r\n\r\nSở hữu không gian rộng, đây là một địa điểm cắm trại lý tưởng, bạn có thể dựng lều, tổ chức các bữa tiệc BBQ ngoài trời, cùng các hoạt động dã ngoại khách rất thú vị.\r\n\r\n', '{\"Address\":\"Xã Ngọc Thanh - Thị xã Phúc Yên - Vĩnh Phúc\",\r\n\"Time\":\"khoảng 50 - 60 phút\",\r\n\"Distance\":\"khoảng 40km\"}'),
+(5, 1, 'Thiên Phú Lâm – Địa Điểm Vui Chơi Cắm Trại Ở Hà Nội', 'Cắm trại, nướng thịt ngày cuối tuần trong đồi thông ngay gần trung tâm thành phố ngày cuối tuần thì còn gì tuyệt vời hơn nhỉ. Chỉ cách trung tâm thành phố khoảng 45km, là địa điểm khiến nhiều bạn trẻ phát cuồng vì quá đẹp. Là một khu du lịch sinh thái, cắm trại ở đây cũng rất thuận tiện vì bạn hoàn toàn có thể thuê tất cả mọi thứ cho chuyến cắm trại tại đây. \r\n\r\nTại Thiên Phú Lâm cũng có rất nhiều các hoạt động vui chơi thú vị, như khu thao trường, trải nghiệm môi trường quân đội hay tổ chức team building….', '{\"Address\":\"Thôn Lâm Trường, Xã Minh Phú, Huyện Sóc Sơn, Hà Nội\",\r\n\"Time\":\"8h – 22h\",\r\n\"Distance\":\"khoảng 45km\"}'),
+(6, 2, 'Bộ sưu tập Delightful Lotte 2021', 'Khách sạn Lotte nằm ở tầng 65 tòa nhà trọc trời giữa lòng thủ đô Hà Nội, là một khách sạn 5 sao quốc tế. Không chỉ cung cấp những dịch vụ đẳng cập, những tiện ích hiện đại nhất, khiến khách hàng có những giây phút thư giãn, thoải mái và hài lòng nhất. Đặc biệt khách hàng được trải nghiệm ẩm thực độc đáo, sáng tạo ở khu ẩm thực chuyên sâu của khách sạn.\r\nMong muốn mang đến những xúc cảm viên mãn trong tết đoàn viên, khách sạn Lotte Hà Nội cho ra bộ sưu tập bánh trung thu 2021 Delightful lotte có thiết kế tinh tế kết hợp truyền thống và hiện đại, cùng hương vị tuyệt hảo làm say đắm mọi khách hàng.\r\n\r\nBộ sưu tập bánh trung thu khách sạn Lotte Hà Nội 2021 Delightful lotte bao gồm 4 hộp Tinh Hoa- Như Ý -Phú Quý- Thịnh Vượng là những tình cảm, tâm huyết của người nghệ nhân gói gọn vào từng chiếc bánh trong mỗi hộp. Mong ước mỗi khách hàng có một trung thu ấm áp, sum vầy cùng người thân thưởng trà, ngắm trắng, ăn bánh chia sẻ những câu chuyện buồn vui trong cuộc sống.\r\nHộp bánh trung thu Lotte Hà Nội 2021 hội tụ tinh túy hương vị ẩm thực truyền thống và hiện đại cho khách hàng trải nghiệm ẩm thực và văn hóa Việt độc đáo trong không khí đầm ấm mùa trăng. Bánh có 4 vị nhân thơm ngon, bổ dưỡng khác nhau như:\r\nBánh trung thu hạt sen nhân táo đỏ\r\nBánh trung thu nhân dứa\r\nBánh trung thu nhân ô mai\r\nBánh trung thu nhân trà ô long ', NULL),
+(7, 2, 'Hộp bánh Delightful Lotte 2021 - Cảm hứng từ những tà áo dài thướt tha', 'Hộp bánh trung thu Lotte Hà Nội 2021 lấy cảm hứng thiết kế từ những chiếc áo dài truyền thống theo phong cách hiện đại với sắc trắng tinh khôi kết hợp màu xanh than nhã nhặn mang vẻ đẹp tinh tế, sang trọng. Trên hộp được in dập chìm, dập nổi hình ảnh đèn lồng như những chiếc đèn ông sao mà lũ trẻ hay rước đèn, phá cỗ, cười nói vui vẻ xem múa lân dưới ánh trăng rằm ấm áp.\r\nHộp bánh trung thu khách sạn Lotte Hà Nội 2021 là món quà ý nghĩa gói trọn những tinh hoa cổ truyền trong từng chiếc bánh thể hiện tấm chân tình của bạn đến người nhận. Cho khách hàng trải nghiệm hương vị ẩm thực cổ truyền kết hợp hiện đại độc đáo và những nét văn hóa đáng nhớ. Hộp thiết kế tinh tế, sang trọng thích hợp làm quà tặng gia đình, bạn bè, biếu sếp,...', NULL),
+(8, 2, 'Các loại hộp bánh trung thu Lotte 2021', '- Hộp Như Ý\r\n\r\nGồm 4 bánh (150gram/bánh) và 1 hộp trà thượng hạng\r\n- Hộp Phú Qúy\r\n\r\nGồm 4 bánh (150gram/bánh) và 1 chai rượu vang\r\n\r\n- Hộp Thinh Vượng\r\n\r\nGồm 4 bánh (150gram/bánh) và 1 chai rượu MACALLAN 12 năm\r\n\r\n- Hộp Tinh Hoa\r\n\r\nGồm 4 bánh (150gram/bánh)\r\n\r\n', NULL);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `ct_hotel`
 --
+CREATE TABLE `img_source` (
+  `Img_Id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `Img_Src` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `Titile` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `Blog_Id` int(11) DEFAULT NULL,
+  `Ct_Blog_Id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `img_source`
+--
+
+INSERT INTO `img_source` (`Img_Id`, `Img_Src`, `Titile`, `Blog_Id`, `Ct_Blog_Id`) VALUES
+('IMG01', '../Code-TravelTips/Ảnh1.jpg', 'Cắm trại', 1, NULL),
+('IMG02', '../Code-TravelTips/Ảnh2.jpg', 'Bánh trung thu Delightfull', 2, NULL),
+('IMG03', '../Code-TravelTips/Ảnh3.jpg', 'Bánh trung thu khách sạn Intercontinental', 3, NULL),
+('IMG04', '../Code-TravelTips/Ảnh4.jpg', 'Chương trình khuyến mãi', 4, NULL),
+('IMG05', '../Code-TravelTips/Ảnh5.jpg', 'Bộ sưu tập bánh trung thu', 5, NULL),
+('IMG06', '../Code-TravelTips/Ảnh6.jpg', 'Top bánh trung thu hot nhất', 6, NULL),
+('IMG07', '../Code-TravelTips/Ảnh7.jpg', 'Du lịch tại chỗ', 7, NULL),
+('IMG08', '../Code-TravelTips/Ảnh8.jpg', 'Mua bánh trung thu mùa dịch', 8, NULL),
+('IMG09', '../Code-TravelTips/Ảnh9.jpg', 'Điểm du lịch pleiku', 9, NULL),
+('IMG10', '../Code-TravelTips/Ảnh10.jpg', 'Du lịch kết hợp chụp ảnh cưới', 10, NULL),
+('IMG11', '../Code-TravelTips/Ảnh11.jpg', 'Sáng tạo liều lĩnh', 11, NULL),
+('IMG12', '../Code-TravelTips/Ảnh12.jpg', 'Câu chuyện của nàng lương', 12, NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `img_source`
+--
+ALTER TABLE `img_source`
+  ADD PRIMARY KEY (`Img_Id`),
+  ADD KEY `Ct_Blog_Id` (`Ct_Blog_Id`),
+  ADD KEY `Blog_Id` (`Blog_Id`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `img_source`
+--
+ALTER TABLE `img_source`
+  ADD CONSTRAINT `img_source_ibfk_1` FOREIGN KEY (`Ct_Blog_Id`) REFERENCES `ct_blog` (`CT_Blog_Id`),
+  ADD CONSTRAINT `img_source_ibfk_2` FOREIGN KEY (`Blog_Id`) REFERENCES `blog` (`Blog_Id`);
+COMMIT;
 
 CREATE TABLE `ct_hotel` (
   `CT_Hotel_Id` int(11) NOT NULL,
