@@ -1,0 +1,14 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.img--css{
+    margin-top: 50px;
+    margin-left: 50px;
+   width: 500px;  
+}
+.h2--css{
+    margin-top: 80px;
+}
+label{
+    font-size: 18px;
+}
