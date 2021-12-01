@@ -10,20 +10,7 @@
     <link rel="stylesheet" href="chatbox.css">
 </head>
 <body>
-    <?php
-        $sv = "localhost";
-        $us = "root";
-        $pw = "";
-        $db = "website_dulich";
-        $conn = new mysqli($sv, $us, $pw, $db);
-        $sql = "select * from message where id = 01";
-        $kq = $conn->query($sql);
-         /* if($kq->num_rows > 0) {
-                while ($row = $kq->fetch_assoc()) {
-                    echo "<p class=\"showChatBox__main--content\">".$row["TEXT"]."</p>";
-                }
-            } */
-    ?>
+    
     <div class="chatting__positioning">
     <div id="showChatBox">
         <header class="showChatBox__tittle">
@@ -43,10 +30,7 @@
             <i class="fas fa-angle-down" onclick="hideChatBox()"></i>
         </header>
         <main class="showChatBox__main">
-            <?php
-                while ($row = $kq->fetch_assoc()) { ?>
-                <p class="showChatBox__main--content"> <?php echo $row["TEXT"]; ?> </p>
-            <?php } ?>
+            
             <p class="showChatBox__main--status">Vừa xong</p>
         </main>
         <form action="chatBox.php" method="post" class="showChatBox__footer">

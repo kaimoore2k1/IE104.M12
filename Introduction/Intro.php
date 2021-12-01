@@ -5,37 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=2.0">
     <link rel="stylesheet" href="intro.css">
-    <link rel="stylesheet" href="/Footer/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../Footer/themify-icons/themify-icons.css">
     <title>Introduction</title>
 </head>
 <body>
     <header>
         <nav class="header_menu">
-            <img id="logo_uitour" src="/Trangchu/File/logo_header.png" alt="logo_uitour">
-            <a href="/Trangchu/Trangchu.html" >Trang chủ</a>
+            <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
+            <a href="../Trangchu/Trangchu.html" >Trang chủ</a>
             <ul>
                 <li><a href="#">Du lịch</a>
                     <ul>
-                        <li><a href="/DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
-                        <li><a href="/DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
+                        <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
+                        <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>
             <ul>
                 <li><a href="#">Khách sạn</a>
                     <ul>
-                        <li><a href="/KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
+                        <li><a href="../KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
                         <li><a href="#">Khách sạn nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="/Code-TravelTips/index.html">Traval tips</a>
+            <a href="../Code-TravelTips/index.html">Traval tips</a>
             <a href="#" class="itemSelected">Giới thiệu</a>
             <a href="#">Liên hệ</a>
             <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
             <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
         </nav>
-        <img src="/Introduction/Image_1.png" id="background" alt="background">
+        <img src="../Introduction/Image_1.png" id="background" alt="background">
 
     </header>
     <div id="overlay">
@@ -43,10 +43,10 @@
         <iframe id="sign-in__overlay" src="../sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>
         <iframe id="sign-up__overlay" src="../sign-up/sign-up.html" width="420px" height="620px" frameborder="0"></iframe>
     </div>
-    <script src="/Trangchu/Trangchu.js"></script>
+    <script src="../Trangchu/Trangchu.js"></script>
     <main>
         <section class="information">
-            <img src="/Introduction/company_1.png"  alt="Company Image">
+            <img src="../Introduction/company_1.png"  alt="Company Image">
             <div>
                 <strong><em>UITour company</em></strong>
                 <p> Một trong những yếu tố hàng đầu để những chuyến du lịch, công tác của bạn trở nên nhẹ nhàng, thoải mái là chọn được
@@ -76,22 +76,22 @@
             </div>
         </section>
         <section class="reason-for-choice">
-            <img src="/Introduction/Thap_dong_ho _1.png" alt="Thap dong ho">
+            <img src="../Introduction/Thap_dong_ho _1.png" alt="Thap dong ho">
             <div class="transparent-shape"></div>
             <div class="content">
                 <div>Lý do chọn UITour?</div>
                 <div>
-                    <img src="/Introduction/bytesize_cart.png" alt="Hỗ trợ đặt tour">
+                    <img src="../Introduction/bytesize_cart.png" alt="Hỗ trợ đặt tour">
                     <p><strong> Hỗ trợ 24/7</strong></p>
                     <p>Một trong những đơn vị đi đầu trong việc đặt tour online tốt nhất Việt Nam. Áp dụng những công nghệ hiện đại nhất</p>
                 </div>
                 <div>
-                    <img src="/Introduction/si-glyph_customer-support.png" alt="Hỗ trợ khách hàng">
+                    <img src="../Introduction/si-glyph_customer-support.png" alt="Hỗ trợ khách hàng">
                     <p><strong>Hỗ trợ 24/7 </strong></p>
                     <p>Luôn giải đáp mọi thắc mắc của khách hàng dù bất kì thời gian nào trong ngày. Liên hệ ngay để trải nghiệm</p>
                 </div>
                 <div>
-                    <img src="/Introduction/whh_sale.png" alt="Các ưu đãi">
+                    <img src="../Introduction/whh_sale.png" alt="Các ưu đãi">
                     <p><strong> Giá rẻ & nhiều ưu đãi</strong></p>
                     <p>Phương châm của công ty là để mọi người mọi nhà đều có thể đi du lịch với giá cả hợp lý</p>
                 </div>
@@ -100,17 +100,16 @@
         <section class="staffs">
             <p>Đội ngũ nhân viên</p>
             <div>
-                <img src="/Introduction/Park_Bo_Gum_1.png" alt="Giám đốc">
+                <img src="../Introduction/Park_Bo_Gum_1.png" alt="Giám đốc">
                 <p><strong>Park Bo Gum</strong><br>Tổng giám đốc</p>
             </div>
             <div>
-                <img src="/Introduction/Lisa_1.png" alt="Thư ký">
+                <img src="../Introduction/Lisa_1.png" alt="Thư ký">
                 <p><strong>Nguyễn Thị Lisa</strong><br> Thư ký</p>
             </div>
         </section>
     </main>
     <footer>
-        <img src="/Footer/timthumb_1.png" alt="teamwork_image">
         <div class="transparent-shape"></div>
         <div class="content">
             <div class="information">
