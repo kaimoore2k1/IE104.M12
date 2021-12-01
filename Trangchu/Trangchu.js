@@ -10,8 +10,8 @@ overlayBackground.addEventListener('click',()=>{
     signUpOverlay.style.display = 'none'
     
     //reload iframe
-    signInOverlay.setAttribute('src','../sign-in/sign-in.html')
-    signUpOverlay.setAttribute('src','../sign-up/sign-up.html')
+    signInOverlay.setAttribute('src','../sign-in/sign-in.php')
+    signUpOverlay.setAttribute('src','../sign-up/sign-up.php')
 })
 
 //sign in button clicking evt
