@@ -1,11 +1,3 @@
-const gal = document.querySelector('.wapper__gallery')
-
-for (let i = 1; i <= 6; i++) {
-    const newImg = document.createElement('img')
-    newImg.setAttribute('src', 'dalat'+ i + '.jpg')
-    newImg.setAttribute('class', 'now_img')
-    gal.appendChild(newImg)
-}
 
 const selected = document.querySelectorAll('.wapper__content__nav button')
         const content_selected = document.querySelectorAll('.wapper__content--content')
