@@ -1,11 +1,11 @@
-<!-- <?php 
+<?php 
     session_start(); 
     header('Content-Type: text/html; charset=utf-8');
     //host info
     $host = 'localhost';
     $host_user = 'root';
     $host_password = '';
-    $db_name= 'demo';
+    $db_name= 'ie104.m12';
     //connect db
     $connect = mysqli_connect($host, $host_user, $host_password, $db_name) 
     //conect fail
@@ -19,7 +19,7 @@
 
   
         //check exist username in db
-        $query = "SELECT * FROM tb_user WHERE USERNAME='$username';";
+        $query = "SELECT * FROM user WHERE User_Name='$username';";
 
         $result = mysqli_query($connect, $query) or die( mysqli_error($connect));
 
@@ -34,32 +34,31 @@
         $row = mysqli_fetch_array($result);
         
         //compare password
-        if ($password != $row['PASSWORD']) {
+        if ($password != $row['User_Password']) {
             echo "<script>
                 alert('Tên đăng nhập hoặc mật khẩu không đúng!');
                 window.location= 'sign-in.php'
             </script>";
             exit;
         }
-        //Hao bo sung session de lam comment
         //$query_all = "SELECT * FROM tb_user WHERE USERNAME='$username';";
     
 
         //Lưu thông tin người đăng nhập
-        $_SESSION['FirstName'] = $row['FIRSTNAME'];
-        $_SESSION['LastName'] = $row['LASTNAME'];
-        $_SESSION['ID'] = $row['ID_USER'];
+        $_SESSION['FirstName'] = $row['First_Name'];
+        $_SESSION['LastName'] = $row['Last_Name'];
+        $_SESSION['ID'] = $row['User_Id '];
         $_SESSION['username'] = $username;
         
         echo "<script>                    
-                window.location.replace('http://localhost/lab1_nmantt/home-page/home-page.php') ;
-                window.parent.location.replace('http://localhost/lab1_nmantt/home-page/home-page.php');
+                window.location.replace('../Trangchu/Trangchu.html') ;
+                window.parent.location.replace('../Trangchu/Trangchu.html');
             </script>";
         $connect->close();
         die();
     }
     
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">

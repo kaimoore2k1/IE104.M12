@@ -12,7 +12,7 @@
 <body>
     <main>
         <h1>Đăng ký</h1>
-        <form action="" method="post">
+        <form action="xuly.php" method="post">
             <div class="information">
                 <input required type="text" id="last-name" name="last-name" placeholder="Họ">
                 <input required type="text" id="first-name" name="first-name" placeholder="Tên">

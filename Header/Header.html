@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="../Header/Header.css">
     <title>UITour</title>
 </head>
 
 <body>
     <header>
         <nav class="header_menu">
-            <img id="logo_uitour" src="/Trangchu/File/logo_header.png" alt="logo_uitour">
-            <a href="/Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
+            <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
+            <div id="header_menu__nav">
+                <a href="/Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
             <ul>
-                <li><a href="#">Du lịch</a>
+                <li><a href="#">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
                         <li><a href="/DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
                         <li><a href="/DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
@@ -23,7 +24,7 @@
                 </li>
             </ul>
             <ul>
-                <li><a href="#">Khách sạn</a>
+                <li><a href="#">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
                         <li><a href="/KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
                         <li><a href="#">Khách sạn nước ngoài</a></li>
@@ -35,12 +36,8 @@
             <a href="#">Liên hệ</a>
             <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
             <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+            </div>
         </nav>
-        <p id="h_p1">ĐIỂM ĐẾN THÚ VỊ</p>
-        <p id="h_p2">Tận hưởng hành trình của bạn trong từng khoảnh khắc</p>
-        <p id="h_link"><a href="#">TÌM HIỂU</a></p>
-        <img id="logo_header" src="/Trangchu/File/Picture_header.svg" alt="Header_picture_Home">
-        </div>
     </header>
     <div id="overlay">
         <div id="overlay-background"></div>

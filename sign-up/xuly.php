@@ -4,7 +4,7 @@
     $host = 'localhost';
     $host_user = 'root';
     $host_password = '';
-    $database = 'demo';
+    $database = 'ie104.m12';
     //connect db
     $connect = mysqli_connect($host, $host_user, $host_password,$database) 
     //conect fail
@@ -22,8 +22,8 @@
         //import data into db
         //
         $sql = "SELECT * 
-                FROM tb_user 
-                WHERE USERNAME = '$username' OR EMAIL='$email';
+                FROM user 
+                WHERE User_Name = '$username' OR Email='$email';
                 ";
         $result = mysqli_query($connect,$sql);
     
@@ -36,20 +36,18 @@
             die();
         }
         else {
-            $sql = "INSERT INTO tb_user 
-                        (USERNAME, 
-                        PASSWORD, 
-                        EMAIL, 
-                        FIRSTNAME, 
-                        LASTNAME,
-                        STATUS) 
+            $sql = "INSERT INTO user 
+                        (Last_Name, 
+                        First_Name, 
+                        User_Name, 
+                        User_Password, 
+                        Email) 
                     VALUES 
-                        ('$username',
-                        '$password',
-                        '$email',
+                        ('$last_name',   
                         '$first_name',
-                        '$last_name',
-                        'ACTIVE')";
+                        '$username',
+                        '$password',
+                        '$email')";
             mysqli_query($connect,$sql);
             echo '<script>
                 alert("Bạn đã đăng ký thành công")

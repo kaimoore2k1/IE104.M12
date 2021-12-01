@@ -31,7 +31,7 @@
     <title>Travel Tips</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
     <nav class="header_menu">
             <img id="logo_uitour" src="../Trangchu/File/logo.svg" alt="logo_uitour">
             <div id="header_menu__nav">
@@ -375,6 +375,9 @@
                 </li>
             </ul>
         </nav>   
+    </header> -->
+    <header>
+        <?php include "../Header/Header.html" ?>
     </header>
     <div id="overlay">
         <div id="overlay-background"></div>
