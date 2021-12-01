@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2021 at 05:36 AM
+-- Generation Time: Dec 01, 2021 at 06:04 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -121,8 +121,8 @@ CREATE TABLE `ct_tour` (
   `Tour_Highlight` text COLLATE utf8_unicode_ci NOT NULL,
   `Content_CS` text COLLATE utf8_unicode_ci NOT NULL,
   `Content_CT` text COLLATE utf8_unicode_ci NOT NULL,
-  `CT_Tour_Img` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`CT_Tour_Img`)),
-  `CT_Tour_PDF` text COLLATE utf8_unicode_ci NOT NULL
+  `CT_Tour_Img` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `CT_Tour_PDF` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
