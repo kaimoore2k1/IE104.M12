@@ -31,34 +31,9 @@
     <title>Travel Tips</title>
 </head>
 <body>
+    
     <header>
-    <nav class="header_menu">
-            <img id="logo_uitour" src="../Trangchu/File/logo.svg" alt="logo_uitour">
-            <div id="header_menu__nav">
-                <a href="../Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
-            <ul>
-                <li><a href="#">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a href="/DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
-                        <li><a href="/DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li><a href="#">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a href="/KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
-                        <li><a href="#">Khách sạn nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="/Code-TravelTips/index.html">Traval tips</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
-            </div>
-        </nav>
+    <?php include '../Header/Header.html'; ?>
         <nav>
             <img src="../Code-TravelTips/2dulich.png" alt="Travel Tips" class="header__img">
             <ul class="nav__links">

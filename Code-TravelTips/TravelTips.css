@@ -15,7 +15,7 @@
     font-family: "Roboto-Regular";
     src: url(/Roboto-Regular.ttf);
 }
-header {
+/* header {
     width: 1520px;
     margin: 0 auto;
     position: relative;
@@ -107,7 +107,7 @@ header {
     padding: 10px;
     border: none;
     cursor: pointer;
-}
+} */
 
 iframe{
     overflow: hidden;

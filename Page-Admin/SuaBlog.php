@@ -36,7 +36,7 @@
 <body>
     <header class="header-container">
         <div class="header-container__logo">
-            <a href="/Page-Admin/TrangChu.html">
+            <a href="../Page-Admin/TrangChu.php">
                 <img src="../Trangchu/File/logo_header.png" alt="UITour">
             </a>
             
@@ -47,7 +47,7 @@
         <div class="header-container__profile">
             <i class="fas fa-user-circle"></i>
             <span>Hello HaiDang</span>
-            <a href="../Page-Admin/DangNhap.html" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
+            <a href="../Page-Admin/DangNhap.php" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
         </div>
     </header>
     <main class="main">
@@ -55,37 +55,37 @@
             <ul class="nav-links__ul">
                 <li class="nav-links__li">
                     
-                    <a href="/Page-Admin/QuanLyTour.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyTour.php" class=" nav-links__a">
                         <i class="fas fa-plane-departure"></i>  Quản lý Tour
                     </a>
                 </li>
                 <li class="nav-links__li">
                         
-                    <a href="/Page-Admin/QuanLyKhachSan.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyKhachSan.php" class=" nav-links__a">
                         <i class="fas fa-hotel"></i></i>  Quản lý Khách sạn
                     </a>
                 </li>
                 <li class="nav-links__li ">
                         
-                    <a href="/Page-Admin/QuanLyPhong.html" class=" nav-links__a ">
+                    <a href="../Page-Admin/QuanLyPhong.php" class=" nav-links__a ">
                         <i class="fas fa-person-booth"></i>  Quản lý Phòng
                     </a>
                 </li>
                 <li class="nav-links__li  active--css">
                     
-                    <a href="/Page-Admin/QuanLyBlog.html" class=" nav-links__a  active--css">
+                    <a href="../Page-Admin/QuanLyBlog.php" class=" nav-links__a  active--css">
                         <i class="fab fa-blogger-b"></i></i>  Quản lý Blog
                     </a>
                 </li>
                 <li class="nav-links__li">
                     
-                    <a href="/Page-Admin/QuanLyComment.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyComment.php" class=" nav-links__a">
                         <i class="far fa-comments"></i></i></i>  Quản lý Comment
                     </a>
                 </li>
                 <li class="nav-links__li " >
                     
-                    <a href="/Page-Admin/QuanLyUser.html" class=" nav-links__a ">
+                    <a href="../Page-Admin/QuanLyUser.php" class=" nav-links__a ">
                         <i class="fas fa-user-tie"></i></i></i>  Quản lý User
                     </a>
                 </li>

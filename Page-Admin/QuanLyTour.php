@@ -1,3 +1,26 @@
+<?php
+    $host = "localhost";
+    $host_user ="root";
+    $host_password = "";
+    $database = "ie104.m12";
+    $port = "8111";
+
+    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
+    if(!$conn)
+    {
+        die ("Kết nối thất bại" . $conn->connect_error);
+    }
+
+    if(isset($_POST["search"]))
+    {
+        $result = $_POST["search"];
+        $sql = "SELECT * FROM tour WHERE Tour_Name Like '%$result%'";
+    }
+    else
+        $sql = "SELECT * from tour";
+    $kq = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +36,7 @@
 <body>
     <header class="header-container">
         <div class="header-container__logo">
-            <a href="/Page-Admin/TrangChu.html">
+            <a href="../Page-Admin/TrangChu.php">
                 <img src="../Trangchu/File/logo_header.png" alt="UITour">
             </a>
         </div>
@@ -23,7 +46,7 @@
         <div class="header-container__profile">
             <i class="fas fa-user-circle"></i>
             <span>Hello HaiDang</span>
-            <a href="/Page-Admin/DangNhap.html" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
+            <a href="../Page-Admin/DangNhap.php" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
         </div>
     </header>
     <main class="main">
@@ -31,37 +54,37 @@
             <ul class="nav-links__ul">
                 <li class="nav-links__li active--css">
                     
-                    <a href="/Page-Admin/QuanLyTour.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyTour.php" class=" nav-links__a">
                         <i class="fas fa-plane-departure active--css"></i>  Quản lý Tour
                     </a>
                 </li> 
                 <li class="nav-links__li">
                         
-                    <a href="/Page-Admin/QuanLyKhachSan.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyKhachSan.php" class=" nav-links__a">
                         <i class="fas fa-hotel"></i></i>  Quản lý Khách sạn
                     </a>
                 </li>
                 <li class="nav-links__li">
                         
-                    <a href="/Page-Admin/QuanLyPhong.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyPhong.php" class=" nav-links__a">
                         <i class="fas fa-person-booth"></i>  Quản lý Phòng
                     </a>
                 </li>
                 <li class="nav-links__li">
                     
-                    <a href="/Page-Admin/QuanLyBlog.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyBlog.php" class=" nav-links__a">
                         <i class="fab fa-blogger-b"></i></i>  Quản lý Blog
                     </a>
                 </li>
                 <li class="nav-links__li">
                     
-                    <a href="ent/Page-Admin/QuanLyComment.html" class=" nav-links__a">
+                    <a href="../Page-Admin/QuanLyComment.php" class=" nav-links__a">
                         <i class="far fa-comments"></i></i></i>  Quản lý Comment
                     </a>
                 </li>
                 <li class="nav-links__li " >
                     
-                    <a href="/Page-Admin/QuanLyUser.html" class=" nav-links__a ">
+                    <a href="../Page-Admin/QuanLyUser.php" class=" nav-links__a ">
                         <i class="fas fa-user-tie"></i></i></i>  Quản lý User
                     </a>
                 </li>
@@ -69,21 +92,15 @@
         </nav>
         <section>
             <div class="search-create" >
-                <form action="" class="col-md-9" >
+                <form action="" class="col-md-9" method="post">
                     <div class="form-inline col-md-9">
-                        <label for="Tour_Name" class="control-label" style="margin-right: 5px;">Tìm kiếm Tour</label>
-                        <select name="Tour_Name" id="" class="form-control col-md-6">
-                            <option value=""></option>
-                            <option value="Dang"> Dang</option>
-                            <option value="Tran"> Tran</option>
-                        </select>             
-                        <button type="button" class="btn btn-info">
-                            <span class="glyphicon glyphicon-search"> </span> Search
-                        </button>
+                        <label for="Tour_Name" class="control-label" style="margin-right: 5px;">Tìm kiếm tour</label>                                
+                        <input type="text" name="search" class="form-control col-md-6">
+                        <input type="submit" class="btn btn-info" name="submit" value="search">
                     </div>
                 </form>
                 <div>
-                    <a href="/Page-Admin/ThemTour.html" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Thêm</a>
+                    <a href="../Page-Admin/ThemTour.php" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Thêm</a>
                 </div>
             </div>
             <div class="table-overflow">
@@ -101,23 +118,32 @@
                             <th>Tour bắt đầu</th>
                             <th>Tour kết thúc</th>
                             <th>Phương tiện</th>
+                            <th>Check</th>
                             <th>Chức năng</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="counterCell"></td>
-                            <td>Trần</td>
-                            <td>Đăng</td>
-                            <td>HaiDang</td>
-                            <td>123456</td>
-                            <td>15/01/2001</td>
-                            <td>Nam</td>
-                            <td>
-                                <a  href="/Page-Admin/SuaTour.html" style="font-size: 20px;" ><i class="far fa-edit"></i></a> |
-                                <a href="" style="font-size: 20px; " class="text-danger" onclick="return confirm('Bạn chắn chắn xóa chứ?')"><i class="far fa-trash-alt"></i></a> 
-                            </td>
-                        </tr>
+                        <?php while($row = $kq->fetch_assoc()) { ?>
+                            <tr>
+                                <td class="counterCell"></td>
+                                <td><?php echo $row["Tour_Name"] ?></td>
+                                <td><?php echo $row["Departure"] ?></td>
+                                <td><?php echo $row["Destination"] ?></td>
+                                <td><?php echo $row["Tour_Time"] ?></td>
+                                <td><?php echo $row["Description_Tour"] ?></td>
+                                <td><?php echo $row["Price"] ?></td>
+                                <td><?php echo $row["Img_Source"] ?></td>
+                                <td><?php echo $row["Tour_Start"] ?></td>
+                                <td><?php echo $row["Tour_Finish"] ?></td>
+                                <td><?php echo $row["Transport"] ?></td>
+                                <td><?php echo $row["Tour_Check"] ?></td>
+                                <td>
+                                    <a  href="../Page-Admin/SuaTour.php?id=<?php echo $row["Tour_Id"]; ?>" style="font-size: 20px;" ><i class="far fa-edit"></i></a>|
+                                    <a href="../Page-Admin/XoaTour.php?id=<?php echo $row["Tour_Id"]; ?>" style="font-size: 20px; " class="text-danger" onclick="return confirm('Bạn chắn chắn xóa chứ?')"><i class="far fa-trash-alt"></i></a> 
+                                </td>
+                            </tr>
+                        <?php } ?>
+                        
                     </tbody>
                 </table>
             </div>
