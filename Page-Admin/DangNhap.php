@@ -12,7 +12,7 @@
 <body>
     <div class="row" >
         <div class="col-md-6" >
-            <img src="/Page-Admin/IMG/Logo-Travel-full(1).png" alt="Logo" class="img--css">
+            <img src="../Page-Admin/IMG/Logo-Travel-full(1).png" alt="Logo" class="img--css">
         </div>
         <div class="col-md-4">
             <section>

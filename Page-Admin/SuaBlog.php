@@ -1,3 +1,26 @@
+<?php
+    $host = "localhost";
+    $host_user ="root";
+    $host_password = "";
+    $database = "ie104.m12";
+    $port = "8111";
+
+    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
+    if(!$conn)
+    {
+        die ("Kết nối thất bại" . $conn->connect_error);
+    }
+
+    if(isset($_REQUEST["id"]) and $_REQUEST['id']!="")
+    {
+        $id =  $_GET["id"];
+        $sql = "SELECT * FROM blog WHERE Blog_Id = $id";
+        
+        $kq = $conn->query($sql);
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +37,7 @@
     <header class="header-container">
         <div class="header-container__logo">
             <a href="/Page-Admin/TrangChu.html">
-                <img src="/Trangchu/File/logo_header.png" alt="UITour">
+                <img src="../Trangchu/File/logo_header.png" alt="UITour">
             </a>
             
         </div>
@@ -24,7 +47,7 @@
         <div class="header-container__profile">
             <i class="fas fa-user-circle"></i>
             <span>Hello HaiDang</span>
-            <a href="/Page-Admin/DangNhap.html" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
+            <a href="../Page-Admin/DangNhap.html" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
         </div>
     </header>
     <main class="main">
@@ -70,45 +93,75 @@
         </nav>
         
         <div class="col-md-8">
-            <h2 class=" text-center">Thêm Blog</h2>
+            <h2 class=" text-center">Sửa Blog</h2>
             <div class="col-md-8 div--css">
-                <form action="" class="form--css">
-                    <div class="form-group">
+                <form action="" class="form--css" method="POST">
+                    <?php while($row = $kq->fetch_assoc()) { ?>
+                        <div class="form-group">
                         <label for="Name_Blog" class="control-label">Tên Blog</label>
-                        <input name="Name_Blog" class="form-control" required/>
+                        <textarea name="Name_Blog" class="form-control"  cols="30" rows="3"  class="form-control" required><?php echo $row["Name_Blog"] ?></textarea>
                     </div>
                     <div class="form-group">
                         <label for="Title" class="control-label">Tiêu đề</label>
-                        <input name="Title" class="form-control" required/>
+                        <input name="Title" class="form-control" value="<?php echo $row["Title"] ?>" required/>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="Write_Time" class="control-label">Ngày viết</label>
-                            <input name="Write_Time" class="form-control" required/>
+                            <input type="date" name="Write_Time" value="<?php echo $row["Write_Time"] ?>" class="form-control" required/>
     
                         </div>
                         <div class="form-group col-md-6">
                             <label for="View" class="control-label">Lượt xem</label>
-                            <input name="View" class="form-control" required/>
+                            <input type="number" name="View" value="<?php echo $row["View"] ?>" class="form-control" required/>
     
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="Description_Blog" class="control-label">Mô tả</label>
-                        <textarea name="Description_Blog"  cols="30" rows="4"  class="form-control" required></textarea>
+                        <textarea name="Description_Blog"  cols="30" rows="4"  class="form-control" required><?php echo $row["Description_Blog"] ?></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="Img_Src" class="control-label">Hình ảnh</label>
+                            <input  name="Img_Src" value="<?php echo $row["Img_Src"] ?>" class="form-control" required/>
+    
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="Title_Img" class="control-label">Tiêu đề hình</label>
+                            <input name="Title_Img" value="<?php echo $row["Title_Img"] ?>" class="form-control" required/>
+    
+                        </div>
                     </div>
                 
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="submit" value="creat" class="btn btn-primary btn-block" />
+                            <input type="submit" name="submit" value="Update" class="btn btn-primary btn-block" />
                         </div>
                         <div class="form-group col-md-6">
-                            <a  href="/Page-Admin/QuanLyBlog.html" class="btn btn-secondary btn-block"><i class="fa fa-table"></i>Trở về</a>
+                            <a  href="../Page-Admin/QuanLyBlog.php" class="btn btn-secondary btn-block"><i class="fa fa-table"></i>Trở về</a>
                         </div>
                     </div>
+                    <?php } ?>
                     
                 </form>
+                <?php 
+                    if(isset($_POST["submit"])) { 
+                        $Name_Blog = $_POST["Name_Blog"];
+                        $Title = $_POST["Title"];
+                        $Write_Time = $_POST["Write_Time"];
+                        $View = $_POST["View"];
+                        $Img_Src = $_POST["Img_Src"];
+                        $Title_Img = $_POST["Title_Img"];
+                        $Description_Blog = $_POST["Description_Blog"];
+                        $sql = "UPDATE blog SET Name_Blog = '$Name_Blog',Title = '$Title', Write_Time = '$Write_Time', View = '$View', Img_Src = '$Img_Src', Title_Img = '$Title_Img', Description_Blog = '$Description_Blog'  WHERE Blog_Id = '$id'";
+                        $conn->query($sql);
+                        echo "<script> window.location.href = '../Page-Admin/QuanLyBlog.php' </script>";
+                    }
+                    
+                ?>
             </div>
+            
         </div>
         
         
