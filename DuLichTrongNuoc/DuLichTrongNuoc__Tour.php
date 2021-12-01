@@ -19,8 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Du lịch nước ngoài - trang chủ</title>
-    <link rel="stylesheet" href="DuLichTrongNuoc__Tour.css">
-    <link rel="stylesheet" href="/Footer/footer.css">
+    <link rel="stylesheet" href="DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.css">
     <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
@@ -31,7 +30,7 @@
 <body>
     <header>
         <nav class="header_menu">
-            <img id="logo_uitour" src="/Trangchu/File/logo_header.png" alt="logo_uitour">
+            <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
             <a id="header_home" href="/Trangchu/Trangchu.html">Trang chủ</a>
             <ul>
                 <li><a href="#" class="itemSelected">Du lịch</a>
@@ -57,7 +56,7 @@
             <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
             <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
         </nav>
-        <img id="logo_header" src="banner_trongnuoc.jpg" alt="Header_picture_Home">
+        <img id="logo_header" src="DuLichTrongNuoc__Tour/banner_trongnuoc.jpg" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer"></div>
             <p class="Header__title--p">DU LỊCH TRONG NƯỚC</p>
@@ -65,7 +64,7 @@
                 <div class="searchBar__location">
                     <p><strong>Địa điểm</strong></p>
                     <div class="searchBar__location--input">
-                        <img class="searchBar__location--img" src="location.svg">
+                        <img class="searchBar__location--img" src="DuLichTrongNuoc__Tour/location.svg">
                         <input id="location__input" name="input_location" type="text" placeholder="Bạn muốn đi đâu?">
                     </div>
                     <div class="autobox">
@@ -75,14 +74,14 @@
                 <div class="searchBar__date">
                     <p><strong>Ngày đi</strong></p>
                     <div class="searchBar__date--input">
-                        <img class="searchBar__date--img" src="human.svg">
+                        <img class="searchBar__date--img" src="DuLichTrongNuoc__Tour/human.svg">
                         <input id="myID" type="text" placeholder="Chọn ngày">
                     </div>
                 </div>
                 <div class="searchBar__date">
                     <p><strong>Ngày về</strong></p>
                     <div class="searchBar__date--input">
-                        <img class="searchBar__date--img" src="human.svg">
+                        <img class="searchBar__date--img" src="DuLichTrongNuoc__Tour/human.svg">
                         <input id="myID" type="text" placeholder="Chọn ngày">
                     </div>
                 </div>
@@ -94,7 +93,7 @@
                     </div>
                     <p><strong>Loại Tour</strong></p>
                     <div class="searchBar__tour--input">
-                        <img class="searchBar__tour--img" src="date.svg">
+                        <img class="searchBar__tour--img" src="DuLichTrongNuoc__Tour/date.svg">
                         <input id="tour__input" type="value" placeholder="Cá nhân - gia đình">
                     </div>
                     <div class="number-box">
@@ -130,8 +129,8 @@
         <?php while($row = $kq->fetch_assoc()) {?>
         <div class="aTour aTour_New">
             <div class="aTour__image">
-                <img src="<?php echo $row['Img_Source']; ?>" id="aTour__image--tour" alt="Tour image">
-                <img src="speacialTag.svg" id="aTour__image--tag" alt="Tour image">
+                <img src="DuLichTrongNuoc__Tour/<?php echo $row['Img_Source']; ?>" id="aTour__image--tour" alt="Tour image">
+                <img src="DuLichTrongNuoc__Tour/speacialTag.svg" id="aTour__image--tag" alt="Tour image">
             </div>
 
             <div class="aTour__infor">
@@ -149,16 +148,16 @@
                 </div>
 
                 <div class="aTour_box--departDate">
-                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <img src="DuLichTrongNuoc__Tour/calendarIcon.svg" alt="calendar Icon">
                     <p><?php echo $row['Tour_Start']; ?></p>
                 </div>
 
                 <div class="aTour_box--backDate">
-                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <img src="DuLichTrongNuoc__Tour/calendarIcon.svg" alt="calendar Icon">
                     <p><?php echo $row['Tour_Finish']; ?></p>
                 </div>
                 <div class="aTour_box--viewMore">
-                    <button> <a href="../DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.php?id=<?php echo $row['Tour_Id']; ?>">Xem thêm >></a>
+                    <button> <a href="DuLichTrongNuoc__ChiTiet.php?id=<?php echo $row['Tour_Id']; ?>">Xem thêm >></a>
                     </button>
                 </div>
             </div>
@@ -168,8 +167,8 @@
         <?php while($row_voting = $kq_voting->fetch_assoc()) {?>
         <div class="aTour aTour_Price hidden">
             <div class="aTour__image">
-                <img src="<?php echo $row_voting['Img_Source']; ?>" id="aTour__image--tour" alt="Tour image">
-                <img src="speacialTag.svg" id="aTour__image--tag" alt="Tour image">
+                <img src="DuLichTrongNuoc__Tour/<?php echo $row_voting['Img_Source']; ?>" id="aTour__image--tour" alt="Tour image">
+                <img src="DuLichTrongNuoc__Tour/speacialTag.svg" id="aTour__image--tag" alt="Tour image">
             </div>
 
             <div class="aTour__infor">
@@ -187,16 +186,16 @@
                 </div>
 
                 <div class="aTour_box--departDate">
-                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <img src="DuLichTrongNuoc__Tour/calendarIcon.svg" alt="calendar Icon">
                     <p><?php echo $row_voting['Tour_Start']; ?></p>
                 </div>
 
                 <div class="aTour_box--backDate">
-                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <img src="DuLichTrongNuoc__Tour/calendarIcon.svg" alt="calendar Icon">
                     <p><?php echo $row_voting['Tour_Finish']; ?></p>
                 </div>
                 <div class="aTour_box--viewMore">
-                    <button> <a href="../DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.php?id=<?php echo $row['Tour_Id']; ?>">Xem thêm >></a>
+                    <button> <a href="DuLichTrongNuoc__ChiTiet.php?id=<?php echo $row['Tour_Id']; ?>">Xem thêm >></a>
                     </button>
                 </div>
             </div>
@@ -206,8 +205,8 @@
         <?php while($row_price = $kq_price->fetch_assoc()) {?>
         <div class="aTour aTour_Voting hidden">
             <div class="aTour__image">
-                <img src="<?php echo $row_price['Img_Source']; ?>" id="aTour__image--tour" alt="Tour image">
-                <img src="speacialTag.svg" id="aTour__image--tag" alt="Tour image">
+                <img src="DuLichTrongNuoc__Tour/<?php echo $row_price['Img_Source']; ?>" id="aTour__image--tour" alt="Tour image">
+                <img src="DuLichTrongNuoc__Tour/speacialTag.svg" id="aTour__image--tag" alt="Tour image">
             </div>
 
             <div class="aTour__infor">
@@ -225,16 +224,16 @@
                 </div>
 
                 <div class="aTour_box--departDate">
-                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <img src="DuLichTrongNuoc__Tour/calendarIcon.svg" alt="calendar Icon">
                     <p><?php echo $row_price['Tour_Start']; ?></p>
                 </div>
 
                 <div class="aTour_box--backDate">
-                    <img src="calendarIcon.svg" alt="calendar Icon">
+                    <img src="DuLichTrongNuoc__Tour/calendarIcon.svg" alt="calendar Icon">
                     <p><?php echo $row_price['Tour_Finish']; ?></p>
                 </div>
                 <div class="aTour_box--viewMore">
-                    <button> <a href="../DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.php?id=<?php echo $row['Tour_Id']; ?>">Xem thêm >></a>
+                    <button> <a href="DuLichTrongNuoc__ChiTiet.php?id=<?php echo $row['Tour_Id']; ?>">Xem thêm >></a>
                     </button>
                 </div>
             </div>

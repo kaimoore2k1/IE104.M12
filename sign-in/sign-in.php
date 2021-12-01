@@ -51,8 +51,8 @@
         $_SESSION['username'] = $username;
         
         echo "<script>                    
-                window.location.replace('../Trangchu/Trangchu.html') ;
-                window.parent.location.replace('../Trangchu/Trangchu.html');
+                window.location.replace('../Trangchu/Trangchu.php') ;
+                window.parent.location.replace('../Trangchu/Trangchu.php');
             </script>";
         $connect->close();
         die();
