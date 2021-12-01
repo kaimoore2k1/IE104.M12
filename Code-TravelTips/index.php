@@ -424,7 +424,7 @@
                     <div class="block-element">
                     <div>
                         <a href="/Code-TravelTips/TravelTips-CT/TravelTips_ct.html">
-                            <img src="<?php echo $row["Img_Src"] ?>" alt="<?php echo $row["Titile"] ?>" class="block-element__img">
+                            <img src="../Code-TravelTips/<?php echo $row["Img_Src"] ?>" alt="<?php echo $row["Titile"] ?>" class="block-element__img">
                         </a>
                         
                     </div>

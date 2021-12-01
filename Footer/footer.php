@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="/Footer/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../Footer/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Footer</title>
 </head>
 <body>
     <footer>
-        <img src="/Footer/timthumb_1.png" alt="teamwork_image">
         <div class="transparent-shape"></div>
         <div class="content">
             <div class="information">
