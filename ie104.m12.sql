@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2021 at 06:04 AM
+-- Generation Time: Dec 01, 2021 at 01:40 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `ie104.m12`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `Admin_Username` varchar(50) NOT NULL,
+  `Admin_Password` varchar(50) NOT NULL,
+  `Admin_FullName` varchar(50) NOT NULL,
+  `Grant` varchar(50) NOT NULL,
+  `Admin_ID` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Admin_Username`, `Admin_Password`, `Admin_FullName`, `Grant`, `Admin_ID`) VALUES
+('kaimoore2001', 'asdfgghjkl', 'Kai Moore', 'admin', 1);
 
 -- --------------------------------------------------------
 
@@ -267,12 +288,27 @@ CREATE TABLE `user` (
   `Last_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `First_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `User_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `User_Password` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+  `User_Password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`User_Id`, `Last_Name`, `First_Name`, `User_Name`, `User_Password`, `Email`) VALUES
+(1, 'Moore', 'Kai', 'kaimoore2001', 'asdfgghjkl', 'kaimoore@gmail.com');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`Admin_ID`),
+  ADD UNIQUE KEY `Admin_Username` (`Admin_Username`);
 
 --
 -- Indexes for table `blog`
@@ -362,6 +398,12 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `Admin_ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
@@ -425,7 +467,7 @@ ALTER TABLE `tour`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
