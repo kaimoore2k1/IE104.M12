@@ -29,33 +29,7 @@
 
 <body>
     <header>
-        <nav class="header_menu">
-            <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
-            <a id="header_home" href="/Trangchu/Trangchu.html">Trang chủ</a>
-            <ul>
-                <li><a href="#" class="itemSelected">Du lịch</a>
-                    <ul>
-                        <li><a href="/DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong
-                                nước</a></li>
-                        <li><a href="/DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước
-                                ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li><a href="#">Khách sạn</a>
-                    <ul>
-                        <li><a href="/KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
-                        <li><a href="#">Khách sạn nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="/Code-TravelTips/index.html">Traval tips</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
-        </nav>
+        <?php include"../Header/Header.html" ?>
         <img id="logo_header" src="DuLichTrongNuoc__Tour/banner_trongnuoc.jpg" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer"></div>
@@ -242,79 +216,10 @@
 
     </section>
     <footer>
-        <img src="/Footer/teamwork_1536.jpg" alt="teamwork_image">
-        <p id="copyright">Copyright &copy 2021 UITour Company</p>
-        <div id="transparency"></div>
-        <section class="info">
-            <h2 class="info__title">Thông tin công ty</h2>
-            <hr class="info__underline"><br>
-            <div>
-                <p>Công ty được thành lập từ tháng 9 năm 2021</p>
-                <p>Dẫn đầu danh sách ít khách du lịch nhất Việt Nam </p>
-                <p>Với những chiến lược kinh doanh vô cùng hiệu quả thì hiện nay công ty đang dần chuyển sang bán kem
-                    trộn để cải thiện tiềm lực kinh tế</p>
-            </div>
-
-        </section>
-        <section class="working-time">
-            <h2 class="working-time__title">Thời gian làm việc</h2>
-            <hr class="working-time__underline"><br>
-            <ul>
-                <il>
-                    <p>Thứ 2: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 3: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 4: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 5: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 6: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 7: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Chủ nhật: từ 6h00 - 17h00</p>
-                </il>
-            </ul>
-        </section>
-        <section class="support">
-            <h2 class="support__title">Hỗ trợ</h2>
-            <hr class="support__underline">
-            <div>
-                <p>Quên mật khẩu?</p>
-                <p>FAQ</p>
-            </div>
-        </section>
-        <section class="connection">
-
-            <span class="ti-location-pin"></span>
-            <div class="connection__address">
-                <p><strong>Địa chỉ</strong><br>Vincom Thủ Đức</p>
-            </div>
-
-            <span class="ti-mobile"></span>
-            <div class="connection__phone">
-                <p><strong>Điện thoại</strong><br>0123456789</p>
-            </div>
-            <span class="ti-email"></span>
-            <div class="connection__email">
-                <p><strong>Email</strong><br>kemkabi_chipu@gmail.com</p>
-            </div>
-            <hr>
-            <p>Kết nối với chúng tôi:</p>
-            <span class="ti-facebook"></span>
-            <span class="ti-google"></span>
-            <span class="ti-linkedin"></span>
-        </section>
+        <?php include"../Footer/Footer.php" ?>
     </footer>
-    <script src="DuLichTrongNuoc__Tour.js"></script>
-    <script src="/Trangchu/Trangchu.js"></script>
+    <script src="DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.js"></script>
+    <script src="../Trangchu/Trangchu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="searchBar.js"></script>
     <script>
