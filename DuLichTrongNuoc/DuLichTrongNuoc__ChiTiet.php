@@ -48,9 +48,8 @@
         <button>Đặt tour ngay</button>
     </div>
     <div class="overlay_pdf">
-
     </div>
-    <form id="bookingForm" name="bookingForm" method="POST" action="bookingTour.php">
+    <form id="bookingForm" name="bookingForm" method="POST" action="bookingTour.php?id=<?php echo $get_idTour?>">
         <h1>THÔNG TIN LIÊN HỆ</h1>
         <div class="bookTourInfor">
             <img src="DuLichTrongNuoc__ChiTiet/dalat1.jpg" alt="dalat picture">
