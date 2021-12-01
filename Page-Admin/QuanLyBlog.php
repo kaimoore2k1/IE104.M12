@@ -1,3 +1,36 @@
+<?php
+    $host = "localhost";
+    $host_user ="root";
+    $host_password = "";
+    $database = "ie104.m12";
+    $port = "8111";
+
+    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
+    if(!$conn)
+    {
+        die ("Kết nối thất bại" . $conn->connect_error);
+    }
+
+    if(isset($_POST["search"]))
+    {
+        $result = $_POST["search"];
+        $sql = "SELECT * FROM blog WHERE Name_Blog Like '%$result%'";
+    }
+    else
+        $sql = "SELECT * from blog";
+    $kq = $conn->query($sql);
+    echo $sql
+    // if(isset($_POST["submit"]) && $_POST["submit"] == "Thêm")
+    // {
+    //     $hoten = $_POST["hoten"];
+    //     $mssv = $_POST["mssv"];
+    //     $sql = "INSERT INTO sinhvien(MSSV, HoTen) VALUES('$mssv','$hoten')";
+    //     $conn->query($sql);
+    //     header("Location:lietkesinhvien.php");
+        
+    // }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +46,8 @@
 <body>
     <header class="header-container">
         <div class="header-container__logo">
-            <a href="/Page-Admin/TrangChu.html">
-                <img src="/Trangchu/File/logo_header.png" alt="UITour">
+            <a href="../Page-Admin/TrangChu.html">
+                <img src="../Trangchu/File/logo_header.png" alt="UITour">
             </a>
         </div>
         <h2 class="header-container__Title">
@@ -23,7 +56,7 @@
         <div class="header-container__profile">
             <i class="fas fa-user-circle"></i>
             <span>Hello HaiDang</span>
-            <a href="/Page-Admin/DangNhap.html" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
+            <a href="/Page-Admin/DangNhap.php" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
         </div>
     </header>
     <main class="main">
@@ -69,21 +102,16 @@
         </nav>
         <section>
             <div class="search-create" >
-                <form action="" class="col-md-9" >
+                <form action="" class="col-md-9" method ="post">
                     <div class="form-inline col-md-9">
-                        <label for="Name_Blog" class="control-label" style="margin-right: 5px;">Tìm kiếm blog</label>
-                        <select name="Name_Blog" id="" class="form-control col-md-6">
-                            <option value=""></option>
-                            <option value="Dang"> Dang</option>
-                            <option value="Tran"> Tran</option>
-                        </select>             
-                        <button type="button" class="btn btn-info">
-                            <span class="glyphicon glyphicon-search"> </span> Search
-                        </button>
+                        <label for="Name_Blog" class="control-label" style="margin-right: 5px;">Tìm kiếm blog</label>                                
+                        <input type="text" name="search" class="form-control col-md-6">
+                        <input type="submit" class="btn btn-info" name="submit" value="search">
+                        
                     </div>
                 </form>
                 <div>
-                    <a href="/Page-Admin/ThemBlog.html" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Thêm</a>
+                    <a href="../Page-Admin/ThemBlog.php" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Thêm</a>
                 </div>
             </div>
             <div class="table-overflow">
@@ -96,22 +124,47 @@
                             <th>Ngày viết</th>
                             <th>Mô tả</th>
                             <th>Lượt xem</th>
+                            <th>Hình ảnh</th>
+                            <th>Tiêu đề hình</th>
                             <th>Chức năng</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <?php while($row = $kq->fetch_assoc()) { ?>
+                            <tr>
                             <td class="counterCell"></td>
-                            <td>Trần1111111111111111111111111111111111111111111111</td>
-                            <td>Đăng1111111111111111111111111111111111111111</td>
-                            <td>HaiDang111111111111111111111111111111111111111111111</td>
-                            <td>1111111111111111111111111111111111111111111111111111111111111111111</td>
-                            <td>15/01/2001</td>
+                            <td><?php echo $row["Title"] ?></td>
+                            <?php
+                                /* echo "<script>alert(".str_word_count($cnt).")</script>" */
+                                if(str_word_count($row["Name_Blog"]) > 100) {
+                                     $cnt = substr($row["Name_Blog"], 0, 900);
+                                    echo "<td>".$cnt."..."."</td>";
+                                }
+                                else {
+                                    echo "<td>".$row["Name_Blog"]."</td>";
+                                }
+                            ?>
+                            <td><?php echo $row["Write_Time"] ?></td>
+                            <?php
+                                /* echo "<script>alert(".str_word_count($cnt).")</script>" */
+                                if(str_word_count($row["Description_Blog"]) > 100) {
+                                     $cnt = substr($row["Description_Blog"], 0, 100);
+                                    echo "<td>".$cnt."..."."</td>";
+                                }
+                                else {
+                                    echo "<td>".$row["Description_Blog"]."</td>";
+                                }
+                            ?>
+                            <td><?php echo $row["View"] ?></td>
+                            <td><?php echo $row["Img_Src"] ?></td>
+                            <td><?php echo $row["Title_Img"] ?></td>
                             <td>
-                                <a  href="/Page-Admin/SuaBlog.html" style="font-size: 20px;" ><i class="far fa-edit"></i></a> |
-                                <a href="" style="font-size: 20px; " class="text-danger" onclick="return confirm('Bạn chắn chắn xóa chứ?')"><i class="far fa-trash-alt"></i></a> 
+                                <a  href="../Page-Admin/SuaBlog.php?id=<?php echo $row["Blog_Id"]; ?>" style="font-size: 20px;" ><i class="far fa-edit"></i></a> |
+                                <a href="../Page-Admin/XoaBlog.php?id=<?php echo $row["Blog_Id"]; ?>" style="font-size: 20px; " class="text-danger" onclick="return confirm('Bạn chắn chắn xóa chứ?')"><i class="far fa-trash-alt"></i></a> 
                             </td>
-                        </tr>
+                            </tr>
+                        <?php } ?>
+                        
                     </tbody>
                 </table>
             </div>

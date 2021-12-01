@@ -1,3 +1,32 @@
+<?php
+    $host = "localhost";
+    $host_user ="root";
+    $host_password = "";
+    $database = "ie104.m12";
+    $port = "8111";
+
+    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
+    if(!$conn)
+    {
+        die ("Kết nối thất bại" . $conn->connect_error);
+    }
+
+    if(isset($_POST["submit"]))
+    {
+        $title =  $_POST["Title"];
+        $name = $_POST["Name_Blog"];
+        $time =  $_POST["Write_Time"];
+        $description = $_POST["Description_Blog"];
+        $view = $_POST["View"];
+        $Img_Src = $_POST["Img_Src"];
+        $Title_Img = $_POST["Title_Img"];
+        $sql = "INSERT INTO blog(Title,Name_Blog,Write_Time,Description_Blog,View,Img_Src,Title_Img) VALUES('$title','$name', '$time', '$description', '$view', '$Img_Src', '$Title_Img')";
+        $conn->query($sql);
+        header("Location:QuanLyBlog.php");
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +43,7 @@
     <header class="header-container">
         <div class="header-container__logo">
             <a href="/Page-Admin/TrangChu.html">
-                <img src="/Trangchu/File/logo_header.png" alt="UITour">
+                <img src="../Trangchu/File/logo_header.png" alt="UITour">
             </a>
             
         </div>
@@ -70,26 +99,27 @@
         </nav>
         
         <div class="col-md-8">
-            <h2 class=" text-center">Sửa Blog</h2>
+            <h2 class=" text-center">Thêm Blog</h2>
             <div class="col-md-8 div--css">
-                <form action="" class="form--css">
-                    <div class="form-group">
-                        <label for="Name_Blog" class="control-label">Tên Blog</label>
-                        <input name="Name_Blog" class="form-control" required/>
-                    </div>
+                <form action="" class="form--css" method="post">
+                    
                     <div class="form-group">
                         <label for="Title" class="control-label">Tiêu đề</label>
                         <input name="Title" class="form-control" required/>
                     </div>
+                    <div class="form-group">
+                        <label for="Name_Blog" class="control-label">Tên Blog</label>
+                        <input name="Name_Blog" class="form-control" required/>
+                    </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="Write_Time" class="control-label">Ngày viết</label>
-                            <input name="Write_Time" class="form-control" required/>
+                            <input type="date" name="Write_Time" class="form-control" required/>
     
                         </div>
                         <div class="form-group col-md-6">
                             <label for="View" class="control-label">Lượt xem</label>
-                            <input name="View" class="form-control" required/>
+                            <input type="number" name="View" class="form-control" required/>
     
                         </div>
                     </div>
@@ -97,20 +127,30 @@
                         <label for="Description_Blog" class="control-label">Mô tả</label>
                         <textarea name="Description_Blog"  cols="30" rows="4"  class="form-control" required></textarea>
                     </div>
-                
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input type="submit" value="Update" class="btn btn-primary btn-block" />
+                            <label for="Img_Src" class="control-label">Hình ảnh</label>
+                            <input  name="Img_Src" class="form-control" required/>
+    
                         </div>
                         <div class="form-group col-md-6">
-                            <a  href="/Page-Admin/QuanLyBlog.html" class="btn btn-secondary btn-block"><i class="fa fa-table"></i>Trở về</a>
+                            <label for="Title_Img" class="control-label">Tiêu đề hình</label>
+                            <input name="Title_Img"  class="form-control" required/>
+    
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="submit" name="submit" value="creat" class="btn btn-primary btn-block" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <a  href="../Page-Admin/QuanLyBlog.php" class="btn btn-secondary btn-block"><i class="fa fa-table"></i>Trở về</a>
                         </div>
                     </div>
                     
                 </form>
             </div>
         </div>
-        
         
     </main>
 </body>
