@@ -20,7 +20,6 @@ header {
     position: absolute;
     width: 1520px;
     right: 0px;
-    z-index: 2;
 }
 #header_menu__nav {
     margin-left: 300px;
