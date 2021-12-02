@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 04:02 PM
+-- Generation Time: Dec 02, 2021 at 04:20 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -297,8 +297,16 @@ CREATE TABLE `user` (
   `Last_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `First_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `User_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `User_Password` varchar(20) COLLATE utf8_unicode_ci NOT NULL
+  `User_Password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`User_Id`, `Last_Name`, `First_Name`, `User_Name`, `User_Password`, `Email`) VALUES
+(1, 'Moore', 'Kai', 'kaimoore2001', 'asdfgghjkl', 'kaimoore@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -468,7 +476,7 @@ ALTER TABLE `tour`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
