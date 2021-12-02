@@ -4,7 +4,7 @@
     $host_user ="root";
     $host_password = "";
     $database = "ie104.m12";
-    /* $port = "8111"; */
+    $port = "8111";
 
     $conn = new mysqli($host, $host_user, $host_password, $database, $port);
     if(!$conn)
@@ -47,7 +47,7 @@
         <div class="header-container__profile">
             <i class="fas fa-user-circle"></i>
             <span>Hello <?php echo $adminName; ?></span>
-            <a href="../Page-Admin/DangNhap.php" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
+            <a href="dangxuat.php" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
         </div>
     </header>
     <main class="main">
