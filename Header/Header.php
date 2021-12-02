@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,9 +37,17 @@
             <a href="/Code-TravelTips/index.php">Traval tips</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
-            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
-            </div>
+            <?php if (isset($_SESSION['ID']) && $_SESSION['ID']){ ?>
+                    <form class="user_infor" method="POST" name="dangxuat" action="../Header/xulydangxuat.php">
+                        <img id="user_infor_id" src="../default-avatar.png" alt="avt_user">
+                        <p><?php echo $_SESSION['FirstName'].' '.$_SESSION['LastName']; ?></p>
+                        <button name="dang_xuat" class="dang_xuat" id="sign_up">Đăng xuất</button>
+                    </form>
+                <?php }
+                else{ ?>
+                    <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                    <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+                <?php } ?>
         </nav>
     </header>
     <div id="overlay">

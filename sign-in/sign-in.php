@@ -47,7 +47,7 @@
         //Lưu thông tin người đăng nhập
         $_SESSION['FirstName'] = $row['First_Name'];
         $_SESSION['LastName'] = $row['Last_Name'];
-        $_SESSION['ID'] = $row['User_Id '];
+        $_SESSION['ID'] = $row['User_Id'];
         $_SESSION['username'] = $username;
         
         echo "<script>                    

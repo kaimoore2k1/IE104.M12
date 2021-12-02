@@ -5,6 +5,7 @@
 html {
     font-size: 14px;
     background-color: white;
+    overflow-x: hidden;
 }
 body {
     width: 1520px;

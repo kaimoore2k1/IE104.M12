@@ -102,3 +102,24 @@ header {
     position: relative;
     z-index: 100;
 }
+
+.user_infor {
+    width: 500px;
+    position: relative;
+    left: 850px;
+    bottom: 55px;
+}
+ #user_infor_id {
+    position: absolute;
+    width: 8%;
+}
+.user_infor p {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+
+.dang_xuat {
+    position: absolute;
+    left: 130px;
+}
