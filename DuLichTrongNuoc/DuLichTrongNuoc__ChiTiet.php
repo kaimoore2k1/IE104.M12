@@ -1,5 +1,6 @@
 <?php
     require "../connect.php";
+    /* ua */
     $get_idTour = $_GET['id'];
     $sql = "SELECT * FROM TOUR, CT_TOUR WHERE TOUR.TOUR_ID = CT_TOUR.TOUR_ID AND TOUR.TOUR_ID = '$get_idTour'";
     $kq = $conn->query($sql);
@@ -203,7 +204,7 @@
                 <form action="xulycomment.php?id=12" class="user_comment" method="POST">
                     <p>Viết bình luận</p>
                     <textarea name="comment_content"></textarea> <br>
-                    <input type="submit" value="Bình luận"> <br>
+                    <input type="submit" value="Bình luận"> <br> 
                 </form>
             <?php }
             else{ ?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 07:48 AM
+-- Generation Time: Dec 02, 2021 at 09:19 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -177,7 +177,8 @@ CREATE TABLE `evaluate` (
 --
 
 INSERT INTO `evaluate` (`Evaluate_Id`, `User_Id`, `CT_Tour_Id`, `CT_Hotel_Id`, `Content`, `Rating`, `Time`) VALUES
-(1, 1, 12, NULL, 'Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh\r\n                        chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.', 5, '2021-12-02');
+(1, 1, 12, NULL, 'Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh\r\n                        chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.', 5, '2021-12-02'),
+(5, 1, 12, NULL, 'Test chức năng bình luận', 5, '2021-12-02');
 
 -- --------------------------------------------------------
 
@@ -445,7 +446,7 @@ ALTER TABLE `ct_tour`
 -- AUTO_INCREMENT for table `evaluate`
 --
 ALTER TABLE `evaluate`
-  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `hotel`
