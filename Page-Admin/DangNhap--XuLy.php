@@ -14,13 +14,13 @@
             session_start();
             $_SESSION['FullName'] = $row['Admin_FullName'];
             $_SESSION['ID'] = $row['Admin_ID '];
-            header("location:TrangChu.html");
+            header("location:TrangChu.php");
         }
         else {
             echo "
                 <script>
                     alert('Sai tài khoản hoặc mật khẩu!')
-                    window.location.href = 'DangNhap.html'
+                    window.location.href = 'DangNhap.php'
                 </script>
             ";
         }
@@ -29,7 +29,7 @@
         echo "
             <script>
                 alert('Sai tài khoản hoặc mật khẩu!')
-                window.location.href = 'DangNhap.html'
+                window.location.href = 'DangNhap.php'
             </script>
         ";
     }

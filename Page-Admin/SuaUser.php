@@ -1,4 +1,5 @@
 <?php
+    require"session_dangnhap.php";
     $host = "localhost";
     $host_user ="root";
     $host_password = "";
@@ -46,7 +47,7 @@
         </h2>
         <div class="header-container__profile">
             <i class="fas fa-user-circle"></i>
-            <span>Hello HaiDang</span>
+            <span>Hello <?php echo $adminName; ?></span>
             <a href="../Page-Admin/DangNhap.php" class="btn btn-danger"> <i class="fas fa-power-off"></i> Đăng xuất</a>
         </div>
     </header>
