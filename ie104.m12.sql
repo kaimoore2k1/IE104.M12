@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Dec 02, 2021 at 09:19 AM
-=======
 -- Generation Time: Dec 02, 2021 at 08:41 AM
->>>>>>> 315b5fa823713d5b46c824ce798f0a039eca16b7
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -157,7 +153,6 @@ CREATE TABLE `evaluate` (
   `Time` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-<<<<<<< HEAD
 --
 -- Dumping data for table `evaluate`
 --
@@ -166,8 +161,6 @@ INSERT INTO `evaluate` (`Evaluate_Id`, `User_Id`, `CT_Tour_Id`, `CT_Hotel_Id`, `
 (1, 1, 12, NULL, 'Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh\r\n                        chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.', 5, '2021-12-02'),
 (5, 1, 12, NULL, 'Test chức năng bình luận', 5, '2021-12-02');
 
-=======
->>>>>>> 315b5fa823713d5b46c824ce798f0a039eca16b7
 -- --------------------------------------------------------
 
 --
@@ -417,11 +410,7 @@ ALTER TABLE `ct_tour`
 -- AUTO_INCREMENT for table `evaluate`
 --
 ALTER TABLE `evaluate`
-<<<<<<< HEAD
-  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
   MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT;
->>>>>>> 315b5fa823713d5b46c824ce798f0a039eca16b7
 
 --
 -- AUTO_INCREMENT for table `hotel`
