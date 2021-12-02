@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 08:03 AM
+-- Generation Time: Dec 02, 2021 at 08:41 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -242,20 +242,20 @@ CREATE TABLE `tour` (
 --
 
 INSERT INTO `tour` (`Tour_Id`, `Tour_Name`, `Departure`, `Destination`, `Tour_Time`, `Description_Tour`, `Price`, `Img_Source`, `Tour_Start`, `Tour_Finish`, `Transport`, `Tour_Check`) VALUES
-(1, 'DU LỊCH ĐÀI LOAN [CAO HÙNG - ĐÀI BẮC - ĐÀI TRUNG]', 'TP.HCM', 'ĐÀI LOAN', '5  ngày 4 đêm', 'Khám phá vùng đất mãnh hổ kinh tế châu Á', 6000000, '', '2021-10-15', '2021-10-20', 'Hàng không Vietjet (VJ)', 0x01),
-(2, 'DU LỊCH ÚC [MELBOURNE – SYDNEY]', 'TP.HCM', 'AUSTRALIA', '5 ngày 4 đêm', 'Khám phá Vương quốc Brunei thanh bình và phồn thịnh', 7000000, '', '2021-10-15', '2021-10-20', 'Hàng không Vietjet (VJ)', 0x01),
-(3, 'DU LỊCH BRUNEI [TẬN HƯỞNG 01 ĐÊM NGHỈ TẠI KHÁCH SẠN HOÀNG GIA 06 SAO EMPIRE]', 'TP.HCM', 'BRUNEI', '4 ngày 3 đêm', 'Khám phá Vương quốc Brunei thanh bình và phồn thịnh', 4000000, '', '2021-11-20', '2021-11-24', 'Hàng không Vietjet (VJ)', 0x01),
-(5, 'DU LỊCH NGA [MOSCOW - SAINT PETERSBURG]', 'HÀ NỘI', 'NGA', '5  ngày 4 đêm', 'Khám phá xử bạch dương mùa đông tuyệt đẹp', 7000000, '', '2021-10-14', '2021-11-19', 'Hàng không Vietjet (VJ)', 0x01),
-(6, 'DU LỊCH HÀN QUỐC [SEOUL - JEJU - EVERLAND - CHIÊM NGƯỠNG LỄ HỘI HOA GOYANG]', 'HÀ NỘI', 'HÀN QUỐC', '6 ngày 5 đêm', 'Khám phá vùng đất thú vị Hàn Quốc', 5000000, '', '2021-11-01', '2021-11-07', 'Hàng không Vietnam (VN)', 0x01),
-(7, 'DU LỊCH CAMPUCHIA [SIEM REAP- PNOM PENH]', 'TP.HCM', 'CAMPUCHIA', '3 ngày 2 đêm', 'Khám phá Vương quốc Campuchia', 2000000, '', '2021-10-05', '2021-11-08', 'Hàng không Vietjet (VJ)', 0x01),
-(8, 'DU LỊCH MYANMAR [YANGONG]', 'TP.HCM', 'MYANMAR', '3 ngày 2 đêm', 'Khám phá vùng đất vàng Myanmar', 100000, '', '2021-10-05', '2021-11-08', 'Hàng không Vietjet (VJ)', 0x01),
-(9, 'DU LỊCH THÁI LAN [CHIANG MAI - CHIANG RAI - BAY THẲNG CÙNG VIETJET AIR]', 'TP.HCM', 'THÁI LAN', '3 ngày 2 đêm', 'Khám phá xứ sở chùa Vàng Đông Nam Á', 3000000, '', '2021-10-06', '2021-11-09', 'Hàng không Vietjet (VJ)', 0x01),
-(10, 'DU LỊCH NHẬT BẢN MÙA THU [OSAKA - KYOTO - FUJI - TOKYO]', 'TP.HCM', 'NHẬT BẢN', '5 ngày 4 đêm', 'Khám phá xử sở mặt trời mọc mùa thu', 7000000, '', '2021-10-15', '2021-10-20', 'Hàng không Vietjet (VJ)', 0x01),
-(11, 'DU LỊCH PHÚ QUỐC - ĐẢO NGỌC THIÊN ĐƯỜNG', 'HẢI PHÒNG', 'Phú Quốc', '3 ngày 2 đêm', 'Du lịch Phú Quốc Quý khách thỏa sức vẫy vùng trong làn nước xanh', 5500000, 'phuquoc01.jpg', '2021-10-15', '2021-10-18', 'Đi, về bằng máy bay', 0x00),
-(12, 'DU LỊCH ĐÀ LẠT - THUNG THĂNG PHỐ NÚI', 'TP.HCM', 'ĐÀ LẠT', '3 ngày 2 đêm', ' Check-in và chụp hình siêu đẹp tại Quê Garden', 1900000, 'dalat01.jpg', '2021-10-15', '2021-10-18', 'Đi, về bằng ô tô', 0x00),
-(13, 'DU LỊCH HẠ LONG - NỤ CƯỜI HẠ LONG', 'HẢI PHÒNG', 'HẠ LONG', '1 ngày', 'Tham quan Cảng tàu Tuần Châu, Hòn Chó Đá, Hòn Đinh Hương, Hòn Gà Chọi,...', 1000000, 'halong01.jpg', '2021-11-03', '2021-11-04', 'Đi, về bằng ô tô', 0x00),
-(14, 'DU LỊCH SAPA - KHÁM PHÁ VÙNG ĐẤT HOANG SƠ', 'HẢI PHÒNG', 'SAPA', '3 ngày', 'Du lịch Sapa: tham quan nhà thờ Đá, núi Hàm Rồng', 1500000, 'sapa01.jpg', '2021-10-15', '2021-10-18', 'Đi, về bằng xe ô tô', 0x00),
-(15, 'DU LỊCH NHA TRANG - THIÊN ĐƯỜNG BIỂN ĐẢO', 'NGHỆ AN', 'NHA TRANG', '3 ngày 2 đêm', 'Tham quan thành phố biển Nha Trang xinh đẹp', 2000000, 'nhatrang01.jpg', '2021-11-01', '2021-11-04', 'Đi, về bằng máy bay', 0x00);
+(1, 'DU LỊCH ĐÀI LOAN [CAO HÙNG - ĐÀI BẮC - ĐÀI TRUNG]', 'TP.HCM', 'ĐÀI LOAN', '5  ngày 4 đêm', 'Khám phá vùng đất mãnh hổ kinh tế châu Á', 6000000, 'DuLichNuocNgoai__Tour/taiwan.png', '2021-10-15', '2021-10-20', 'Hàng không Vietjet (VJ)', 0x01),
+(2, 'DU LỊCH ÚC [MELBOURNE – SYDNEY]', 'TP.HCM', 'AUSTRALIA', '5 ngày 4 đêm', 'Khám phá Vương quốc Brunei thanh bình và phồn thịnh', 7000000, 'DuLichNuocNgoai__Tour/australia.png', '2021-10-15', '2021-10-20', 'Hàng không Vietjet (VJ)', 0x01),
+(3, 'DU LỊCH BRUNEI [TẬN HƯỞNG 01 ĐÊM NGHỈ TẠI KHÁCH SẠN HOÀNG GIA 06 SAO EMPIRE]', 'TP.HCM', 'BRUNEI', '4 ngày 3 đêm', 'Khám phá Vương quốc Brunei thanh bình và phồn thịnh', 4000000, 'DuLichNuocNgoai__Tour/brunei.png', '2021-11-20', '2021-11-24', 'Hàng không Vietjet (VJ)', 0x01),
+(5, 'DU LỊCH NGA [MOSCOW - SAINT PETERSBURG]', 'HÀ NỘI', 'NGA', '5  ngày 4 đêm', 'Khám phá xử bạch dương mùa đông tuyệt đẹp', 7000000, 'DuLichNuocNgoai__Tour/russia.png', '2021-10-14', '2021-11-19', 'Hàng không Vietjet (VJ)', 0x01),
+(6, 'DU LỊCH HÀN QUỐC [SEOUL - JEJU - EVERLAND - CHIÊM NGƯỠNG LỄ HỘI HOA GOYANG]', 'HÀ NỘI', 'HÀN QUỐC', '6 ngày 5 đêm', 'Khám phá vùng đất thú vị Hàn Quốc', 5000000, 'DuLichNuocNgoai__Tour/seoul.png', '2021-11-01', '2021-11-07', 'Hàng không Vietnam (VN)', 0x01),
+(7, 'DU LỊCH CAMPUCHIA [SIEM REAP- PNOM PENH]', 'TP.HCM', 'CAMPUCHIA', '3 ngày 2 đêm', 'Khám phá Vương quốc Campuchia', 2000000, 'DuLichNuocNgoai__Tour/campuchia.png', '2021-10-05', '2021-11-08', 'Hàng không Vietjet (VJ)', 0x01),
+(8, 'DU LỊCH MYANMAR [YANGONG]', 'TP.HCM', 'MYANMAR', '3 ngày 2 đêm', 'Khám phá vùng đất vàng Myanmar', 100000, 'DuLichNuocNgoai__Tour/myanmar.png', '2021-10-05', '2021-11-08', 'Hàng không Vietjet (VJ)', 0x01),
+(9, 'DU LỊCH THÁI LAN [CHIANG MAI - CHIANG RAI - BAY THẲNG CÙNG VIETJET AIR]', 'TP.HCM', 'THÁI LAN', '3 ngày 2 đêm', 'Khám phá xứ sở chùa Vàng Đông Nam Á', 3000000, 'DuLichNuocNgoai__Tour/thailand.png', '2021-10-06', '2021-11-09', 'Hàng không Vietjet (VJ)', 0x01),
+(10, 'DU LỊCH NHẬT BẢN MÙA THU [OSAKA - KYOTO - FUJI - TOKYO]', 'TP.HCM', 'NHẬT BẢN', '5 ngày 4 đêm', 'Khám phá xử sở mặt trời mọc mùa thu', 7000000, 'DuLichNuocNgoai__Tour/tokyo.png', '2021-10-15', '2021-10-20', 'Hàng không Vietjet (VJ)', 0x01),
+(11, 'DU LỊCH PHÚ QUỐC - ĐẢO NGỌC THIÊN ĐƯỜNG', 'HẢI PHÒNG', 'Phú Quốc', '3 ngày 2 đêm', 'Du lịch Phú Quốc Quý khách thỏa sức vẫy vùng trong làn nước xanh', 5500000, 'DulichTrongNuoc__Tour/phuquoc01.jpg', '2021-10-15', '2021-10-18', 'Đi, về bằng máy bay', 0x00),
+(12, 'DU LỊCH ĐÀ LẠT - THUNG THĂNG PHỐ NÚI', 'TP.HCM', 'ĐÀ LẠT', '3 ngày 2 đêm', ' Check-in và chụp hình siêu đẹp tại Quê Garden', 1900000, 'DulichTrongNuoc__Tour/dalat01.jpg', '2021-10-15', '2021-10-18', 'Đi, về bằng ô tô', 0x00),
+(13, 'DU LỊCH HẠ LONG - NỤ CƯỜI HẠ LONG', 'HẢI PHÒNG', 'HẠ LONG', '1 ngày', 'Tham quan Cảng tàu Tuần Châu, Hòn Chó Đá, Hòn Đinh Hương, Hòn Gà Chọi,...', 1000000, 'DulichTrongNuoc__Tour/halong01.jpg', '2021-11-03', '2021-11-04', 'Đi, về bằng ô tô', 0x00),
+(14, 'DU LỊCH SAPA - KHÁM PHÁ VÙNG ĐẤT HOANG SƠ', 'HẢI PHÒNG', 'SAPA', '3 ngày', 'Du lịch Sapa: tham quan nhà thờ Đá, núi Hàm Rồng', 1500000, 'DulichTrongNuoc__Tour/sapa01.jpg', '2021-10-15', '2021-10-18', 'Đi, về bằng xe ô tô', 0x00),
+(15, 'DU LỊCH NHA TRANG - THIÊN ĐƯỜNG BIỂN ĐẢO', 'NGHỆ AN', 'NHA TRANG', '3 ngày 2 đêm', 'Tham quan thành phố biển Nha Trang xinh đẹp', 2000000, 'DulichTrongNuoc__Tour/nhatrang01.jpg', '2021-11-01', '2021-11-04', 'Đi, về bằng máy bay', 0x00);
 
 -- --------------------------------------------------------
 
