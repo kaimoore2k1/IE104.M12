@@ -1,42 +1,28 @@
 <?php
     require "../connect.php"; 
 
-    $type = $_GET['type'];
-    $type_name;
-    $type_img;
-
-    if ($type == '0x00') {
-        $type_name = "DU LỊCH TRONG NƯỚC";
-        $type_img = "DuLichTrongNuoc__Tour/banner_trongnuoc.jpg";
-    }
-    else {
-        $type_name = "DU LỊCH NƯỚC NGOÀI";
-        $type_img = "DuLichNuocNgoai__Tour/foreign_banner.png";
-    }
-
     $diadiem = $_POST['input_location'];
     
     if ($diadiem) {
-        $sql = "SELECT * FROM TOUR WHERE TOUR_CHECK = ".$type." AND Destination = '$diadiem' ORDER BY TOUR_ID DESC ";
+        $sql = "SELECT * FROM TOUR WHERE TOUR_CHECK = 0x01 AND Destination = '$diadiem' ORDER BY TOUR_ID DESC ";
         $kq = $conn->query($sql);
 
-        $sql_price = "SELECT * FROM TOUR WHERE TOUR_CHECK = ".$type." AND Destination = '$diadiem'  ORDER BY Price DESC ";
+        $sql_price = "SELECT * FROM TOUR WHERE TOUR_CHECK = 0x01 AND Destination = '$diadiem'  ORDER BY Price DESC ";
         $kq_price = $conn->query($sql_price);
 
-        $sql_voting = "SELECT * FROM TOUR WHERE TOUR_CHECK = ".$type." AND Destination = '$diadiem' ORDER BY Price ASC ";
+        $sql_voting = "SELECT * FROM TOUR WHERE TOUR_CHECK = 0x01 AND Destination = '$diadiem' ORDER BY Price ASC ";
         $kq_voting = $conn->query($sql_voting);
     }
     else {
-        $sql = "SELECT * FROM TOUR WHERE TOUR_CHECK = '.$type.' ORDER BY TOUR_ID DESC ";
+        $sql = "SELECT * FROM TOUR WHERE TOUR_CHECK = 0x01 ORDER BY TOUR_ID DESC ";
         $kq = $conn->query($sql);
 
-        $sql_price = "SELECT * FROM TOUR WHERE TOUR_CHECK = '.$type.' ORDER BY Price DESC ";
+        $sql_price = "SELECT * FROM TOUR WHERE TOUR_CHECK = 0x01 ORDER BY Price DESC ";
         $kq_price = $conn->query($sql_price);
 
-        $sql_voting = "SELECT * FROM TOUR WHERE TOUR_CHECK = '.$type.' ORDER BY Price ASC ";
+        $sql_voting = "SELECT * FROM TOUR WHERE TOUR_CHECK = 0x01 ORDER BY Price ASC ";
         $kq_voting = $conn->query($sql_voting);
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -46,9 +32,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $type_name; ?></title>
+    <title>Du lịch nước ngoài - trang chủ</title>
     <link rel="stylesheet" href="DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.css">
-    <link rel="stylesheet" href="../Footer/footer.css">
     <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
@@ -59,11 +44,11 @@
 <body>
     <header>
         <?php include"../Header/Header.php" ?>
-        <img id="logo_header" src="<?php echo $type_img; ?>" alt="Header_picture_Home">
+        <img id="logo_header" src="DuLichTrongNuoc__Tour/banner_trongnuoc.jpg" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer"></div>
-            <p class="Header__title--p"><?php echo $type_name; ?></p>
-            <form class="searchBar" action="DuLichTrongNuoc__Tour--search.php?type=<?php echo $type; ?>" method="POST">
+            <p class="Header__title--p">DU LỊCH TRONG NƯỚC</p>
+            <form class="searchBar" action="DuLichTrongNuoc__Tour--search.php" method="POST">
                 <div class="searchBar__location">
                     <p><strong>Địa điểm</strong></p>
                     <div class="searchBar__location--input">

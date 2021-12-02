@@ -481,6 +481,7 @@ iframe{
     font-weight: 700;
     padding: 15px 30px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 iframe {
@@ -716,4 +717,35 @@ p.responseBox--message {
     border-radius: 10px;
     width: 100px;
     font-weight: 600;
+}
+
+.comment__warning {
+    width: 508px;
+    margin: 0 auto;
+    height: 88px;
+    border-radius: 20px;
+    background-color: #F3D100;
+    position: fixed;
+    z-index: 10;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.comment__warning img {
+    width: 38px;
+    height: 38px;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+.comment__warning p {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF0000;
+    top: 35%;
+    left: 20%;
 }

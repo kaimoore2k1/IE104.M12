@@ -21,8 +21,8 @@
             <ul>
                 <li><a href="#" id="decor--dulich">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
-                        <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php">Du lịch trong nước</a></li>
-                        <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour.php">Du lịch nước ngoài</a></li>
+                        <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x00">Du lịch trong nước</a></li>
+                        <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x01">Du lịch nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>

@@ -1,6 +1,6 @@
 <?php
     require "../connect.php";
-
+    /* ua */
     $get_idTour = $_GET['id'];
     $sql = "SELECT * FROM TOUR, CT_TOUR WHERE TOUR.TOUR_ID = CT_TOUR.TOUR_ID AND TOUR.TOUR_ID = '$get_idTour'";
     $kq = $conn->query($sql);
@@ -8,7 +8,7 @@
     if(!$check){
         echo "<script>
             alert('Sản phẩm đang được hoàn thiện, vui lòng trở lại sau!!!')
-            window.location.href = 'DuLichTrongNuoc__Tour.php'
+            window.location.href = 'DuLichNuocNgoai__Tour.php'
         </script>";
     }
     $myJSON = $check['CT_Tour_Img'];
@@ -30,13 +30,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.css">
-    <title>Du lịch trong nước</title>
+    <link rel="stylesheet" href="../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.css">
+    <title>Du lịch nước ngoài</title>
 </head>
 
 <body>
     <header>
-        <?php include"../Header/Header.php" ?>  
+        <?php include"../Header/Header.php" ?>
         <img id="logo_header" src="<?php echo $obj['banner']; ?>" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer">
@@ -59,7 +59,7 @@
     <form id="bookingForm" name="bookingForm" method="POST" action="bookingTour.php?id=<?php echo $get_idTour?>">
         <h1>THÔNG TIN LIÊN HỆ</h1>
         <div class="bookTourInfor">
-            <img src="<?php echo $obj['gallery'][0]; ?>" alt="dalat picture">
+            <img src="DuLichTrongNuoc__ChiTiet/dalat1.jpg" alt="dalat picture">
             <div class="bookTourInfor__detail">
                 <p id="bookTourInfor__detail--code">Mã tour: <?php echo $check['Tour_Id'] ?></p>
                 <p id="bookTourInfor__detail--time">Thời gian: <?php echo $check['Tour_Time'] ?></p>
@@ -97,10 +97,6 @@
     <script src="DuLichTrongNuoc__Booking.js"></script>
     <iframe seamless="seamless" class="InTour__PDF" src="DuLichTrongNuoc__PDF/DuLichTrongNuoc__PDF.php?id=<?php echo $check['Tour_Id']; ?>"
         frameborder="0"></iframe>
-    <div class="comment__warning">
-        <img src="DuLichTrongNuoc__ChiTiet/warning.svg" alt="warning">
-        <p>Bạn cần đăng nhập để viết đánh giá</p>
-    </div>
     <article class="article__wapper">
         
         <div class="wapper__intro">
@@ -213,7 +209,7 @@
             <?php }
             else{ ?>
                 <div class="btn_insert">
-                    <button class="btn_insert--write" onclick="show_comment__warning()">
+                    <button class="btn_insert--write">
                         Viết đánh giá
                     </button>
                     <button class="btn_insert--more">
@@ -227,15 +223,6 @@
     <footer>
         <?php include"../Footer/Footer.php" ?>
     </footer>
-    <script>
-        function show_comment__warning() {
-            let comment_warning = document.querySelector('.comment__warning')
-            comment_warning.style.display = 'block';
-            setTimeout(() => {
-                comment_warning.style.display = "none";
-            }, 3000);
-        }
-    </script>
     <script src="/Trangchu/Trangchu.js"></script>
     <script>
         let overlay = document.querySelector('.overlay_pdf')
