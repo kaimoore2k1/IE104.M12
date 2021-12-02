@@ -17,9 +17,9 @@
         <nav class="header_menu">
             <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
             <div id="header_menu__nav">
-                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
+                <a href="../Trangchu/Trangchu.php" id="decor--trangchu">Trang chủ</a>
             <ul>
-                <li><a href="#">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                <li><a href="#" id="decor--dulich">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
                         <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php">Du lịch trong nước</a></li>
                         <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour.php">Du lịch nước ngoài</a></li>
@@ -27,16 +27,16 @@
                 </li>
             </ul>
             <ul>
-                <li><a href="#">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                <li><a href="#" id="decor--khachsan">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
                         <li><a href="/KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
                         <li><a href="#">Khách sạn nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="/Code-TravelTips/index.php">Traval tips</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
+            <a href="/Code-TravelTips/index.php" id="decor--traveltips">Travel tips</a>
+            <a href="#" id="decor--gioithieu">Giới thiệu</a>
+            <a href="#" id="decor--lienhe">Liên hệ</a>
             <?php if (isset($_SESSION['ID']) && $_SESSION['ID']){ ?>
                     <form class="user_infor" method="POST" name="dangxuat" action="../Header/xulydangxuat.php">
                         <img id="user_infor_id" src="../default-avatar.png" alt="avt_user">

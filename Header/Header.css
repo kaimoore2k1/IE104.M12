@@ -104,22 +104,22 @@ header {
 }
 
 .user_infor {
-    width: 500px;
-    position: relative;
-    left: 850px;
-    bottom: 55px;
+    width: 500px !important;
+    position: relative !important;
+    left: 850px !important;
+    bottom: 55px !important;
 }
  #user_infor_id {
-    position: absolute;
-    width: 8%;
+    position: absolute !important;
+    width: 8% !important;
 }
 .user_infor p {
-    position: absolute;
-    left: 50px;
-    top: 10px;
+    position: absolute !important;
+    left: 50px !important;
+    top: 10px !important;
 }
 
 .dang_xuat {
-    position: absolute;
-    left: 130px;
+    position: absolute !important;
+    left: 130px !important;
 }

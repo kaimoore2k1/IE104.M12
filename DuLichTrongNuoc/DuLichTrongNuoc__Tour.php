@@ -29,7 +29,7 @@
 
 <body>
     <header>
-        <?php include"../Header/Header.html" ?>
+        <?php include"../Header/Header.php" ?>
         <img id="logo_header" src="DuLichTrongNuoc__Tour/banner_trongnuoc.jpg" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer"></div>

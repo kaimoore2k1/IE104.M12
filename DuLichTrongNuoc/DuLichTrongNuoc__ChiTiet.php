@@ -12,6 +12,15 @@
     }
     $myJSON = $check['CT_Tour_Img'];
     $obj = json_decode($myJSON, true);
+
+    $sql_cmt = "SELECT * FROM evaluate, user WHERE CT_Tour_Id  = '$get_idTour' AND evaluate.User_Id = user.User_Id";
+    $kq_cmt = $conn->query($sql_cmt);
+
+    $sql_count = "SELECT COUNT(*) AS COUNT FROM TOUR";
+    $kq_sql_count = $conn->query($sql_count);
+    $row_count = $kq_sql_count->fetch_assoc();
+    echo $row_count['COUNT'];
+    
 ?>
 
 
@@ -29,8 +38,8 @@
 
 <body>
     <header>
-        <?php include"../Header/Header.html" ?>
-        <img id="logo_header" src="DuLichTrongNuoc__ChiTiet/DaLatBanner.jpg" alt="Header_picture_Home">
+        <?php include"../Header/Header.php" ?>
+        <img id="logo_header" src="<?php echo $obj['banner']; ?>" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer">
             </div>
@@ -118,7 +127,7 @@
             <?php
                 
                 for ($i = 0; $i < count($obj['gallery']); $i++) {
-                    echo  "<img src='DuLichTrongNuoc__ChiTiet/".$obj['gallery'][$i]."' class='now_img'>";
+                    echo  "<img src=".$obj['gallery'][$i]." class='now_img'>";
                 }
             ?>
         </div>
@@ -148,80 +157,50 @@
             </div>
 
             <div class="wapper__content--content wapper__hidden__content">
-                <div class="danhgiachung">
-                    <div class="danhgia__title">
-                        <p>Đánh giá của khách hàng về Tour</p>
-                    </div>
-                    <div class="danhgia__voting">
-                        <img id="dalat_danhgia" src="DuLichTrongNuoc__ChiTiet/dalat_danhgia.jpg" alt="Hình ảnh Đà Lạt">
-                        <div class="hihiandhehe">
-                            <div class="dalat_danhgia_hihi">
-                                <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img">
-                                <div class="count_voting">
-                                    <p>142 đánh giá</p>
-                                </div>
-                                <p class="huhu">5.0</p>
+            <div class="danhgiachung">
+                <div class="danhgia__title">
+                    <p>Đánh giá của khách hàng về Tour</p>
+                </div>
+                <div class="danhgia__voting">
+                    <img id="dalat_danhgia" src="DuLichTrongNuoc__ChiTiet/dalat_danhgia.jpg" alt="Hình ảnh Đà Lạt">
+                    <div class="hihiandhehe">
+                        <div class="dalat_danhgia_hihi">
+                            <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img">
+                            <div class="count_voting">
+                                <p>142 đánh giá</p>
                             </div>
-                            <div class="dalat_danhgia_hehe">
-                                <div id="one_sao" class="voting full__voting">
-                                    <p class="huhu">1.0</p>
-                                </div>
-                                <div id="two_sao" class="voting">
-                                    <p class="huhu">2.0</p>
-                                </div>
-                                <div id="three_sao" class="voting">
-                                    <p class="huhu">3.0</p>
-                                </div>
-                                <div id="four_sao" class="voting">
-                                    <p class="huhu">4.0</p>
-                                </div>
-                                <div id="five_sao" class="voting">
-                                    <p class="huhu">5.0</p>
-                                </div>
+                            <p class="huhu">5.0</p>
+                        </div>
+                        <div class="dalat_danhgia_hehe">
+                            <div id="one_sao" class="voting full__voting">
+                                <p class="huhu">1.0</p>
+                            </div>
+                            <div id="two_sao" class="voting">
+                                <p class="huhu">2.0</p>
+                            </div>
+                            <div id="three_sao" class="voting">
+                                <p class="huhu">3.0</p>
+                            </div>
+                            <div id="four_sao" class="voting">
+                                <p class="huhu">4.0</p>
+                            </div>
+                            <div id="five_sao" class="voting">
+                                <p class="huhu">5.0</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="danhgiachung__comment">
-                    <div class="danhgiachung__comment__infor">
-                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
-                        <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
-                    </div>
-                    <div class="danhgiachung__comment__content">
-                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh
-                            chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
-                    </div>
+            </div>
+            <div class="danhgiachung__comment">
+                <div class="danhgiachung__comment__infor">
+                    <p><strong>Đào Nguyên Trọng Khôi</strong></p>
+                    <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
                 </div>
-                <div class="danhgiachung__comment">
-                    <div class="danhgiachung__comment__infor">
-                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
-                        <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
-                    </div>
-                    <div class="danhgiachung__comment__content">
-                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh
-                            chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
-                    </div>
+                <div class="danhgiachung__comment__content">
+                    <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh
+                        chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
                 </div>
-                <div class="danhgiachung__comment">
-                    <div class="danhgiachung__comment__infor">
-                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
-                        <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
-                    </div>
-                    <div class="danhgiachung__comment__content">
-                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh
-                            chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
-                    </div>
-                </div>
-                <div class="danhgiachung__comment">
-                    <div class="danhgiachung__comment__infor">
-                        <p><strong>Đào Nguyên Trọng Khôi</strong></p>
-                        <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
-                    </div>
-                    <div class="danhgiachung__comment__content">
-                        <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh
-                            chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
-                    </div>
-                </div>
+            </div>
                 <div class="btn_insert">
                     <button class="btn_insert--write">
                         Viết đánh giá
