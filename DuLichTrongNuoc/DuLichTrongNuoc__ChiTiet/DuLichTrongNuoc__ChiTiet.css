@@ -685,3 +685,35 @@ p.responseBox--message {
     background-color: chartreuse;
     z-index: 3;
 }
+
+.user_comment {
+    width: 900px;
+    left: 75px;
+    min-height: 200px;
+    position: relative;
+}
+
+.user_comment p {
+    position: relative;
+    font-weight: 700;
+    left: 85%;
+    margin-bottom: 10px;
+}
+
+.user_comment textarea {
+    max-width: 900px;
+    min-height: 130px;
+    width: 900px;
+    margin-bottom: 10px;
+}
+
+.user_comment input {
+    position: relative;
+    left: 85%;
+    padding: 10px;
+    background-color: #F3D100;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    font-weight: 600;
+}

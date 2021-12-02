@@ -170,19 +170,19 @@
                         </div>
                         <div class="dalat_danhgia_hehe">
                             <div id="one_sao" class="voting full__voting">
-                                <p class="huhu">1.0</p>
+                                <p class="huhu">5.0</p>
                             </div>
                             <div id="two_sao" class="voting">
-                                <p class="huhu">2.0</p>
+                                <p class="huhu">4.0</p>
                             </div>
                             <div id="three_sao" class="voting">
                                 <p class="huhu">3.0</p>
                             </div>
                             <div id="four_sao" class="voting">
-                                <p class="huhu">4.0</p>
+                                <p class="huhu">2.0</p>
                             </div>
                             <div id="five_sao" class="voting">
-                                <p class="huhu">5.0</p>
+                                <p class="huhu">1.0</p>
                             </div>
                         </div>
                     </div>
@@ -199,6 +199,14 @@
                     </div>
                 </div>
             <?php } ?>
+            <?php if (isset($_SESSION['ID']) && $_SESSION['ID']){ ?>
+                <form action="xulycomment.php?id=12" class="user_comment" method="POST">
+                    <p>Viết bình luận</p>
+                    <textarea name="comment_content"></textarea> <br>
+                    <input type="submit" value="Bình luận"> <br>
+                </form>
+            <?php }
+            else{ ?>
                 <div class="btn_insert">
                     <button class="btn_insert--write">
                         Viết đánh giá
@@ -207,6 +215,7 @@
                         Xem thêm đánh giá
                     </button>
                 </div>
+            <?php } ?>
             </div>
         </div>
     </article>
