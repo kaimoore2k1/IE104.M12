@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 03:04 PM
+-- Generation Time: Dec 02, 2021 at 04:02 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `ie104.m12`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `Admin_Username` varchar(50) NOT NULL,
+  `Admin_Password` varchar(50) NOT NULL,
+  `Admin_FullName` varchar(50) NOT NULL,
+  `Grant` varchar(50) NOT NULL,
+  `Admin_ID` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Admin_Username`, `Admin_Password`, `Admin_FullName`, `Grant`, `Admin_ID`) VALUES
+('kaimoore2001', 'asdfgghjkl', 'Kai Moore', 'admin', 1);
 
 -- --------------------------------------------------------
 
@@ -284,6 +305,13 @@ CREATE TABLE `user` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`Admin_ID`),
+  ADD UNIQUE KEY `Admin_Username` (`Admin_Username`);
+
+--
 -- Indexes for table `blog`
 --
 ALTER TABLE `blog`
@@ -369,6 +397,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `Admin_ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `blog`
