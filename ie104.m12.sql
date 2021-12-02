@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 07:35 AM
+-- Generation Time: Dec 02, 2021 at 07:48 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -165,12 +165,19 @@ INSERT INTO `ct_tour` (`CT_Tour_id`, `Tour_Id`, `Tour_Highlight`, `Content_CS`, 
 CREATE TABLE `evaluate` (
   `Evaluate_Id` int(11) NOT NULL,
   `User_Id` int(11) NOT NULL,
-  `CT_Tour_Id` int(11) NOT NULL,
-  `CT_Hotel_Id` int(11) NOT NULL,
+  `CT_Tour_Id` int(11) DEFAULT NULL,
+  `CT_Hotel_Id` int(11) DEFAULT NULL,
   `Content` text COLLATE utf8_unicode_ci NOT NULL,
   `Rating` int(11) DEFAULT NULL,
   `Time` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `evaluate`
+--
+
+INSERT INTO `evaluate` (`Evaluate_Id`, `User_Id`, `CT_Tour_Id`, `CT_Hotel_Id`, `Content`, `Rating`, `Time`) VALUES
+(1, 1, 12, NULL, 'Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh\r\n                        chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.', 5, '2021-12-02');
 
 -- --------------------------------------------------------
 
@@ -353,10 +360,7 @@ ALTER TABLE `ct_tour`
 -- Indexes for table `evaluate`
 --
 ALTER TABLE `evaluate`
-  ADD PRIMARY KEY (`Evaluate_Id`),
-  ADD KEY `CT_Tour_Id` (`CT_Tour_Id`),
-  ADD KEY `CT_Hotel_Id` (`CT_Hotel_Id`),
-  ADD KEY `User_Id` (`User_Id`);
+  ADD PRIMARY KEY (`Evaluate_Id`);
 
 --
 -- Indexes for table `hotel`
@@ -441,7 +445,7 @@ ALTER TABLE `ct_tour`
 -- AUTO_INCREMENT for table `evaluate`
 --
 ALTER TABLE `evaluate`
-  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `hotel`

@@ -16,14 +16,11 @@
     $sql_cmt = "SELECT * FROM evaluate, user WHERE CT_Tour_Id  = '$get_idTour' AND evaluate.User_Id = user.User_Id";
     $kq_cmt = $conn->query($sql_cmt);
 
-    $sql_count = "SELECT COUNT(*) AS COUNT FROM TOUR";
+    $sql_count = "SELECT COUNT(*) AS COUNT FROM evaluate";
     $kq_sql_count = $conn->query($sql_count);
     $row_count = $kq_sql_count->fetch_assoc();
-    echo $row_count['COUNT'];
-    
+
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -167,7 +164,7 @@
                         <div class="dalat_danhgia_hihi">
                             <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img">
                             <div class="count_voting">
-                                <p>142 đánh giá</p>
+                                <p><?php echo $row_count['COUNT']; ?> đánh giá</p>
                             </div>
                             <p class="huhu">5.0</p>
                         </div>
@@ -191,16 +188,17 @@
                     </div>
                 </div>
             </div>
-            <div class="danhgiachung__comment">
-                <div class="danhgiachung__comment__infor">
-                    <p><strong>Đào Nguyên Trọng Khôi</strong></p>
-                    <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
+            <?php while($row_cmt = $kq_cmt->fetch_assoc()) { ?>
+                <div class="danhgiachung__comment">
+                    <div class="danhgiachung__comment__infor">
+                        <p><strong><?php echo $row_cmt['First_Name'].' '.$row_cmt['Last_Name']; ?></strong></p>
+                        <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
+                    </div>
+                    <div class="danhgiachung__comment__content">
+                        <p><?php echo $row_cmt['Content']?></p>
+                    </div>
                 </div>
-                <div class="danhgiachung__comment__content">
-                    <p>Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh
-                        chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.</p>
-                </div>
-            </div>
+            <?php } ?>
                 <div class="btn_insert">
                     <button class="btn_insert--write">
                         Viết đánh giá
