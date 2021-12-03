@@ -225,22 +225,26 @@ header {
 #div_1 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_1 {
     width: 500px;
     height: 500px;
     position: absolute;
+    cursor: pointer;
 }
 #div_2 p {
     position: absolute;
     color: white;
     font-size: 3em;
     top: 100px;
-    left: 80px;
+    left: 40px;
+    cursor: pointer;
 }
 #div_2 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_2 {
     position: absolute;
@@ -254,16 +258,19 @@ header {
     font-size: 3em;
     top: 40%;
     left: 15%;
+    cursor: pointer;
 }
 #div_3 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_3 {
     position: absolute;
     width: 250px;
     height: 240px;
     left: 865px;
+    cursor: pointer;
 }
 #div_4 p {
     position: absolute;
@@ -271,10 +278,12 @@ header {
     font-size: 3.5em;
     top: 40%;
     left: 30%;
+    cursor: pointer;
 }
 #div_4 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_4 {
     position: absolute;
@@ -282,6 +291,7 @@ header {
     height: 212px;
     left: 560px;
     margin-top: 290px;
+    cursor: pointer;
 }
 .section_4 {
     border-top: 1px solid black;
@@ -347,195 +357,6 @@ header {
     top: -35%;
     left: 42%;
 }
-footer {
-    width: 100%;
-    height: 420px;
-    letter-spacing: 0.1em;
-    position: relative;
-}
-  
-#copyright {
-    width: 1450px;
-    color: white;
-    height: 20px;
-    background: #363131;
-    position: relative;
-    top: -5px;
-    padding: 1em 0 0.5em 5em;
-}
-  
-#transparency {
-    width: 1520px;
-    height: 376px;
-    background: #000000;
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-}
-  
-.underline, .info__underline, .working-time__underline, .support__underline {
-    width: 39%;
-    height: 0.25em;
-    background: white;
-}
-  
-.title, .info__title, .working-time__title, .support__title, .connection__address strong, .connection__phone strong, .connection__email strong {
-    font-size: 1.7em;
-}
-  
-.info {
-    width: 292px;
-    height: 25%;
-    position: absolute;
-    top: 5%;
-    color: white;
-    left: 5%;
-}
-  
-.info div {
-    background: none;
-    position: absolute;
-    top: 4.5em;
-}
-  
-.info div p {
-    background: none;
-    height: 2.5em;
-    width: 100%;
-    line-height: 1.5em;
-    padding: 0em 1em 1em 1em;
-}
-  
-.working-time {
-    width: 292px;
-    height: 25%;
-    position: absolute;
-    top: 5%;
-    color: white;
-    left: 30%;
-}
-  
-.working-time ul {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 4.5em;
-}
-  
-.working-time ul li {
-    display: inline-block;
-}
-  
-.working-time ul p {
-    background: none;
-    height: 1em;
-    padding: 0 1em 1em 1em;
-}
-  
-.support {
-    width: 150px;
-    height: 25%;
-    position: absolute;
-    top: 5%;
-    color: white;
-    left: 55%;
-}
-  
-.support div {
-    position: absolute;
-    top: 4.5em;
-}
-  
-.support div p {
-    background: none;
-    height: 1em;
-    width: 100%;
-    line-height: 1.5em;
-    padding: 0 1em 0.5em 1em;
-}
-  
-.connection {
-    width: 350px;
-    height: 350px;
-    color: white;
-    position: absolute;
-    top: 5%;
-    left: 70%;
-}
-  
-.connection__address p, .connection__phone p, .connection__email p {
-    line-height: 1.5em;
-}
-  
-.connection__address {
-    position: absolute;
-    left: 25%;
-}
-  
-.connection__phone {
-    position: absolute;
-    top: 18%;
-    left: 25%;
-}
-  
-.connection__email {
-    position: absolute;
-    top: 39%;
-    left: 25%;
-}
-  
-  .connection hr {
-    width: 100%;
-    height: 0.1em;
-    background: white;
-    position: absolute;
-    top: 60%;
-  }
-  
-  .connection > p {
-    position: absolute;
-    top: 70%;
-  }
-  
-  .ti-location-pin, .ti-mobile, .ti-email {
-    font-size: 1.9em;
-  }
-  
-  .ti-location-pin {
-    position: absolute;
-    left: 10%;
-  }
-  
-  .ti-mobile {
-    position: absolute;
-    top: 18%;
-    left: 10%;
-  }
-  
-  .ti-email {
-    position: absolute;
-    top: 39%;
-    left: 10%;
-  }
-  
-  .ti-facebook {
-    position: absolute;
-    top: 70%;
-    left: 55%;
-  }
-  
-  .ti-google {
-    position: absolute;
-    top: 70%;
-    left: 65%;
-  }
-  
-  .ti-linkedin {
-    position: absolute;
-    top: 70%;
-    left: 75%;
-  }
-
   iframe{
     overflow: hidden;
     display: none;

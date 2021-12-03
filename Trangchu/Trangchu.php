@@ -126,19 +126,19 @@
         <section class="section_3">
             <h1>Điểm đến yêu thích</h1>
             <div id="div_1">
-                <img src="File/Dalat.png" alt="Đà Lạt">
+                <img src="File/Dalat.png" alt="Đà Lạt" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=12'">
                 <p>Đà Lạt</p>
             </div>
             <div id="div_2">
-                <img src="File/Sapa.png" alt="Sapa">
-                <p>Sapa</p>
+                <img src="File/Sapa.png" alt="Sapa" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=1'">
+                <p>Đài Loan</p>
             </div>
             <div id="div_3">
-                <img src="File/Japan.png" alt="Nhật Bản">
+                <img src="File/Japan.png" alt="Nhật Bản" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=10'">
                 <p>Nhật Bản</p>
             </div>
             <div id="div_4">
-                <img src="File/Phuquoc.png" alt="Phú Quốc">
+                <img src="File/Phuquoc.png" alt="Phú Quốc" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=11'">
                 <p>Phú Quốc</p>
             </div>
         </section>
@@ -160,78 +160,7 @@
         </section>
     </main>
 
-    <footer>
-        <img src="File/teamwork_1536.jpg" alt="teamwork_image">
-        <p id="copyright">Copyright &copy 2021 UITour Company</p>
-        <div id="transparency"></div>
-        <section class="info">
-            <h2 class="info__title">Thông tin công ty</h2>
-            <hr class="info__underline"><br>
-            <div>
-                <p>Công ty được thành lập từ tháng 9 năm 2021</p>
-                <p>Dẫn đầu danh sách ít khách du lịch nhất Việt Nam </p>
-                <p>Với những chiến lược kinh doanh vô cùng hiệu quả thì hiện nay công ty đang dần chuyển sang bán kem
-                    trộn để cải thiện tiềm lực kinh tế</p>
-            </div>
-
-        </section>
-        <section class="working-time">
-            <h2 class="working-time__title">Thời gian làm việc</h2>
-            <hr class="working-time__underline"><br>
-            <ul>
-                <il>
-                    <p>Thứ 2: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 3: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 4: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 5: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 6: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Thứ 7: từ 6h00 - 17h00</p>
-                </il>
-                <il>
-                    <p>Chủ nhật: từ 6h00 - 17h00</p>
-                </il>
-            </ul>
-        </section>
-        <section class="support">
-            <h2 class="support__title">Hỗ trợ</h2>
-            <hr class="support__underline">
-            <div>
-                <p>Quên mật khẩu?</p>
-                <p>FAQ</p>
-            </div>
-        </section>
-        <section class="connection">
-
-            <span class="ti-location-pin"></span>
-            <div class="connection__address">
-                <p><strong>Địa chỉ</strong><br>Vincom Thủ Đức</p>
-            </div>
-
-            <span class="ti-mobile"></span>
-            <div class="connection__phone">
-                <p><strong>Điện thoại</strong><br>0123456789</p>
-            </div>
-            <span class="ti-email"></span>
-            <div class="connection__email">
-                <p><strong>Email</strong><br>kemkabi_chipu@gmail.com</p>
-            </div>
-            <hr>
-            <p>Kết nối với chúng tôi:</p>
-            <span class="ti-facebook"></span>
-            <span class="ti-google"></span>
-            <span class="ti-linkedin"></span>
-        </section>
-    </footer>
+    <?php include "../Footer/footer.html" ?>
 
     <script src="Trangchu.js"></script>
 </body>
