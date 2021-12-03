@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2021 at 04:20 PM
+-- Generation Time: Dec 03, 2021 at 01:06 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -167,8 +167,8 @@ INSERT INTO `ct_tour` (`CT_Tour_id`, `Tour_Id`, `Tour_Highlight`, `Content_CS`, 
 CREATE TABLE `evaluate` (
   `Evaluate_Id` int(11) NOT NULL,
   `User_Id` int(11) NOT NULL,
-  `CT_Tour_Id` int(11) NOT NULL,
-  `CT_Hotel_Id` int(11) NOT NULL,
+  `CT_Tour_Id` int(11) DEFAULT NULL,
+  `CT_Hotel_Id` int(11) DEFAULT NULL,
   `Content` text COLLATE utf8_unicode_ci NOT NULL,
   `Rating` int(11) DEFAULT NULL,
   `Time` date DEFAULT NULL
@@ -364,10 +364,7 @@ ALTER TABLE `ct_tour`
 -- Indexes for table `evaluate`
 --
 ALTER TABLE `evaluate`
-  ADD PRIMARY KEY (`Evaluate_Id`),
-  ADD KEY `CT_Tour_Id` (`CT_Tour_Id`),
-  ADD KEY `CT_Hotel_Id` (`CT_Hotel_Id`),
-  ADD KEY `User_Id` (`User_Id`);
+  ADD PRIMARY KEY (`Evaluate_Id`);
 
 --
 -- Indexes for table `hotel`
@@ -422,7 +419,7 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT for table `booking_form`
 --
 ALTER TABLE `booking_form`
-  MODIFY `Booking_Form_Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Booking_Form_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -452,7 +449,7 @@ ALTER TABLE `ct_tour`
 -- AUTO_INCREMENT for table `evaluate`
 --
 ALTER TABLE `evaluate`
-  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `hotel`
@@ -481,13 +478,6 @@ ALTER TABLE `user`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `booking_form`
---
-ALTER TABLE `booking_form`
-  ADD CONSTRAINT `booking_form_ibfk_1` FOREIGN KEY (`User_Id`) REFERENCES `user` (`User_Id`),
-  ADD CONSTRAINT `booking_form_ibfk_2` FOREIGN KEY (`CT_Tour_Id`) REFERENCES `ct_tour` (`CT_Tour_id`);
 
 --
 -- Constraints for table `ct_blog`
