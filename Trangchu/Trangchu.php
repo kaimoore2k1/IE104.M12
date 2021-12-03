@@ -126,19 +126,19 @@
         <section class="section_3">
             <h1>Điểm đến yêu thích</h1>
             <div id="div_1">
-                <img src="File/Dalat.png" alt="Đà Lạt">
+                <img src="File/Dalat.png" alt="Đà Lạt" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=12'">
                 <p>Đà Lạt</p>
             </div>
             <div id="div_2">
-                <img src="File/Sapa.png" alt="Sapa">
-                <p>Sapa</p>
+                <img src="File/Sapa.png" alt="Sapa" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=1'">
+                <p>Đài Loan</p>
             </div>
             <div id="div_3">
-                <img src="File/Japan.png" alt="Nhật Bản">
+                <img src="File/Japan.png" alt="Nhật Bản" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=10'">
                 <p>Nhật Bản</p>
             </div>
             <div id="div_4">
-                <img src="File/Phuquoc.png" alt="Phú Quốc">
+                <img src="File/Phuquoc.png" alt="Phú Quốc" onClick="location.href='../DuLichTrongNuoc/DuLichTrongNuoc__ChiTiet.php?id=11'">
                 <p>Phú Quốc</p>
             </div>
         </section>
