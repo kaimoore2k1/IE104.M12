@@ -14,6 +14,7 @@
             session_start();
             $_SESSION['FullName'] = $row['Admin_FullName'];
             $_SESSION['ID'] = $row['Admin_ID '];
+            $_SESSION['Role'] = $row['Grant'];
             header("location:TrangChu.php");
         }
         else {
