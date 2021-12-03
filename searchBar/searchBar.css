@@ -49,22 +49,16 @@ body {
     width: 300px;
     display: flex;
     flex-direction: column;
-    height: 86px;
+    height: 96px;
     flex: 2;
     background-color: white;
     border-right: 1px solid #DEDEDE;
     text-align: center;
-    padding-top: 10px;
 }
 
 .searchBar__date--input {
     display: flex;
     margin-left: 48px;
-}
-
-
-.searchBar__date p {
-    margin-top: 10px;
 }
 
 .searchBar__date--input input {
@@ -129,6 +123,7 @@ body {
     color: white;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
 .searchBar__location--img {

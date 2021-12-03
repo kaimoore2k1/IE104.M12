@@ -32,6 +32,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.css">
     <title>Du lịch trong nước</title>
+    <script src="//code.tidio.co/kejfzg9uqghunwx4afuy5fvtocc7uk97.js" async></script>
 </head>
 
 <body>
