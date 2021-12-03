@@ -76,7 +76,7 @@
         <div class="feedback-form">
             <div class="title"><h2>Ý kiến đóng góp của khách hàng</h2></div>
             <div class="form">
-                <form action="Contact.php" method="post">
+                <form action="Process.php" method="post">
                     <div>
                         <p>Họ tên <span class="required-field">*</span></p>
                         <input type="text" id="full-name" name="full-name">
