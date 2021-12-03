@@ -102,7 +102,8 @@
             </div>
         </div>
     </main>
-    <footer>
+    <?php include "../Footer/footer.html" ?>
+    <!-- <footer>
         <div class="transparent-shape"></div>
         <div class="content">
             <div class="information">
@@ -152,6 +153,6 @@
             </div>
         </div>
         <p id="copyright">Copyright &copy 2021 UITour Company</p>
-    </footer>
+    </footer> -->
 </body>
 </html>

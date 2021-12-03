@@ -12,12 +12,11 @@ body{
     margin: 0 auto;
 }
 
-header{
 
-}
 
-header #background{
+#background{
     width: 100%;
+    
 }
 
 
@@ -153,28 +152,21 @@ iframe{
   }
 
   main{
-      width: 1519.5px;
+      width: 100%;
       margin: 0 auto;
   }
 
   main .information{
-      display: flex;
-      justify-items: center;
+      display: grid;
+      grid-template-columns: 30% 50%;
+      justify-content: space-evenly;
       padding: 50px 100px;
-      flex-direction: row;
       align-items: center;
+      height: 300px;
   }
 
-  main .information img{
-      margin-right: 50px;
-  }
-
-  main .information>div{
-      margin-left: 50px;
-  }
-
-  main .information>div *{
-      margin: 25px 0;
+  main .information *{
+      width: 100%;
   }
 
   main .feature{
@@ -257,98 +249,38 @@ iframe{
  }
 
 
-  
- footer h2{
-    font-size: 1.5em;
-    
-}
+  @media only screen and (max-width: 768px){
+      body{
+          max-width: 100vw;
+         
+      }
+    main .information, main .feature, main .reason-for-choice .content, main .staffs{
+        display: grid;
+        grid-template-columns: 75%;
+        height: auto;
+       
+    }
 
-footer {
-  max-width: 100%;
-  height: auto;
-  letter-spacing: 0.1em;
-  position: relative;
-}
+    main .information, main .staffs{
+        grid-row-gap: 50px;
+    }
 
-footer>img{
-    width: 100%;
-}
+    main .reason-for-choice .content div:nth-of-type(1), main .staffs>p{
+        grid-column: 1/2;
+    }
 
-footer .transparent-shape{
-    width: 100%;
-    height: 484px;
-    background: #363131;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
+    main .reason-for-choice .transparent-shape{
+        display: none;
+    }
 
-footer .content{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    color: rgb(238, 234, 234);
-    display: flex;
-    justify-content: space-evenly;
-    margin: 30px  auto;
-}
+    main .reason-for-choice>img{
+        display: none;
+    }
 
-footer .content .information>h2, .working-time>h2, .support>h2{
-    margin: 10px auto;
-}
+    main .reason-for-choice{
+        background-color: rgb(36, 33, 33);
+        height: 1100px;
+    }
+   
 
-footer .content .information{
-    width: 20%;
-}
-
-footer .content .information>p, .working-time>p, .support>p{
-    margin: 10px auto;
-   line-height: 1.2em;
-}
-
-footer .content .working-time{
-    width: 20%;
-}
-
-footer .contact{
-    width: 26%;
-}
-
-footer .content .contact p{
-    margin: 10px auto;
-}
-
-footer .ti-location-pin, .ti-mobile, .ti-email{
-    font-size: 1.5em;
-    float: left;
-    margin: 10px;
-}
-
-footer .content .contact>p{
-    float: left;
-}
-
-footer .contact>hr{
-    height: 2px;
-    max-width: 100%;
-    background-color: rgb(238, 234, 234);
-    margin: 20px auto;
-}
-
-footer .ti-facebook, .ti-google, .ti-linkedin{
-    position: relative;
-    top: 10px;
-}
-
-#copyright {
-  max-width: 100%;
-  color: rgb(238, 234, 234);
-  background: #363131;
-  position: relative;
-  padding: 10px 0 10px 100px;
-  top: 420px;
-  z-index: 1;
-}
+  }
