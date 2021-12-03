@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <?php include"../Header/Header.php" ?>
+        <?php include"../newHeader/newHeader.php" ?>
         <p id="h_p1">ĐIỂM ĐẾN THÚ VỊ</p>
         <p id="h_p2">Tận hưởng hành trình của bạn trong từng khoảnh khắc</p>
         <p id="h_link"><a href="#">TÌM HIỂU</a></p>
