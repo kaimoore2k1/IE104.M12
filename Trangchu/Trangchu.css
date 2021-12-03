@@ -225,22 +225,26 @@ header {
 #div_1 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_1 {
     width: 500px;
     height: 500px;
     position: absolute;
+    cursor: pointer;
 }
 #div_2 p {
     position: absolute;
     color: white;
     font-size: 3em;
     top: 100px;
-    left: 80px;
+    left: 40px;
+    cursor: pointer;
 }
 #div_2 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_2 {
     position: absolute;
@@ -254,16 +258,19 @@ header {
     font-size: 3em;
     top: 40%;
     left: 15%;
+    cursor: pointer;
 }
 #div_3 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_3 {
     position: absolute;
     width: 250px;
     height: 240px;
     left: 865px;
+    cursor: pointer;
 }
 #div_4 p {
     position: absolute;
@@ -271,10 +278,12 @@ header {
     font-size: 3.5em;
     top: 40%;
     left: 30%;
+    cursor: pointer;
 }
 #div_4 img {
     width: 100%;
     height: 100%;
+    cursor: pointer;
 }
 #div_4 {
     position: absolute;
@@ -282,6 +291,7 @@ header {
     height: 212px;
     left: 560px;
     margin-top: 290px;
+    cursor: pointer;
 }
 .section_4 {
     border-top: 1px solid black;
