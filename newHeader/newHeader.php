@@ -38,7 +38,7 @@
             <a href="#" id="decor--gioithieu">Giới thiệu</a>
             <a href="#" id="decor--lienhe">Liên hệ</a>
             <?php if (isset($_SESSION['ID']) && $_SESSION['ID']){ ?>
-                    <form class="user_infor" method="POST" name="dangxuat" action="../Header/xulydangxuat.php">
+                    <form class="user_infor" method="POST" name="dangxuat" action="../newHeader/xulydangxuat.php">
                         <img id="user_infor_id" src="../default-avatar.png" alt="avt_user">
                         <p><?php echo $_SESSION['FirstName'].' '.$_SESSION['LastName']; ?></p>
                         <button name="dang_xuat" class="dang_xuat" id="sign_up">Đăng xuất</button>
