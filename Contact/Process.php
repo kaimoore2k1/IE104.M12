@@ -30,6 +30,7 @@
         echo "Error" . $sql . "<br>" . $conn->error;
     }
 
+    header("Location: Contact.php");
 
     $conn->close();
 
