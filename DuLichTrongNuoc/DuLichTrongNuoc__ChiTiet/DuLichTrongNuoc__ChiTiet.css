@@ -13,6 +13,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     margin: 0 auto;
+    font-size: 14px !important;
 }
 
 .header_menu {
