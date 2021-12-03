@@ -16,36 +16,9 @@
         <?php include"../newHeader/newHeader.php" ?>
         <p id="h_p1">ĐIỂM ĐẾN THÚ VỊ</p>
         <p id="h_p2">Tận hưởng hành trình của bạn trong từng khoảnh khắc</p>
-        <p id="h_link"><a href="#">TÌM HIỂU</a></p>
+        <p id="h_link"><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x00">TÌM HIỂU</a></p>
         <img id="logo_header" src="../Trangchu/File/Picture_header.svg" alt="Header_picture_Home">
-        <div class="searchBar">
-            <div class="searchBar__location">
-                <img class="searchBar__location--img" src="File/location.svg">
-                <p>
-                    <strong>Địa điểm</strong>
-                    <br>
-                    Bạn muốn đi đâu?
-                </p>
-            </div>
-            <div class="searchBar__date">
-                <img class="searchBar__date--img" src="File/date.svg">
-                <p>
-                    <strong>Bắt đầu - Kết thúc</strong>
-                    <br>
-                    Chọn ngày
-                </p>
-            </div>
-            <div class="searchBar__tour">
-                <img class="searchBar__tour--img" src="File/human.svg">
-                <p>
-                    <strong>Loại Tour</strong>
-                    <br>
-                    Cá nhân - gia đình
-                </p>
-            </div>
-            <button class="searchBar__button">TÌM KIẾM</button>
-        </div>
-        
+        <?php include"../searchBar/searchBar.html" ?>
     </header>
 
     <div id="overlay">

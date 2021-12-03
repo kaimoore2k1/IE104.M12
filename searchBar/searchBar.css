@@ -12,7 +12,7 @@ body {
     margin: 0 auto;
 }
 
-img {
+.searchBar img {
     width: 36px;
     height: 36px;
 }
@@ -83,6 +83,7 @@ img {
     margin-top: 50px;
     margin-right: 25px;
     display: none;
+    background-color: transparent !important;
 }
 
 .number_box-decor.active {
