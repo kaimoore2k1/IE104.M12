@@ -1,6 +1,8 @@
 const decor_dulich = document.querySelector('#decor--dulich')
 
 decor_dulich.classList.add('itemSelected')
+document.querySelector('#decor--trangchu').classList.remove('itemSelected')
+
 const selected = document.querySelectorAll('.wapper__content__nav button')
         const content_selected = document.querySelectorAll('.wapper__content--content')
 

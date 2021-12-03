@@ -2,6 +2,8 @@ const overlayBackground = document.getElementById('overlay-background')
 const signInOverlay = document.getElementById('sign-in__overlay')
 const signUpOverlay = document.getElementById('sign-up__overlay')
 
+document.querySelector('#decor--trangchu').classList.add('itemSelected')
+
 //Event when click overlay background 
 overlayBackground.addEventListener('click',()=>{
     // hidden overlay windows

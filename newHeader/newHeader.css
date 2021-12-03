@@ -123,3 +123,9 @@ header {
     position: absolute !important;
     left: 130px !important;
 }
+
+.itemSelected {
+    border-bottom: 3px solid rgb(64, 64, 255);
+    border-radius: 1px;
+    color: rgb(64, 64, 255) !important;
+}

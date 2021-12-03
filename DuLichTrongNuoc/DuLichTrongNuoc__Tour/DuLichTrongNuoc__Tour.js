@@ -5,6 +5,8 @@ const aTour_Voting = document.querySelectorAll('.aTour.aTour_Voting')
 const decor_dulich = document.querySelector('#decor--dulich')
 
 decor_dulich.classList.add('itemSelected')
+document.querySelector('#decor--trangchu').classList.remove('itemSelected')
+
 
     function latest_selected() {
 
