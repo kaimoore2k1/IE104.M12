@@ -635,13 +635,17 @@ iframe::-webkit-scrollbar {
     border: 1px solid black;
     border-radius: 10px;
     margin: 0 auto;
-    display: none;
+    /* display: none; */
     z-index: 20;
     overflow: hidden;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.hidden {
+    display: none;
 }
 
 .responseBox img {

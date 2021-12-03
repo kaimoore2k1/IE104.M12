@@ -33,7 +33,7 @@
 <body>
     
     <header>
-    <?php include '../Header/Header.html'; ?>
+    <?php include '../newHeader/newHeader.html'; ?>
         <nav>
             <img src="../Code-TravelTips/2dulich.png" alt="Travel Tips" class="header__img">
             <ul class="nav__links">

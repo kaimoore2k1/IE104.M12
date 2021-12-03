@@ -377,7 +377,7 @@
         </nav>   
     </header> -->
     <header>
-        <?php include "../Header/Header.html" ?>
+        <?php include "../newHeader/newHeader.html" ?>
     </header>
     <div id="overlay">
         <div id="overlay-background"></div>

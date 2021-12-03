@@ -36,7 +36,7 @@
 
 <body>
     <header>
-        <?php include"../Header/Header.php" ?>  
+        <?php include"../newHeader/newHeader.php" ?> 
         <img id="logo_header" src="<?php echo $obj['banner']; ?>" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer">
@@ -75,7 +75,7 @@
                 <input type="text" name="bookTourInfor__cus--phonenum" id="bookTourInfor__cus--phonenum" required><br>
                 <label for="bookTourInfor__cus--email">Email</label><br>
                 <input type="text" name="bookTourInfor__cus--email" id="bookTourInfor__cus--email" required><br>
-                <input name="btn_bookTour" id="submit__exitOverlay" type="submit" value="GỬI THÔNG TIN" onclick="on()">
+                <input name="btn_bookTour" id="submit__exitOverlay" type="submit" value="GỬI THÔNG TIN">
             </div>
         </div>
     </form>
@@ -84,16 +84,7 @@
         <iframe id="sign-in__overlay" src="/sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>
         <iframe id="sign-up__overlay" src="/sign-up/sign-up.html" width="420px" height="620px" frameborder="0"></iframe>
     </div>
-    <div class="responseBox--background"></div>
-
-    <div class="responseBox" id="responseBox">
-        <div class="responseBox_tittle">
-            <img src="DuLichTrongNuoc__ChiTiet/checked_tick.svg" alt="checked_tick">
-            <p>BẠN ĐÃ ĐĂNG KÝ TOUR THÀNH CÔNG</p>
-        </div>
-        <p class="responseBox--message">Chúng tôi sẽ liên hệ để xác nhận thông tin của bạn trong vòng <strong>24
-                giờ</strong> , chân thành cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</p>
-    </div>
+    
     <script src="DuLichTrongNuoc__Booking.js"></script>
     <iframe seamless="seamless" class="InTour__PDF" src="DuLichTrongNuoc__PDF/DuLichTrongNuoc__PDF.php?id=<?php echo $check['Tour_Id']; ?>"
         frameborder="0"></iframe>
@@ -227,6 +218,33 @@
     <footer>
         <?php include"../Footer/Footer.php" ?>
     </footer>
+    <?php if (isset($_SESSION['status']) && $_SESSION['status']) { ?>
+        <div class="responseBox--background"></div>
+
+        <div class="responseBox" id="responseBox">
+            <div class="responseBox_tittle">
+                <img src="DuLichTrongNuoc__ChiTiet/checked_tick.svg" alt="checked_tick">
+                <p>BẠN ĐÃ ĐĂNG KÝ TOUR THÀNH CÔNG</p>
+            </div>
+            <p class="responseBox--message">Chúng tôi sẽ liên hệ để xác nhận thông tin của bạn trong vòng <strong>24
+                    giờ</strong> , chân thành cảm ơn bạn đã sử dụng dịch vụ của chúng tôi</p>
+        </div>
+        <script>
+            setTimeout(() => {
+                document.querySelector('.responseBox').classList.add('hidden')
+            }, 3000);
+        </script>
+        <?php session_destroy(); ?>
+            
+    <?php } ?>
+    <script>
+            function on() {
+            document.getElementById("responseBox").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("responseBox").style.display = "none";
+            }, 3000);
+        }
+    </script>
     <script>
         function show_comment__warning() {
             let comment_warning = document.querySelector('.comment__warning')
@@ -265,12 +283,7 @@
             bookTourForm.style.display = 'block'
         }
 
-        function on() {
-            document.getElementById("responseBox").style.display = "block";
-            setTimeout(() => {
-                document.getElementById("responseBox").style.display = "none";
-            }, 3000);
-        }
+        
     </script>
     <script src="DuLichTrongNuoc__ChiTiet/DuLichTrongNuoc__ChiTiet.js"></script>
 </body>

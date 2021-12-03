@@ -42,7 +42,7 @@
 
 <body>
     <header>
-        <?php include"../Header/Header.php" ?>
+        <?php include"../newHeader/newHeader.php" ?> 
         <img id="logo_header" src="<?php echo $type_img; ?>" alt="Header_picture_Home">
         <div class="Header__title">
             <div class="Header__title--layer"></div>
