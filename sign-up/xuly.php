@@ -51,7 +51,7 @@
             mysqli_query($connect,$sql);
             echo '<script>
                 alert("Bạn đã đăng ký thành công")
-                window.location= "sign-up.php"
+                window.location= "../sign-in/sign-in.php"
             </script>';
             
         };
