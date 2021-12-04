@@ -32,13 +32,25 @@
             <h2 class="section1__heading">Các dịch vụ được cung cấp</h2>
             <div class="section1__list">
                 <a href="#" class="section1__list__item">
-                    <img src="File/DuLich.png" alt="Du lịch">
+                    <picture>
+                    <source srcset="File/DuLichS.png" media="(max-width: 768px)">
+                    <source srcset="File/DuLichR.png">
+                    <img src="File/DuLichS.png" alt="Flowers">
+                    </picture>
                 </a>
                 <a href="#" class="section1__list__item">
-                    <img src="File/LuuTru.png" alt="Lưu trú">
+                <picture>
+                    <source srcset="File/LuuTruS.png" media="(max-width: 768px)">
+                    <source srcset="File/LuuTruR.png">
+                    <img src="File/LuuTruS.png" alt="Flowers">
+                    </picture>
                 </a>
                 <a href="#" class="section1__list__item">
-                    <img src="File/GiaiTri.png" alt="Giải trí">
+                <picture>
+                    <source srcset="File/GiaiTriS.png" media="(max-width: 768px)">
+                    <source srcset="File/GiaiTriR.png">
+                    <img src="File/GiaiTriS.png" alt="Flowers">
+                </picture>
                 </a>
             </div>
         </section>
