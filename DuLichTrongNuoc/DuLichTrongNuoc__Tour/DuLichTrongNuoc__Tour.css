@@ -129,7 +129,7 @@ iframe{
 }
 
 #logo_header {
-    width: 100%;
+    width: 50%;
     height: 439px;
     object-fit: fill;
 }
@@ -440,13 +440,14 @@ iframe{
     height: 425px;
     position: absolute;
     left: 30px;
+    top:10px
 }
 
 #aTour__image--tag {
     width: 166px;
     height: 63px;
     position: absolute;
-    top: 390px;
+    top: 400px;
     left: 30px;
 }
 
@@ -575,4 +576,170 @@ iframe{
 
 .tourType button:active {
     color: aqua;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .tourType {
+        display: flex;
+        width: 614px;
+        font-size: 18px;
+        margin-left: 80px;
+        margin-bottom: 84px;
+    }
+    
+    .tourType button {
+        flex: 1;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .tourType__goodPrice {
+        margin-right: 25px;
+    }
+
+    .aTour {
+        display: flex;
+        position: relative;
+        width: 728px;
+        height: 300px;
+        margin-left: 30px;
+        border-bottom: 1px solid black;
+    
+    }
+    
+    #aTour__image--tour {
+        width: 247px;
+        height: 261px;
+        position: absolute;
+        left: 10px;
+        top: 10px
+    }
+    
+    #aTour__image--tag {
+        width: 125px;
+        height: 50px;
+        position: absolute;
+        top: 245px;
+        left: 10px;
+    }
+    
+    .aTour__infor--tittle {
+        font-size: 18px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #0060F1;
+        cursor: pointer;
+    }
+    
+    .aTour__infor--departure {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 35px;
+    }
+    
+    .aTour__infor--detail {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .aTour__infor {
+        position: absolute;
+        left: 280px;
+        top: 30px;
+        width: 276px;
+        height: 424px;
+        text-align: center;
+    }
+    
+    .aTour__infor--tittle, .aTour__infor--departure {
+        margin-bottom: 15px;
+    }
+    
+    
+    
+    .aTour_box {
+        position: absolute;
+        right: 0px;
+    }
+    
+    .aTour_box--price {
+        width: 130px;
+        height: 60px;
+        background-color: #EEB700;
+        margin-top: 30px;
+        margin-left: 50px;
+    }
+    
+    .aTour_box--price p {
+        font-size: 12px;
+        color: white;
+        text-align: center;
+        padding: 21.5px;
+    }
+    
+    .aTour_box--departDate, .aTour_box--backDate {
+        display: flex;
+        width: 130px;
+        height: 50px;
+        border: 1px solid black;
+        font-size: 12px;
+        position: relative;
+        margin-top: 15px;
+        margin-left: 50px;
+    }
+    
+    .aTour_box--departDate img, .aTour_box--backDate img {
+        position: absolute;
+        margin-left: 8px;
+        margin-top: 8px;
+    }
+    
+    .aTour_box--departDate p, .aTour_box--backDate p {
+        position: absolute;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    
+    
+    .aTour_box--viewMore button {
+        color: #2887A9;
+        font-size: 15px;
+        border: none;
+        width: 166px;
+        height: 66px;
+        background-color: white;
+        cursor: pointer;
+        margin-top: 0px;
+        margin-left: 30px;
+    }
+
+    .searchBar {
+        display: none;
+    }
+
+    .Header__title--p {
+        font-size: 36px;
+        z-index: 3;
+        color: white;
+        position: absolute;
+        top: 70px;
+        left: 70px;
+    }
+    
+    .Header__title--layer {
+        background-color: #000000;
+        opacity: 60%;
+        width: 550px;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    
+
 }
