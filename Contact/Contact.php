@@ -9,7 +9,7 @@
     <title>Contact</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <nav class="header_menu">
             <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
             <a href="../Trangchu/Trangchu.html" >Trang chủ</a>
@@ -36,7 +36,9 @@
             <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
         </nav>
         <img src="../Contact/banner.png" class="banner" alt="background">
-    </header>
+    </header> -->
+    
+    <img src="../Contact/banner.png" class="banner" alt="background">
     <div id="overlay">
         <div id="overlay-background"></div>
         <iframe id="sign-in__overlay" src="../sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>

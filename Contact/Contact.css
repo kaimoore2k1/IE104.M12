@@ -5,62 +5,64 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
     width: 100%;
     margin: 0 auto;
 }
-
-
-
+header {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
 .header_menu {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+#header_menu__nav {
     margin-left: 300px;
 }
-
+.nav_tick {
+    margin-bottom: 10px;
+}
 .header_menu a {
-    text-decoration: none;
-    color: rgb(48, 48, 48);
-    font-size: 20px;
-    padding: 20px;
-    display: inline-block;
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  font-size: 20px;
+  padding: 20px;
+  display:inline-block;
 }
 
 .header_menu a:hover {
     color: #0047FF;
 }
-
 .header_menu ul {
-    display: inline;
-    margin: 0;
-    padding: 0;
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
-
 .header_menu ul li {
     display: inline-block;
 }
-
 .header_menu ul li:hover {
     color: #0047FF;
 }
-
 .header_menu ul li:hover ul {
     display: block;
 }
-
 .header_menu ul li ul {
-    position: absolute;
-    width: 200px;
-    display: none;
+  position: absolute;
+  width: 200px;
+  display: none;
 }
-
-.header_menu ul li ul li {
-    background: white;
-    display: block;
+.header_menu ul li ul li { 
+  background: white; 
+  display: block; 
 }
-
 .header_menu ul li ul li a {
-    display: block !important;
+    display:block !important;
     margin: 5px 0px -4px 0px;
-}
+} 
 
 #sign_in {
     font-size: 15px;
@@ -71,8 +73,7 @@ body {
     background-color: white;
     cursor: pointer;
 }
-
-#sign_in:hover {
+#sign_in:hover{
     color: #484848;
 }
 
@@ -85,17 +86,101 @@ body {
     border: none;
     cursor: pointer;
 }
-
 #logo_uitour {
     position: absolute;
     left: 10rem;
-    top: 0.7rem;
+    top: -3px;
 }
-
 #logo_header {
-    width: 100%;
+    width: 1520px;
 }
 
+/* header menu ipad */
+.header_menu--ipad {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+ #header_menu__nav--ipad {
+    margin-left: 10px;
+}
+.nav_tick {
+    margin-bottom: 10px;
+}
+.header_menu--ipad a {
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  font-size: 20px;
+  padding: 20px;
+  display:inline-block;
+}
+
+.header_menu--ipad a:hover {
+    color: #0047FF;
+}
+.header_menu--ipad ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.header_menu--ipad  ul li {
+    display: inline-block;
+}
+.header_menu--ipad  ul li:hover {
+    color: #0047FF;
+}
+.header_menu--ipad  ul li:hover ul {
+    display: block;
+}
+.header_menu--ipad  ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+.header_menu--ipad  ul li ul li { 
+  background: white; 
+  display: block; 
+}
+.header_menu--ipad ul li ul li a {
+    display:block !important;
+    margin: 5px 0px -4px 0px;
+} 
+
+.header_menu--ipad #sign_in {
+    font-size: 15px;
+    margin-left: 1em;
+    border-radius: 5em;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.header_menu--ipad #sign_in:hover{
+    color: #484848;
+}
+
+.header_menu--ipad #sign_up {
+    background-color: rgb(64, 64, 255);
+    color: white;
+    font-size: 15px;
+    border-radius: 5em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .header_menu {
+        display: none;
+    }
+    
+}
+@media only screen and (min-width: 768px) {
+    .header_menu--ipad {
+        display: none;
+    }
+}
 #h_p1 {
     position: absolute;
     color: white;
@@ -138,7 +223,7 @@ body {
     border-bottom: 3px solid rgb(64, 64, 255);
     border-radius: 1px;
     color: rgb(64, 64, 255) !important;
-}
+} 
 
 iframe {
     overflow: hidden;
@@ -162,7 +247,7 @@ iframe {
 }
 
 
-header .banner {
+body .banner {
     width: 100%;
 }
 
@@ -171,7 +256,7 @@ main {
     width: 1500px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 20% 50%;
+    grid-template-columns: 25% 50%;
     justify-content: space-evenly;
     margin: 50px 0;
 }
@@ -280,7 +365,7 @@ main .feedback-form{
 
 /* Footer CSS */
 
-/* 
+ 
 footer h2{
     font-size: 1.5em;
     
@@ -291,10 +376,7 @@ footer {
   height: auto;
   letter-spacing: 0.1em;
   position: relative;
-}
-
-footer>img{
-    width: 100%;
+  font-size: 20px !important;
 }
 
 footer .transparent-shape{
@@ -314,17 +396,19 @@ footer .content{
     left: 0;
     z-index: 2;
     color: rgb(238, 234, 234);
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 20% 10% 26%;
     justify-content: space-evenly;
-    margin: 30px  auto;
+    grid-row-gap: 100px;
+    background: #363131;
 }
 
 footer .content .information>h2, .working-time>h2, .support>h2{
     margin: 10px auto;
 }
 
-footer .content .information{
-    width: 20%;
+#information, #working-time, #contact, #support{
+    width: 100%;
 }
 
 footer .content .information>p, .working-time>p, .support>p{
@@ -332,13 +416,6 @@ footer .content .information>p, .working-time>p, .support>p{
    line-height: 1.2em;
 }
 
-footer .content .working-time{
-    width: 20%;
-}
-
-footer .contact{
-    width: 26%;
-}
 
 footer .content .contact p{
     margin: 10px auto;
@@ -361,7 +438,14 @@ footer .contact>hr{
     margin: 20px auto;
 }
 
+footer .icon{
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+}
+
 footer .ti-facebook, .ti-google, .ti-linkedin{
+    
     position: relative;
     top: 10px;
 }
@@ -369,9 +453,61 @@ footer .ti-facebook, .ti-google, .ti-linkedin{
 #copyright {
   max-width: 100%;
   color: rgb(238, 234, 234);
-  background: #363131;
   position: relative;
-  padding: 10px 0 10px 100px;
-  top: 420px;
+  padding: 20px 0 20px 100px;
   z-index: 1;
-} */
+  grid-column: 1/5;
+}
+
+@media only screen and (max-width: 768px){
+  footer .content{
+      display: grid;
+      grid-template-columns: 40% 40%;
+      grid-row-gap: 50px;
+  }
+
+  footer .transparent-shape{
+      height: 900px;
+  }
+  
+  #information , #working-time , #support , #contact {
+      width: 100%;
+  }
+
+  footer .content .contact>p{
+      float: none;
+  }
+
+  #copyright{
+     top: 0;
+      grid-column: 1/3;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */
+
+
+@media only screen and (max-width: 768px){
+    
+    body{
+        width: 768px;
+    }
+
+    main {
+        width: 768px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 75%;
+        justify-content: space-evenly;
+        grid-row-gap: 50px;
+    }
+
+    .feedback-form .form{
+        max-width: 100%;
+        padding: 0 90px;
+    }
+
+    main .feedback-form{
+        height: 700px;
+    }
+}
