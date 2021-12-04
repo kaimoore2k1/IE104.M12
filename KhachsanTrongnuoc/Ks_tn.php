@@ -1,10 +1,11 @@
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104_m12";
+    require "../connect.php";
+    // $host = "localhost";
+    // $host_user ="root";
+    // $host_password = "";
+    // $database = "ie104_m12";
 
-    $conn = new mysqli($host, $host_user, $host_password, $database);
+    // $conn = new mysqli($host, $host_user, $host_password, $database);
 
     $sql = "SELECT * FROM hotel where type = 1 order by Hotel_Id desc" ;
     $kq = $conn->query($sql);
@@ -36,7 +37,8 @@
 
 <body>
     <header>
-        <nav class="header_menu">
+    <?php include '../newHeader/newHeader.php'; ?>
+        <!-- <nav class="header_menu">
             <img id="logo_uitour" src="File/logo.svg" alt="logo_uitour">
             <div id="header_menu__nav">
                 <a href="../Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
@@ -62,7 +64,7 @@
             <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
             <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
             </div>
-        </nav>
+        </nav> -->
         <div class="div_domesticHotel"></div>
         <p id="tag_domesticHotel">KHÁCH SẠN TRONG NƯỚC</p>
         <img id="logo_header" src="File/Picture_header.svg" alt="Header_picture_Home">
@@ -127,15 +129,15 @@
     </header>
     <div id="overlay">
         <div id="overlay-background"></div>
-        <iframe id="sign-in__overlay" src="../sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>
-        <iframe id="sign-up__overlay" src="../sign-up/sign-up.html" width="420px" height="620px" frameborder="0"></iframe>
+        <iframe id="sign-in__overlay" src="../sign-in/sign-in.php" width="420px" height="620px" frameborder="0"></iframe>
+        <iframe id="sign-up__overlay" src="../sign-up/sign-up.php" width="420px" height="620px" frameborder="0"></iframe>
     </div>
     <main>
         <h1 id="tag_favorite">Điểm đến yêu thích trong nước</h1>
         <p id="tag_favorite--content">Khách sạn hàng đầu Việt Nam</p>
         <div class="grid-container">
             <div id="item1">
-                <a href="../KhachsanTrongnuoc/ks_tn_PhuQuoc.html">
+                <a href="../KhachsanTrongnuoc/ks_tn_PhuQuoc.php">
                     <p><b>Phú Quốc</b><br><span>124 khách sạn</span></p>
                     <img src="File/PhuQuoc.png" alt="Phú Quốc">
                 </a>

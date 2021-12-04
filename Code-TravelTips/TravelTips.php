@@ -1,15 +1,13 @@
 <?php
-            $host = "localhost";
-            $host_user ="root";
-            $host_password = "";
-            $database = "ie104.m12";
-            $port = "8111";
+            require "../connect.php";
+            // $host = "localhost";
+            // $host_user ="root";
+            // $host_password = "";
+            // $database = "ie104.m12";
+            // $port = "8111";
             
-            $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-            if(!$conn)
-            {
-                die ("Kết nối thất bại" . $conn->connect_error);
-            }
+            // $conn = new mysqli($host, $host_user, $host_password, $database, $port);
+            
             $sql = "SELECT * FROM blog WHERE title = 'CẨM NANG DU LỊCH' ";
             if(isset($_POST["timkiem"]))
             {
@@ -353,8 +351,8 @@
     </header>
     <div id="overlay">
         <div id="overlay-background"></div>
-        <iframe id="sign-in__overlay" src="../sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>
-        <iframe id="sign-up__overlay" src="../sign-up/sign-up.html" width="420px" height="620px" frameborder="0"></iframe>
+        <iframe id="sign-in__overlay" src="../sign-in/sign-in.php" width="420px" height="620px" frameborder="0"></iframe>
+        <iframe id="sign-up__overlay" src="../sign-up/sign-up.php" width="420px" height="620px" frameborder="0"></iframe>
     </div>
     <main>
         <div class="overlay_hidden" onclick="clickhidden()"></div>

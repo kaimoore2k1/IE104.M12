@@ -1,10 +1,11 @@
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104_m12";
+    require "../connect.php";
+    // $host = "localhost";
+    // $host_user ="root";
+    // $host_password = "";
+    // $database = "ie104_m12";
 
-    $conn = new mysqli($host, $host_user, $host_password, $database);
+    // $conn = new mysqli($host, $host_user, $host_password, $database);
 
     $diadiem = $_POST['input__location'];
     $sql = "SELECT * FROM hotel where type = 1 AND Location LIKE '%$diadiem%'";
@@ -29,7 +30,8 @@
 
 <body>
     <header>
-        <nav class="header_menu">
+    <?php include '../newHeader/newHeader.php'; ?>
+        <!-- <nav class="header_menu">
             <img id="logo_uitour" src="File/logo.svg" alt="logo_uitour">
             <div id="header_menu__nav">
                 <a href="../Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
@@ -55,7 +57,7 @@
             <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
             <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
             </div>
-        </nav>
+        </nav> -->
         <div class="div_domesticHotel"></div>
         <p id="tag_domesticHotel">Khách sạn <?php echo $diadiem ?></p>
         <img id="logo_header" src="File/pic_header_PhuQuoc.svg" alt="Header_picture_Home">

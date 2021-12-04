@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <?php include"../newHeader/newHeader.php" ?>
+        <?php include "../newHeader/newHeader.php" ?>
         <p id="h_p1">ĐIỂM ĐẾN THÚ VỊ</p>
         <p id="h_p2">Tận hưởng hành trình của bạn trong từng khoảnh khắc</p>
         <p id="h_link"><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x00">TÌM HIỂU</a></p>

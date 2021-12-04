@@ -35,7 +35,7 @@
                     </ul>
                 </li>
             </ul>
-            <a href="../Code-TravelTips/index.html">Traval tips</a>
+            <a href="../Code-TravelTips/index.html">Travel tips</a>
             <a href="#">Giới thiệu</a>
             <a href="#">Liên hệ</a>
             <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
@@ -46,6 +46,7 @@
         <p id="tag_domesticHotel">KHÁCH SẠN PHÚ QUỐC</p>
         <img id="logo_header" src="File/pic_header_PhuQuoc.svg" alt="Header_picture_Home">
     </header>
+    
     <main>
         <div class="wrapper_content">
             <div class="hotel">

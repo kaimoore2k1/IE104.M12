@@ -9,6 +9,7 @@
     <title>Contact</title>
 </head>
 <body>
+<?php include "../newHeader/newHeader.php" ?>
     <!-- <header>
         <nav class="header_menu">
             <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
@@ -156,5 +157,11 @@
         </div>
         <p id="copyright">Copyright &copy 2021 UITour Company</p>
     </footer> -->
+    <script>
+        const decor_dulich = document.querySelector('#decor--lienhe')
+
+        decor_dulich.classList.add('itemSelected')
+        document.querySelector('#decor--trangchu').classList.remove('itemSelected')
+    </script>
 </body>
 </html>

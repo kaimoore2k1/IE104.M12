@@ -1,10 +1,11 @@
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104_m12";
+    require "../connect.php";
+    // $host = "localhost";
+    // $host_user ="root";
+    // $host_password = "";
+    // $database = "ie104_m12";
 
-    $conn = new mysqli($host, $host_user, $host_password, $database);
+    // $conn = new mysqli($host, $host_user, $host_password, $database);
 
     $sql = "SELECT * FROM hotel where type = 2 order by Hotel_Id desc" ;
     $kq = $conn->query($sql);
