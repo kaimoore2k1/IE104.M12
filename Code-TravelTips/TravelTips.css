@@ -483,10 +483,10 @@ main{
 
 
 @media only screen  and (max-width: 768px){
-    /* body{
+    body{
         width: 768px;
         font-size: 10px;
-    } */
+    }
     .main-content__borderbottom{
         width: 718px;
     }
@@ -507,7 +507,7 @@ main{
         top: 0;
         padding: 0 0 15px;
         width: 280px;
-        z-index: 1000; 
+        z-index: 4; 
         display: none;
         background-color: #fff;
     }
@@ -549,5 +549,13 @@ main{
     .block-element{
         margin-right: 70px;
         margin-left: 20px;
+    }
+    .changepages-number{
+        display: none;
+    }
+    .main-content__changepages{
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
     }
 }
