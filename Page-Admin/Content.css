@@ -38,6 +38,7 @@ table thead tr{
     margin-left: 30px;
     overflow-y: auto;
     margin-top: 20px;
+    word-wrap: break-word;
 
 }
 .table-overflow th, td{

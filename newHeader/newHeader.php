@@ -49,6 +49,38 @@
                     <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
                 <?php } ?>
         </nav>
+        <nav class="header_menu--ipad">
+            <div id="header_menu__nav--ipad">
+                <a href="../Trangchu/Trangchu.php" id="decor--trangchu">Trang chủ</a>
+                <ul>
+                    <li><a href="#" id="decor--dulich">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x00">Du lịch trong nước</a></li>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x01">Du lịch nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#" id="decor--khachsan">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
+                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">Khác <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../Code-TravelTips/TravelTips.php" id="decor--traveltips">Travel tips</a></li>
+                            <li><a href="../Introduction/Intro.php" id="decor--gioithieu">Giới thiệu</a></li>
+                            <li><a href="../Contact/Contact.php" id="decor--lienhe">Liên hệ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+            </div>
+        </nav>
     </header>
     <div id="overlay">
         <div id="overlay-background"></div>

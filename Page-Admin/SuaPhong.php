@@ -1,17 +1,6 @@
 <?php require"session_dangnhap.php"; ?>
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-    if(!$conn)
-    {
-        die ("Kết nối thất bại" . $conn->connect_error);
-    }
-
+    require "../connect.php";
     if(isset($_REQUEST["id"]) and $_REQUEST['id']!="")
     {
         $id =  $_GET["id"];
@@ -103,12 +92,12 @@
                         <input name="Name_Phong" value="<?php echo $row["Name_Phong"] ?>" class="form-control" required/>
                     </div>
                     <div class="form-group">
-                        <label for="CT_Hotel_Id" class="control-label">Chi tiết khách sạn</label>
-                        <input name="CT_Hotel_Id" value="<?php echo $row["CT_Hotel_Id"] ?>" class="form-control" required/>
+                        <label for="Hotel_Id" class="control-label">Mã khách sạn</label>
+                        <input type="number" name="Hotel_Id" value="<?php echo $row["Hotel_Id"] ?>" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label  for="Price" class="control-label">Giá</label>
-                        <input type="number" value="<?php echo $row["Price"] ?>" name="Price" class="form-control" required/>
+                        <input value="<?php echo $row["Price"] ?>" name="Price" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label  for="Area" class="control-label">Khu vực</label>
@@ -119,10 +108,13 @@
                         <input name="Facing" value="<?php echo $row["Facing"] ?>" class="form-control" required/>
                     </div>
                     <div class="form-group">
-                        <label for="Description_Phong" class="control-label">Mô tả</label>
-                        <textarea name="Description_Phong"  cols="30" rows="4"  class="form-control" required><?php echo $row["Description_Phong"] ?></textarea>
+                        <label for="Description" class="control-label">Mô tả</label>
+                        <textarea name="Description"  cols="30" rows="4"  class="form-control" required><?php echo $row["Description"] ?></textarea>
                     </div>
-                    
+                    <div class="form-group">
+                        <label  for="type" class="control-label">Check</label>
+                        <input name="type" value="<?php echo $row["type"] ?>" class="form-control" required/>
+                    </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -138,13 +130,14 @@
                 </form>
                 <?php 
                     if(isset($_POST["submit"])) { 
-                        $CT_Hotel_Id =  $_POST["CT_Hotel_Id"];
+                        $Hotel_Id =  $_POST["Hotel_Id"];
                         $Name_Phong = $_POST["Name_Phong"];
                         $Price =  $_POST["Price"];
                         $Area = $_POST["Area"];
                         $Facing = $_POST["Facing"];
-                        $Description_Phong = $_POST["Description_Phong"];
-                        $sql = "UPDATE  phong SET CT_Hotel_Id = '$CT_Hotel_Id', Name_Phong = '$Name_Phong', Price = '$Price', Area = '$Area', Facing = '$Facing', Description_Phong = '$Description_Phong'  WHERE Phong_Id = '$id'";
+                        $Description = $_POST["Description"];
+                        $type = $_POST["type"];
+                        $sql = "UPDATE  phong SET Hotel_Id = '$Hotel_Id', Name_Phong = '$Name_Phong', Price = '$Price', Area = '$Area', Facing = '$Facing', Description = '$Description', type= '$type'  WHERE Phong_Id = '$id'";
                         $conn->query($sql);
                         echo "<script> window.location.href = '../Page-Admin/QuanLyPhong.php' </script>";
                     }

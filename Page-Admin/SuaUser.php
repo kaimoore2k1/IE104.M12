@@ -1,16 +1,6 @@
 <?php
-    require"session_dangnhap.php";
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-    if(!$conn)
-    {
-        die ("Kết nối thất bại" . $conn->connect_error);
-    }
+    require "session_dangnhap.php";
+    require "../connect.php";
 
     if(isset($_REQUEST["id"]) and $_REQUEST['id']!="")
     {
@@ -116,7 +106,7 @@
                     </div>
                     <div class="form-group">
                         <label for="User_Passwork" class="control-label">Passwork</label>
-                        <input type="password" name="User_Passwork"  value="<?php echo $row["User_Passwork"] ?>" class="form-control" required/>
+                        <input name="User_Passwork"  value="<?php echo $row["User_Password"] ?>" class="form-control" required/>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
