@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Intro.css">
     <link rel="stylesheet" href="../Footer/themify-icons/themify-icons.css">
     <title>Introduction</title>
+    <script src="//code.tidio.co/kejfzg9uqghunwx4afuy5fvtocc7uk97.js" async></script>
 </head>
 <body>
     <?php include "../newHeader/newHeader.php" ?>

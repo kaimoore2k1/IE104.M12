@@ -234,7 +234,7 @@
                 document.querySelector('.responseBox').classList.add('hidden')
             }, 3000);
         </script>
-        <?php session_destroy(); ?>
+        <?php unset($_SESSION['status']); ?>
             
     <?php } ?>
     <script>

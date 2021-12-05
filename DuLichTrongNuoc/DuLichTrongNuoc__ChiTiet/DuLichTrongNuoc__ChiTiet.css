@@ -566,7 +566,7 @@ iframe::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #f1f1f1;
-    z-index: 10;
+    z-index: 1000;
     display: none;
 }
 
