@@ -1,16 +1,6 @@
 <?php require"session_dangnhap.php"; ?>
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-    if(!$conn)
-    {
-        die ("Kết nối thất bại" . $conn->connect_error);
-    }
+    require "../connect.php";
 
     if(isset($_POST["search"]))
     {
@@ -127,7 +117,16 @@
                                 <td><?php echo $row["User_Id"] ?></td>
                                 <td><?php echo $row["CT_Tour_Id"] ?></td>
                                 <td><?php echo $row["CT_Hotel_Id"] ?></td>
-                                <td><?php echo $row["Content"] ?></td>
+                                <?php
+                                /* echo "<script>alert(".str_word_count($cnt).")</script>" */
+                                if(str_word_count($row["Content"]) > 50) {
+                                     $cnt = substr($row["Content"], 0, 50);
+                                    echo "<td>".$cnt."..."."</td>";
+                                }
+                                else {
+                                    echo "<td>".$row["Content"]."</td>";
+                                }
+                                ?>
                                 <td><?php echo $row["Rating"] ?></td>
                                 <td><?php echo $row["Time"] ?></td>
                                 <td>

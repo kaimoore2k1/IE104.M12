@@ -1,12 +1,6 @@
 <?php
-    require"session_dangnhap.php";
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
+    require "session_dangnhap.php";
+    require "../connect.php";
     if(!$conn)
     {
         die ("Kết nối thất bại" . $conn->connect_error);
@@ -14,14 +8,15 @@
 
     if(isset($_POST["submit"]))
     {
-        $CT_Hotel_Id =  $_POST["CT_Hotel_Id"];
+        $Hotel_Id =  $_POST["Hotel_Id"];
         $Name_Phong = $_POST["Name_Phong"];
         $Price =  $_POST["Price"];
         $Area = $_POST["Area"];
         $Facing = $_POST["Facing"];
-        $Description_Phong = $_POST["Description_Phong"];
-        $sql = "INSERT INTO phong(CT_Hotel_Id,Name_Phong,Price,Area,Facing,Description_Phong) VALUES
-            ('$CT_Hotel_Id','$Name_Phong', '$Price', '$Area', '$Facing', '$Description_Phong')";
+        $Description = $_POST["Description"];
+        $type = $_POST["type"];
+        $sql = "INSERT INTO phong(Hotel_Id,Name_Phong,Price,Area,Facing,Description, type) VALUES
+            ('$CT_Hotel_Id','$Name_Phong', '$Price', '$Area', '$Facing', '$Description', '$type')";
         $conn->query($sql);
         header("Location:QuanLyPhong.php");
     }  
@@ -103,8 +98,8 @@
             <div class="col-md-8 div--css">
                 <form action="" class="form--css" method="post">
                     <div class="form-group">
-                        <label for="CT_Hotel_Id" class="control-label">Mã chi tiết khách sạn</label>
-                        <input type="number" name="CT_Hotel_Id" class="form-control" required/>
+                        <label for="Hotel_Id" class="control-label">Mã chi tiết khách sạn</label>
+                        <input type="number" name="Hotel_Id" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label for="Name_Phong" class="control-label">Tên phòng</label>
@@ -112,7 +107,7 @@
                     </div>
                     <div class="form-group">
                         <label  for="Price" class="control-label">Giá</label>
-                        <input type="number" name="Price" class="form-control" required/>
+                        <input name="Price" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label  for="Area" class="control-label">Khu vực</label>
@@ -123,8 +118,12 @@
                         <input name="Facing" class="form-control" required/>
                     </div>
                     <div class="form-group">
-                        <label for="Description_Phong" class="control-label">Mô tả</label>
-                        <textarea name="Description_Phong"  cols="30" rows="4"  class="form-control" required></textarea>
+                        <label for="Description" class="control-label">Mô tả</label>
+                        <textarea name="Description"  cols="30" rows="4"  class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label  for="type" class="control-label">Check</label>
+                        <input name="type" class="form-control" required/>
                     </div>
                     
 

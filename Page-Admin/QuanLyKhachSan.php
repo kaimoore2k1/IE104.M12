@@ -1,17 +1,6 @@
 <?php require"session_dangnhap.php"; ?>
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-    if(!$conn)
-    {
-        die ("Kết nối thất bại" . $conn->connect_error);
-    }
-
+    require "../connect.php";
     if(isset($_POST["search"]))
     {
         $result = $_POST["search"];
@@ -109,11 +98,14 @@
                     <thead>
                         <tr>
                             <th>STT</th>
+                            <th>Tiêu đề</th>
                             <th>Tên khách sạn</th>
                             <th>Vị trí</th>
                             <th>Giá</th>
                             <th>Mô tả</th>
+                            <th>Điểm nhấn</th>
                             <th>Hình ảnh</th>
+                            <th>Check</th>
                             <th>Chức năng</th>
                         </tr>
                     </thead>
@@ -121,11 +113,24 @@
                         <?php while($row = $kq->fetch_assoc()) { ?>
                             <tr>
                                 <td class="counterCell"></td>
+                                <?php
+                                /* echo "<script>alert(".str_word_count($cnt).")</script>" */
+                                if(str_word_count($row["header_description"]) > 50) {
+                                     $cnt = substr($row["header_description"], 0, 50);
+                                    echo "<td>".$cnt."..."."</td>";
+                                }
+                                else {
+                                    echo "<td>".$row["header_description"]."</td>";
+                                }
+                                ?>
+                                
                                 <td><?php echo $row["Name_Hotel"] ?></td>
-                                <td><?php echo $row["Location_Hotel"] ?></td>
+                                <td><?php echo $row["Location"] ?></td>
                                 <td><?php echo $row["Price"] ?></td>
                                 <td><?php echo $row["Description_Hotel"] ?></td>
+                                <td><?php echo $row["Highlight"] ?></td>
                                 <td><?php echo $row["img_hotel"] ?></td>
+                                <td><?php echo $row["type"] ?></td>
                                 <td>
                                     <a  href="../Page-Admin/SuaKhachSan.php?id=<?php echo $row["Hotel_Id"]; ?>" style="font-size: 20px;" ><i class="far fa-edit"></i></a>|
                                     <a href="../Page-Admin/XoaKhachSan.php?id=<?php echo $row["Hotel_Id"]; ?>" style="font-size: 20px; " class="text-danger" onclick="return confirm('Bạn chắn chắn xóa chứ?')"><i class="far fa-trash-alt"></i></a> 

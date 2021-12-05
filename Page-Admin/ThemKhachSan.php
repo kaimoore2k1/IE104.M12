@@ -1,26 +1,18 @@
 <?php
-    require"session_dangnhap.php";
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-    if(!$conn)
-    {
-        die ("Kết nối thất bại" . $conn->connect_error);
-    }
-
+    require "session_dangnhap.php";
+    require "../connect.php";
     if(isset($_POST["submit"]))
     {
+        $header_description =  $_POST["header_description"];
         $Name_Hotel =  $_POST["Name_Hotel"];
-        $Location_Hotel = $_POST["Location_Hotel"];
+        $Location = $_POST["Location"];
         $Price =  $_POST["Price"];
         $Description_Hotel = $_POST["Description_Hotel"];
+        $Highlight = $_POST["Highlight"];
         $img_hotel = $_POST["img_hotel"];
-        $sql = "INSERT INTO hotel(Name_Hotel,Location_Hotel,Price,Description_Hotel,img_hotel) 
-            VALUES('$Name_Hotel','$Location_Hotel','$Price', '$Description_Hotel', '$img_hotel')";
+        $type = $_POST["type"];
+        $sql = "INSERT INTO hotel(header_description,Name_Hotel,Location,Price,Description_Hotel,Highlight,img_hotel,type) 
+            VALUES('$header_description','$Name_Hotel','$Location','$Price', '$Description_Hotel','$Highlight', '$img_hotel', '$type')";
         $conn->query($sql);
         header("Location:QuanLyKhachSan.php");
     }
@@ -57,7 +49,7 @@
         </div>
     </header>
     <main class="main">
-        <nav class="nav-links">
+        <nav class="nav-links ">
             <ul class="nav-links__ul">
                 <li class="nav-links__li">
                     
@@ -103,24 +95,36 @@
             <div class="col-md-8 div--css">
                 <form action="" class="form--css" method="post">
                     <div class="form-group">
+                        <label for="header_description" class="control-label">Tiêu đề</label>
+                        <textarea name="header_description  "  cols="30" rows="4"  class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
                         <label for="Name_Hotel" class="control-label">Tên khách sạn</label>
                         <input name="Name_Hotel" class="form-control" required/>
                     </div>
                     <div class="form-group">
-                        <label for="Location_Hotel" class="control-label">Địa điểm</label>
-                        <input name="Location_Hotel" class="form-control" required/>
+                        <label for="Location" class="control-label">Địa điểm</label>
+                        <input name="Location" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label  for="Price" class="control-label">Giá</label>
-                        <input type="number" name="Price" class="form-control" required/>
+                        <input  name="Price" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label for="Description_Hotel" class="control-label">Mô tả</label>
                         <textarea name="Description_Hotel"  cols="30" rows="4"  class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="Highlight" class="control-label">Nổi bật</label>
+                        <textarea name="Highlight"  cols="30" rows="4"  class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
                         <label  for="img_hotel" class="control-label">Hình ảnh</label>
                         <input name="img_hotel" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label  for="type" class="control-label">Check</label>
+                        <input type="number" name="type" class="form-control" required/>
                     </div>
                     
                     <div class="form-row">

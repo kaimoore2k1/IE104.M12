@@ -1,16 +1,6 @@
 <?php require"session_dangnhap.php"; ?>
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-    if(!$conn)
-    {
-        die ("Kết nối thất bại" . $conn->connect_error);
-    }
+    require "../connect.php";
 
     if(isset($_POST["search"]))
     {
@@ -20,15 +10,6 @@
     else
         $sql = "SELECT * from blog";
     $kq = $conn->query($sql);
-    // if(isset($_POST["submit"]) && $_POST["submit"] == "Thêm")
-    // {
-    //     $hoten = $_POST["hoten"];
-    //     $mssv = $_POST["mssv"];
-    //     $sql = "INSERT INTO sinhvien(MSSV, HoTen) VALUES('$mssv','$hoten')";
-    //     $conn->query($sql);
-    //     header("Location:lietkesinhvien.php");
-        
-    // }
 ?>
 
 <!DOCTYPE html>
@@ -137,7 +118,7 @@
                             <?php
                                 /* echo "<script>alert(".str_word_count($cnt).")</script>" */
                                 if(str_word_count($row["Name_Blog"]) > 100) {
-                                     $cnt = substr($row["Name_Blog"], 0, 900);
+                                     $cnt = substr($row["Name_Blog"], 0, 100);
                                     echo "<td>".$cnt."..."."</td>";
                                 }
                                 else {

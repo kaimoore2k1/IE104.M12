@@ -1,17 +1,6 @@
 <?php require"session_dangnhap.php"; ?>
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-    $port = "8111";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database, $port);
-    if(!$conn)
-    {
-        die ("Kết nối thất bại" . $conn->connect_error);
-    }
-
+    require "../connect.php";
     if(isset($_REQUEST["id"]) and $_REQUEST['id']!="")
     {
         $id =  $_GET["id"];
@@ -98,27 +87,38 @@
             <div class="col-md-8 div--css">
                 <form action="" class="form--css" method="post">
                     <?php while($row = $kq->fetch_assoc()) { ?>
+                        <div class="form-group">
+                        <label for="header_description" class="control-label">Tiêu đề</label>
+                        <textarea name="header_description  "  cols="30" rows="4"  class="form-control" required><?php echo $row["header_description"] ?></textarea>
+                    </div>
                     <div class="form-group">
                         <label for="Name_Hotel" class="control-label">Tên khách sạn</label>
                         <input name="Name_Hotel" value="<?php echo $row["Name_Hotel"] ?>" class="form-control" required/>
                     </div>
                     <div class="form-group">
-                        <label for="Location_Hotel" class="control-label">Địa điểm</label>
-                        <input name="Location_Hotel" value="<?php echo $row["Location_Hotel"] ?>" class="form-control" required/>
+                        <label for="Location" class="control-label">Địa điểm</label>
+                        <input name="Location" value="<?php echo $row["Location"] ?>" class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label  for="Price" class="control-label">Giá</label>
-                        <input type="number" name="Price"  value="<?php echo $row["Price"] ?>"  class="form-control" required/>
+                        <input name="Price"  value="<?php echo $row["Price"] ?>"  class="form-control" required/>
                     </div>
                     <div class="form-group">
                         <label for="Description_Hotel" class="control-label">Mô tả</label>
                         <textarea name="Description_Hotel"  cols="30" rows="4"  class="form-control" required><?php echo $row["Description_Hotel"] ?></textarea>
                     </div>
                     <div class="form-group">
+                        <label for="Highlight" class="control-label">Nổi bật</label>
+                        <textarea name="Highlight"  cols="30" rows="4"  class="form-control" required><?php echo $row["Highlight"] ?></textarea>
+                    </div>
+                    <div class="form-group">
                         <label  for="img_hotel" class="control-label">Hình ảnh</label>
                         <input name="img_hotel" value="<?php echo $row["img_hotel"] ?>" class="form-control" required/>
                     </div>
-                    
+                    <div class="form-group">
+                        <label  for="type" class="control-label">Check</label>
+                        <input type="number" name="type" value="<?php echo $row["type"] ?>" class="form-control" required/>
+                    </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <input name="submit" type="submit" value="Update" class="btn btn-primary btn-block" />
@@ -133,12 +133,15 @@
                 </form>
                 <?php 
                     if(isset($_POST["submit"])) { 
+                        $header_description =  $_POST["header_description"];
                         $Name_Hotel =  $_POST["Name_Hotel"];
-                        $Location_Hotel = $_POST["Location_Hotel"];
+                        $Location = $_POST["Location"];
                         $Price =  $_POST["Price"];
                         $Description_Hotel = $_POST["Description_Hotel"];
+                        $Highlight = $_POST["Highlight"];
                         $img_hotel = $_POST["img_hotel"];
-                        $sql = "UPDATE  hotel SET Name_Hotel = '$Name_Hotel',Location_Hotel = '$Location_Hotel',Price = '$Price', Description_Hotel = '$Description_Hotel', img_hotel = '$img_hotel' WHERE Hotel_Id = '$id'";
+                        $type = $_POST["type"];
+                        $sql = "UPDATE  hotel SET header_description = '$header_description' Name_Hotel = '$Name_Hotel',Location = '$Location',Price = '$Price', Description_Hotel = '$Description_Hotel',Highlight = '$Highlight', img_hotel = '$img_hotel', type = '$type' WHERE Hotel_Id = '$id'";
                         $conn->query($sql);
                         echo "<script> window.location.href = '../Page-Admin/QuanLyKhachSan.php' </script>";
                     }

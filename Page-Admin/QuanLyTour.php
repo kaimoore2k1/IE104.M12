@@ -1,3 +1,4 @@
+<?php require"session_dangnhap.php"; ?>
 <?php
     $host = "localhost";
     $host_user ="root";
