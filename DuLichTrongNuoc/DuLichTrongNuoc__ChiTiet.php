@@ -1,6 +1,5 @@
 <?php
     require "../connect.php";
-
     $get_idTour = $_GET['id'];
     $sql = "SELECT * FROM TOUR, CT_TOUR WHERE TOUR.TOUR_ID = CT_TOUR.TOUR_ID AND TOUR.TOUR_ID = '$get_idTour'";
     $kq = $conn->query($sql);
@@ -8,7 +7,7 @@
     if(!$check){
         echo "<script>
             alert('Sản phẩm đang được hoàn thiện, vui lòng trở lại sau!!!')
-            window.location.href = 'DuLichTrongNuoc__Tour.php'
+            window.location.href = 'DuLichTrongNuoc__Tour.php?type=0x00'
         </script>";
     }
     $myJSON = $check['CT_Tour_Img'];

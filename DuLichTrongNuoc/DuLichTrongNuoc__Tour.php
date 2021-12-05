@@ -1,6 +1,5 @@
 <?php
     require "../connect.php";
-
     $type = $_GET['type'];
     $type_name;
     $type_img;
