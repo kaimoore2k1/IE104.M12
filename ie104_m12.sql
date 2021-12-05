@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8111
--- Generation Time: Dec 05, 2021 at 05:38 AM
+-- Generation Time: Dec 05, 2021 at 08:48 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `ie104.m12`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `Admin_Username` varchar(50) NOT NULL,
+  `Admin_Password` varchar(50) NOT NULL,
+  `Admin_FullName` varchar(50) NOT NULL,
+  `Grant` varchar(50) NOT NULL,
+  `Admin_ID` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Admin_Username`, `Admin_Password`, `Admin_FullName`, `Grant`, `Admin_ID`) VALUES
+('kaimoore2001', 'asdfgghjkl', 'Kai Moore', 'admin', 1),
+('HaiDang', '123456', 'Hải Đăng', 'admin', 2);
 
 -- --------------------------------------------------------
 
@@ -207,6 +229,38 @@ INSERT INTO `hotel` (`Hotel_Id`, `header_description`, `Name_Hotel`, `Location`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `img_source`
+--
+
+CREATE TABLE `img_source` (
+  `Img_Id` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `Img_Src` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `Titile` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `Blog_Id` int(11) DEFAULT NULL,
+  `Ct_Blog_Id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `img_source`
+--
+
+INSERT INTO `img_source` (`Img_Id`, `Img_Src`, `Titile`, `Blog_Id`, `Ct_Blog_Id`) VALUES
+('IMG01', '../Code-TravelTips/Ảnh1.jpg', 'Cắm trại', 1, NULL),
+('IMG02', '../Code-TravelTips/Ảnh2.jpg', 'Bánh trung thu Delightfull', 2, NULL),
+('IMG03', '../Code-TravelTips/Ảnh3.jpg', 'Bánh trung thu khách sạn Intercontinental', 3, NULL),
+('IMG04', '../Code-TravelTips/Ảnh4.jpg', 'Chương trình khuyến mãi', 4, NULL),
+('IMG05', '../Code-TravelTips/Ảnh5.jpg', 'Bộ sưu tập bánh trung thu', 5, NULL),
+('IMG06', '../Code-TravelTips/Ảnh6.jpg', 'Top bánh trung thu hot nhất', 6, NULL),
+('IMG07', '../Code-TravelTips/Ảnh7.jpg', 'Du lịch tại chỗ', 7, NULL),
+('IMG08', '../Code-TravelTips/Ảnh8.jpg', 'Mua bánh trung thu mùa dịch', 8, NULL),
+('IMG09', '../Code-TravelTips/Ảnh9.jpg', 'Điểm du lịch pleiku', 9, NULL),
+('IMG10', '../Code-TravelTips/Ảnh10.jpg', 'Du lịch kết hợp chụp ảnh cưới', 10, NULL),
+('IMG11', '../Code-TravelTips/Ảnh11.jpg', 'Sáng tạo liều lĩnh', 11, NULL),
+('IMG12', '../Code-TravelTips/Ảnh12.jpg', 'Câu chuyện của nàng lương', 12, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `phong`
 --
 
@@ -301,6 +355,13 @@ INSERT INTO `user` (`User_Id`, `Last_Name`, `First_Name`, `User_Name`, `User_Pas
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`Admin_ID`),
+  ADD UNIQUE KEY `Admin_Username` (`Admin_Username`);
+
+--
 -- Indexes for table `blog`
 --
 ALTER TABLE `blog`
@@ -354,6 +415,14 @@ ALTER TABLE `hotel`
   ADD PRIMARY KEY (`Hotel_Id`);
 
 --
+-- Indexes for table `img_source`
+--
+ALTER TABLE `img_source`
+  ADD PRIMARY KEY (`Img_Id`),
+  ADD KEY `Ct_Blog_Id` (`Ct_Blog_Id`),
+  ADD KEY `Blog_Id` (`Blog_Id`);
+
+--
 -- Indexes for table `tour`
 --
 ALTER TABLE `tour`
@@ -368,6 +437,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `Admin_ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `blog`
