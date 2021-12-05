@@ -29,7 +29,7 @@
             <ul>
                 <li><a href="#" id="decor--khachsan">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
-                        <li><a href="/KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
+                        <li><a href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
                         <li><a href="#">Khách sạn nước ngoài</a></li>
                     </ul>
                 </li>
