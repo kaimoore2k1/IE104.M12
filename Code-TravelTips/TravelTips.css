@@ -497,19 +497,18 @@ main{
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 4;
+        z-index: 1;
         display: none;
     }
     .main-sidebar{
-        position: fixed;
-        bottom: 0;
-        right: 763px;
-        top: 0;
-        padding: 0 0 15px;
-        width: 280px;
-        z-index: 4; 
-        display: none;
+        position: absolute;
+        top: 50px; 
+        right: 0;
         background-color: #fff;
+        padding-top: 20px;
+        padding-bottom: 120px;
+        display: none;
+        z-index: 1;
     }
     main{
         display: flex;
