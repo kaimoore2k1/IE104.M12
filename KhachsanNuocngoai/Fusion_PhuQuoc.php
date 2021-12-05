@@ -60,7 +60,6 @@
                 <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
                 <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
             </div>
-
         </nav>
         <nav class="header_menu--ipad">
             <div id="header_menu__nav--ipad">

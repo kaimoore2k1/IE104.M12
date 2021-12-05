@@ -23,7 +23,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Ks_tn.css">
-    <script src="ks_tn.js" defer></script>
     <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
@@ -36,74 +35,7 @@
 
 <body>
     <header>
-        <nav class="header_menu">
-            <img id="logo_uitour" src="File/logo.svg" alt="logo_uitour">
-            <div id="header_menu__nav">
-                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
-                <ul>
-                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                        <ul>
-                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
-                                    trong nước</a></li>
-                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
-                                    nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
-                                alt="nav_tick"></a>
-                        <ul>
-                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
-                            </li>
-                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <a href="../Code-TravelTips/index.php">Traval tips</a>
-                <a href="../Introduction/Intro.php">Giới thiệu</a>
-                <a href="../Contact/Contact.php">Liên hệ</a>
-                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
-            </div>
-
-        </nav>
-        <nav class="header_menu--ipad">
-            <div id="header_menu__nav--ipad">
-                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
-                <ul>
-                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                        <ul>
-                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
-                                    trong nước</a></li>
-                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
-                                    nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a id="header_hotel--ipad" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
-                                alt="nav_tick"></a>
-                        <ul>
-                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
-                            </li>
-                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a href="#">Khác <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                        <ul>
-                            <li><a href="../Code-TravelTips/index.php">Traval tips</a></li>
-                            <li><a href="../Introduction/Intro.php">Giới thiệu</a></li>
-                            <li><a href="../Contact/Contact.php">Liên hệ</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
-            </div>
-        </nav>
+        <?php include"../newHeader/newHeader.php" ?> 
         <div class="div_domesticHotel"></div>
         <div class="div_domesticHotel--ipad"></div>
         <p id="tag_domesticHotel">KHÁCH SẠN TRONG NƯỚC</p>
@@ -356,6 +288,7 @@
         </div>
         
     </footer>
+    <script src="../KhachsanTrongnuoc/ks_tn.js"></script>
 </body>
 
 </html>
