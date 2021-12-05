@@ -16,9 +16,6 @@ body {
     font-size: 14px !important;
 }
 
-.header_menu {
-    margin-left: 300px;
-}
 
 .header_menu a {
     text-decoration: none;
@@ -495,7 +492,7 @@ iframe::-webkit-scrollbar {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 5;
+    z-index: 1000;
     background-color: white;
     display: none;
 }
@@ -507,7 +504,7 @@ iframe::-webkit-scrollbar {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 4;
+    z-index: 1000;
     display: none;
     overflow: hidden;
 }
