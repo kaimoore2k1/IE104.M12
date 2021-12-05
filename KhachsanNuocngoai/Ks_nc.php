@@ -2,7 +2,7 @@
     $host = "localhost";
     $host_user ="root";
     $host_password = "";
-    $database = "ie104_m12";
+    $database = "ie104.m12";
 
     $conn = new mysqli($host, $host_user, $host_password, $database);
 
@@ -22,8 +22,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Ks_nc.css">
-    <script src="ks_nc.js" defer></script>
+    <link rel="stylesheet" href="Ks_tn.css">
+    <script src="ks_tn.js" defer></script>
     <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
@@ -39,39 +39,82 @@
         <nav class="header_menu">
             <img id="logo_uitour" src="File/logo.svg" alt="logo_uitour">
             <div id="header_menu__nav">
-                <a href="../Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
-            <ul>
-                <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
-                        <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
-                        <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="../Code-TravelTips/index.html">Traval tips</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
+                <ul>
+                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
+                                    trong nước</a></li>
+                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
+                                    nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
+                                alt="nav_tick"></a>
+                        <ul>
+                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
+                            </li>
+                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="../Code-TravelTips/index.php">Traval tips</a>
+                <a href="../Introduction/Intro.php">Giới thiệu</a>
+                <a href="../Contact/Contact.php">Liên hệ</a>
+                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+            </div>
+
+        </nav>
+        <nav class="header_menu--ipad">
+            <div id="header_menu__nav--ipad">
+                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
+                <ul>
+                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
+                                    trong nước</a></li>
+                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
+                                    nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a id="header_hotel--ipad" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
+                                alt="nav_tick"></a>
+                        <ul>
+                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
+                            </li>
+                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">Khác <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../Code-TravelTips/index.php">Traval tips</a></li>
+                            <li><a href="../Introduction/Intro.php">Giới thiệu</a></li>
+                            <li><a href="../Contact/Contact.php">Liên hệ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
             </div>
         </nav>
         <div class="div_domesticHotel"></div>
+        <div class="div_domesticHotel--ipad"></div>
         <p id="tag_domesticHotel">KHÁCH SẠN NƯỚC NGOÀI</p>
+        <p id="tag_domesticHotel--ipad">KHÁCH SẠN NƯỚC NGOÀI</p>
         <img id="logo_header" src="File/Picture_header copy.svg" alt="Header_picture_Home">
-        <form class="searchBar"  action="Ks_nc__search.php" method="POST">
+        <form class="searchBar" action="Ks_tn__search.php" method="POST">
             <div class="searchBar__location">
                 <p><strong>Địa điểm</strong></p>
                 <div class="searchBar__location--input">
                     <img class="searchBar__location--img" src="File/location.svg">     
-                    <input id="location__input" name="input__location--nc" type="text" placeholder="Bạn muốn đi đâu?">
+                    <input id="location__input" name="input__location" type="text" placeholder="Bạn muốn đi đâu?">
                 </div>
                 <div class="autobox">
     
@@ -116,7 +159,7 @@
                 </div>
             </div>
             <button class="searchBar__button">TÌM KIẾM</button>
-            </form>
+        </form>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script>
@@ -125,8 +168,13 @@
             });
         </script>
     </header>
+    <div id="overlay">
+        <div id="overlay-background"></div>
+        <iframe id="sign-in__overlay" src="../sign-in/sign-in.html" width="420px" height="620px" frameborder="0"></iframe>
+        <iframe id="sign-up__overlay" src="../sign-up/sign-up.html" width="420px" height="620px" frameborder="0"></iframe>
+    </div>
     <main>
-        <h1 id="tag_favorite">Điểm đến yêu thích nước ngoài</h1>
+    <h1 id="tag_favorite">Điểm đến yêu thích nước ngoài</h1>
         <p id="tag_favorite--content">Khách sạn hàng đầu thế giới</p>
         <div class="grid-container">
             <div id="item1">
@@ -148,7 +196,7 @@
                 </a>
             </div>
             <div id="item4">
-                <a href="../KhachsanNuocngoai/Ks_nc_Italy.html">
+                <a href="../KhachsanNuocngoai/Ks_tn__search--fusion.php">
                     <p><b>Italy</b><br><span>198 khách sạn</span></p>
                     <img src="File/Italy.png" alt="Italy">
                 </a>
@@ -163,10 +211,10 @@
             <button class="btn_danhgiacaonhat" onclick="danhgiacaonhat_selected()">Đánh giá cao nhất</button>
         </div>
         <div class="wrapper_content">
-        <?php while($row = $kq->fetch_assoc()) { ?>
+            <?php while($row = $kq->fetch_assoc()) { ?>
             <div class="hotel">
                 <p><?php echo $row["header_description"] ?></p>
-                <a href="../KhachsanNuocngoai/Grand.php" style="text-decoration: none;">
+                <a href="../KhachsanNuocngoai/Fusion_PhuQuoc.php" style="text-decoration: none;">
                     <img class="hotel__content" src="File/<?php echo $row["img_hotel"] ?>" alt="<?php echo $row["Name_Hotel"] ?>">
                     <div class="hotel__content" id="hotel__content--center">
                         <h3 style="color: black;"><?php echo $row["Name_Hotel"] ?></h3>
@@ -190,7 +238,7 @@
             <?php } ?>
         </div>
         <div class="wrapper_content wrapper_content--hidden">
-        <?php while($row_price = $kq_price->fetch_assoc()) { ?>
+            <?php while($row_price = $kq_price->fetch_assoc()) { ?>
             <div class="hotel">
                 <p><?php echo $row_price["header_description"] ?></p>
                 <a href="../KhachsanTrongnuoc/Fusion_PhuQuoc.php" style="text-decoration: none;">
@@ -218,7 +266,7 @@
         </div>
 
         <div class="wrapper_content wrapper_content--hidden">
-        <?php while($row_voting = $kq_voting->fetch_assoc()) { ?>
+            <?php while($row_voting = $kq_voting->fetch_assoc()) { ?>
             <div class="hotel">
                 <p><?php echo $row_voting["header_description"] ?></p>
                 <a href="../KhachsanTrongnuoc/Fusion_PhuQuoc.php" style="text-decoration: none;">
@@ -260,10 +308,9 @@
         </section>
     </main>
     <footer>
-        <img src="File/timthumb_1.png" alt="teamwork_image">
-        <div class="transparent-shape"></div>
+        
         <div class="content">
-            <div class="information">
+            <div class="information" id="information">
                 <h2>Thông tin công ty</h2>
                 <p>Công ty được thành lập từ tháng 9 năm 2021 </p>
                 <p>Dẫn đầu danh sách ít khách du lịch nhất Việt Nam</p>
@@ -271,7 +318,7 @@
                 để cải thiện tiềm lực kinh tế</p>
                
             </div>
-            <div class="working-time">
+            <div class="working-time" id="working-time">
                 <h2>Thời gian làm việc</h2>
                 <p>Thứ 2: từ 6h00 - 17h00</p>
                 <p>Thứ 3: từ 6h00 - 17h00</p>
@@ -281,12 +328,12 @@
                 <p>Thứ 7: từ 6h00 - 17h00</p>
                 <p>Chủ nhật: từ 6h00 - 17h00</p>
             </div>
-            <div class="support">
+            <div class="support" id="support">
                 <h2>Hỗ trợ</h2>
                 <p>Quên mật khẩu?</p>
                 <p>FAQ</p>
             </div>
-            <div class="contact">
+            <div class="contact" id="contact">
                 <div class="address">
                     <span class="ti-location-pin"></span>
                     <h2>Địa chỉ</h2>
@@ -304,12 +351,16 @@
                 </div>
                 <hr>
                 <p>Kết nối với chúng tôi:</p>
-                <span class="ti-facebook"></span>
-                <span class="ti-google"></span>
-                <span class="ti-linkedin"></span>
+                <div class="icon">
+                    <span class="ti-facebook"></span>
+                    <span class="ti-google"></span>
+                    <span class="ti-linkedin"></span>
+                </div>
             </div>
+            <div id="copyright">Copyright &copy 2021 UITour Company</div>
+           
         </div>
-        <p id="copyright">Copyright &copy 2021 UITour Company</p>
+        
     </footer>
 </body>
 

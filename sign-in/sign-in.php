@@ -1,17 +1,18 @@
 <?php 
     session_start(); 
     header('Content-Type: text/html; charset=utf-8');
+    require "../connect.php";
     //host info
-    $host = 'localhost';
-    $host_user = 'root';
-    $host_password = '';
-    $db_name= 'ie104.m12';
+    // $host = 'localhost';
+    // $host_user = 'root';
+    // $host_password = '';
+    // $db_name= 'ie104.m12';
     //connect db
-    $connect = mysqli_connect($host, $host_user, $host_password, $db_name) 
+    // $connect = mysqli_connect($host, $host_user, $host_password, $db_name) 
     //conect fail
-        or die ('Lỗi kết nối'); 
+        // or die ('Lỗi kết nối'); 
 
-    mysqli_set_charset($connect, "utf8");
+    mysqli_set_charset($conn, "utf8");
 
     if(isset($_POST['signInSubmit'])){
         $username = addslashes($_POST['accountName']);
@@ -21,7 +22,7 @@
         //check exist username in db
         $query = "SELECT * FROM user WHERE User_Name='$username';";
 
-        $result = mysqli_query($connect, $query) or die( mysqli_error($connect));
+        $result = mysqli_query($conn, $query) or die( mysqli_error($conn));
 
         if (!$result) {
             echo "<script>
@@ -54,7 +55,7 @@
                 window.location.replace('../Trangchu/Trangchu.php') ;
                 window.parent.location.replace('../Trangchu/Trangchu.php');
             </script>";
-        $connect->close();
+        $conn->close();
         die();
     }
     

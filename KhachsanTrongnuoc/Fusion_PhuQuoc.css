@@ -13,13 +13,13 @@ body {
 }
 header {
     position: relative;
-    width: 1520px;
+    width: 100%;
     margin: 0 auto;
 }
 .header_menu {
     background-color: white;
     position: fixed;
-    width: 1520px;
+    width: 100%;
     z-index: 10;
 }
 #header_menu__nav {
@@ -97,6 +97,101 @@ header {
 #logo_header {
     width: 1520px;
 }
+
+/* header menu ipad */
+.header_menu--ipad {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+ #header_menu__nav--ipad {
+    margin-left: 10px;
+}
+.nav_tick {
+    margin-bottom: 10px;
+}
+.header_menu--ipad a {
+  text-decoration: none;
+  color: rgb(48, 48, 48);
+  font-size: 20px;
+  padding: 20px;
+  display:inline-block;
+}
+
+.header_menu--ipad a:hover {
+    color: #0047FF;
+}
+.header_menu--ipad ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.header_menu--ipad  ul li {
+    display: inline-block;
+}
+.header_menu--ipad  ul li:hover {
+    color: #0047FF;
+}
+.header_menu--ipad  ul li:hover ul {
+    display: block;
+}
+.header_menu--ipad  ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+.header_menu--ipad  ul li ul li { 
+  background: white; 
+  display: block; 
+}
+.header_menu--ipad ul li ul li a {
+    display:block !important;
+    margin: 5px 0px -4px 0px;
+} 
+
+.header_menu--ipad #sign_in {
+    font-size: 15px;
+    margin-left: 1em;
+    border-radius: 5em;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.header_menu--ipad #sign_in:hover{
+    color: #484848;
+}
+
+.header_menu--ipad #sign_up {
+    background-color: rgb(64, 64, 255);
+    color: white;
+    font-size: 15px;
+    border-radius: 5em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .header_menu {
+        display: none;
+    }
+    
+}
+@media only screen and (min-width: 768px) {
+    .header_menu--ipad {
+        display: none;
+    }
+}
+#logo_uitour {
+    position: absolute;
+    left: 10rem;
+    top: -3px;
+}
+#logo_header {
+    width: 100%;
+}
 #domestic_hotel {
     margin-top: 2px;
 }
@@ -105,21 +200,60 @@ header {
     border-bottom: 3px solid #0074FF;
     color: #0047FF;
 }
-.div_domesticHotel {
-    position: absolute;
-    background-color: black;
-    opacity: 0.7;
-    width: 1300px;
-    left: 7.5%;
-    top: 296px;
-    height: 150px;
+#header_hotel--ipad {
+    border-bottom: 3px solid #0074FF;
+    color: #0047FF;
 }
-#tag_domesticHotel {
-    position: absolute;
-    color: white;
-    font-size: 48px;
-    top: 350px;
-    left: 400px;
+@media only screen and (max-width: 768px) {
+    .div_domesticHotel--ipad {
+        position: absolute;
+        background-color: black;
+        opacity: 0.7;
+        width: 600px;
+        left: 10%;
+        top: 140px;
+        height: 80px;
+    }
+    #tag_domesticHotel--ipad {
+        position: absolute;
+        color: white;
+        font-size: 36px;
+        top: 160px;
+        left: 15%;
+    }
+    
+    .div_domesticHotel {
+        display: none;
+    }
+    #tag_domesticHotel {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .div_domesticHotel {
+        position: absolute;
+        background-color: black;
+        opacity: 0.7;
+        width: 1300px;
+        left: 7.5%;
+        top: 296px;
+        height: 150px;
+    }
+    #tag_domesticHotel {
+        position: absolute;
+        color: white;
+        font-size: 36px;
+        top: 320px;
+        left: 150px;
+    }
+    
+    .div_domesticHotel--ipad {
+        display: none;
+    }
+    #tag_domesticHotel--ipad {
+        display: none;
+    }
+    
 }
 
 main {
@@ -555,28 +689,24 @@ h1 {
     border-radius: 10px;
 }
 
+
 footer h2{
     font-size: 1.5em;
     
 }
 
 footer {
-  max-width: 1520px;
-  margin: 0 auto;
+  max-width: 100%;
   height: auto;
   letter-spacing: 0.1em;
   position: relative;
-}
-
-footer>img{
-    width: 100%;
+  font-size: 20px !important;
 }
 
 footer .transparent-shape{
     width: 100%;
     height: 484px;
-    background: black;
-    opacity: 0.7;
+    background: #363131;
     position: absolute;
     top: 0;
     left: 0;
@@ -590,17 +720,19 @@ footer .content{
     left: 0;
     z-index: 2;
     color: rgb(238, 234, 234);
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 20% 10% 26%;
     justify-content: space-evenly;
-    margin: 30px  auto;
+    grid-row-gap: 100px;
+    background: #363131;
 }
 
 footer .content .information>h2, .working-time>h2, .support>h2{
     margin: 10px auto;
 }
 
-footer .content .information{
-    width: 20%;
+#information, #working-time, #contact, #support{
+    width: 100%;
 }
 
 footer .content .information>p, .working-time>p, .support>p{
@@ -608,13 +740,6 @@ footer .content .information>p, .working-time>p, .support>p{
    line-height: 1.2em;
 }
 
-footer .content .working-time{
-    width: 20%;
-}
-
-footer .contact{
-    width: 26%;
-}
 
 footer .content .contact p{
     margin: 10px auto;
@@ -637,17 +762,69 @@ footer .contact>hr{
     margin: 20px auto;
 }
 
+footer .icon{
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+}
+
 footer .ti-facebook, .ti-google, .ti-linkedin{
+    
     position: relative;
     top: 10px;
 }
 
 #copyright {
   max-width: 100%;
-  color: white;
-  background: #363131;
+  color: rgb(238, 234, 234);
   position: relative;
-  padding: 10px 0 10px 100px;
-  top: -5px;
+  padding: 20px 0 20px 100px;
+  z-index: 1;
+  grid-column: 1/5;
 }
 
+@media only screen and (max-width: 768px){
+  footer .content{
+      display: grid;
+      grid-template-columns: 40% 40%;
+      grid-row-gap: 50px;
+  }
+
+  footer .transparent-shape{
+      height: 900px;
+  }
+  
+  #information , #working-time , #support , #contact {
+      width: 100%;
+  }
+
+  footer .content .contact>p{
+      float: none;
+  }
+
+  #copyright{
+     top: 0;
+      grid-column: 1/3;
+  }
+}
+
+
+iframe{
+    overflow: hidden;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+  }
+  #overlay-background{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }

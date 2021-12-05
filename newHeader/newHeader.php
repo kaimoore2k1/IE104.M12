@@ -30,13 +30,13 @@
                 <li><a href="#" id="decor--khachsan">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
                     <ul>
                         <li><a href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
-                        <li><a href="#">Khách sạn nước ngoài</a></li>
+                        <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="/Code-TravelTips/index.php" id="decor--traveltips">Travel tips</a>
-            <a href="#" id="decor--gioithieu">Giới thiệu</a>
-            <a href="#" id="decor--lienhe">Liên hệ</a>
+            <a href="../Code-TravelTips/TravelTips.php" id="decor--traveltips">Travel tips</a>
+            <a href="../Introduction/Intro.php" id="decor--gioithieu">Giới thiệu</a>
+            <a href="../Contact/Contact.php" id="decor--lienhe">Liên hệ</a>
             <?php if (isset($_SESSION['ID']) && $_SESSION['ID']){ ?>
                     <form class="user_infor" method="POST" name="dangxuat" action="../newHeader/xulydangxuat.php">
                         <img id="user_infor_id" src="../default-avatar.png" alt="avt_user">

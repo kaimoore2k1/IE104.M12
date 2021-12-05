@@ -2,12 +2,11 @@
     $host = "localhost";
     $host_user ="root";
     $host_password = "";
-    $database = "ie104_m12";
+    $database = "ie104.m12";
 
     $conn = new mysqli($host, $host_user, $host_password, $database);
 
-    $diadiem = $_POST['input__location--nc'];
-    $sql = "SELECT * FROM hotel where type = 2 AND Location LIKE '%$diadiem%'";
+    $sql = "SELECT * FROM hotel where type = 2 AND Location LIKE '%Italy%'";
     $kq = $conn->query($sql);
     
 
@@ -19,45 +18,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ks_nc_Italy.css">
+    <link rel="stylesheet" href="ks_tn.css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="File/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="ks_nc.js" defer></script>
+    <script src="ks_tn.js" defer></script>
     <title>UITour</title>
 </head>
 
 <body>
     <header>
-        <nav class="header_menu">
+    <nav class="header_menu">
             <img id="logo_uitour" src="File/logo.svg" alt="logo_uitour">
             <div id="header_menu__nav">
-                <a href="../Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
-            <ul>
-                <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
-                        <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
-                        <li><a href="../KhachsanNuocngoai/Ks_nc.html">Khách sạn nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="../Code-TravelTips/index.html">Traval tips</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
+                <ul>
+                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
+                                    trong nước</a></li>
+                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
+                                    nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
+                                alt="nav_tick"></a>
+                        <ul>
+                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
+                            </li>
+                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="../Code-TravelTips/index.php">Traval tips</a>
+                <a href="../Introduction/Intro.php">Giới thiệu</a>
+                <a href="../Contact/Contact.php">Liên hệ</a>
+                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+            </div>
+
+        </nav>
+        <nav class="header_menu--ipad">
+            <div id="header_menu__nav--ipad">
+                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
+                <ul>
+                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
+                                    trong nước</a></li>
+                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
+                                    nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a id="header_hotel--ipad" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
+                                alt="nav_tick"></a>
+                        <ul>
+                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
+                            </li>
+                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">Khác <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../Code-TravelTips/index.php">Traval tips</a></li>
+                            <li><a href="../Introduction/Intro.php">Giới thiệu</a></li>
+                            <li><a href="../Contact/Contact.php">Liên hệ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
             </div>
         </nav>
         <div class="div_domesticHotel"></div>
-        <p id="tag_domesticHotel">Khách sạn <?php echo $diadiem ?></p>
+        <div class="div_domesticHotel--ipad"></div>
+        <p id="tag_domesticHotel">Khách sạn Italy</p>
+        <p id="tag_domesticHotel--ipad">Khách sạn Italy</p>
         <img id="logo_header" src="File/italy.svg" alt="Header_picture_Home">
     </header>
     <main>
@@ -104,10 +146,9 @@
         </section>
     </main>
     <footer>
-        <img src="File/timthumb_1.png" alt="teamwork_image">
-        <div class="transparent-shape"></div>
+        
         <div class="content">
-            <div class="information">
+            <div class="information" id="information">
                 <h2>Thông tin công ty</h2>
                 <p>Công ty được thành lập từ tháng 9 năm 2021 </p>
                 <p>Dẫn đầu danh sách ít khách du lịch nhất Việt Nam</p>
@@ -115,7 +156,7 @@
                 để cải thiện tiềm lực kinh tế</p>
                
             </div>
-            <div class="working-time">
+            <div class="working-time" id="working-time">
                 <h2>Thời gian làm việc</h2>
                 <p>Thứ 2: từ 6h00 - 17h00</p>
                 <p>Thứ 3: từ 6h00 - 17h00</p>
@@ -125,12 +166,12 @@
                 <p>Thứ 7: từ 6h00 - 17h00</p>
                 <p>Chủ nhật: từ 6h00 - 17h00</p>
             </div>
-            <div class="support">
+            <div class="support" id="support">
                 <h2>Hỗ trợ</h2>
                 <p>Quên mật khẩu?</p>
                 <p>FAQ</p>
             </div>
-            <div class="contact">
+            <div class="contact" id="contact">
                 <div class="address">
                     <span class="ti-location-pin"></span>
                     <h2>Địa chỉ</h2>
@@ -148,12 +189,16 @@
                 </div>
                 <hr>
                 <p>Kết nối với chúng tôi:</p>
-                <span class="ti-facebook"></span>
-                <span class="ti-google"></span>
-                <span class="ti-linkedin"></span>
+                <div class="icon">
+                    <span class="ti-facebook"></span>
+                    <span class="ti-google"></span>
+                    <span class="ti-linkedin"></span>
+                </div>
             </div>
+            <div id="copyright">Copyright &copy 2021 UITour Company</div>
+           
         </div>
-        <p id="copyright">Copyright &copy 2021 UITour Company</p>
+        
     </footer>
 </body>
 

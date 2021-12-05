@@ -150,6 +150,36 @@ header {
     
 }
 
+@media only screen and (max-width: 768px) {
+
+.section1{
+        padding: 20px 10px 20px 10px;
+        border-bottom: 1px solid #000;
+        margin-top: 5px;
+}
+
+.section1__heading {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    color: #180A64;
+    padding: 0px 0 30px 0;    
+}
+
+.section1__list {
+    width: 768px;
+    margin-left: 22px;
+    margin-right: auto;
+    padding: 0 0 20px 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+
+
+}
+
 /*section2*/
 
 .section2{
@@ -197,10 +227,31 @@ header {
     right: 0;
 }
 
+
 .active, .dot:hover{
     background-color: #515151;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .section2__slideshow{
+        width: 666px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+
+    .slide__wapper .slides img {
+        width: 666px; 
+    }
+
+    .section2__heading {
+        padding-top: 10px;
+    }
+} 
+
+/*section3*/
 .section_3 {
     position: relative;
     width: 1100px;
@@ -293,6 +344,104 @@ header {
     margin-top: 290px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .section_3 {
+        position: relative;
+        width: 676px;
+        margin: 0 auto;
+        height: 400px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .section_3 h1 {
+        font-size: 2em;
+        text-align: center;
+        color: #180A6A;
+        margin-bottom: 50px;
+    }
+    #div_1 p {
+        position: absolute;
+        color: white;
+        font-size: 3em;
+        top: 125px;
+        left: 90px;
+    }
+    #div_1 img {
+        width: 300px;
+        height: 300px;
+        cursor: pointer;
+    }
+    #div_1 {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        cursor: pointer;
+    }
+    #div_2 p {
+        position: absolute;
+        color: white;
+        font-size: 1.5em;
+        top: 60px;
+        left: 35px;
+        cursor: pointer;
+    }
+    #div_2 img {
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+    }
+    #div_2 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: 330px;
+    }
+    #div_3 p {
+        position: absolute;
+        color: white;
+        font-size: 1.5em;
+        top: 60px;
+        left: 35px;
+        cursor: pointer;
+    }
+    #div_3 img {
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+    }
+    #div_3 {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        left: 530px;
+        cursor: pointer;
+    }
+    #div_4 p {
+        position: absolute;
+        color: white;
+        font-size: 2em;
+        top: 40px;
+        left: 110px;
+        cursor: pointer;
+    }
+    #div_4 img {
+        width: 350px;
+        height: 100px;
+        cursor: pointer;
+    }
+    
+    #div_4 {
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        left: 330px;
+        margin-top: 200px;
+        cursor: pointer;
+    }
+} 
+/*section4*/
 .section_4 {
     border-top: 1px solid black;
     padding-top: 150px;
@@ -375,4 +524,91 @@ header {
     left: 0;
     right: 0;
     z-index: 1;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .section_4 {
+        border-top: 1px solid black;
+        padding-top: 100px;
+        height: 350px;
+    }
+    #div_5 {
+        width: 768px;
+        background-color: #3284FF;
+        height: 225px;
+        margin-top: 100px;
+        position: relative;
+        margin: 0 auto;
+    }
+    #p_1 {
+        color: white;
+        font-size: 1.6em;
+        position: absolute;
+        top: 8%;
+        left: 10%;
+    }
+    #p_2 {
+        color: white;
+        font-size: 1em;
+        position: absolute;
+        top: 22%;
+        left: 10%;
+        width: 26%;
+        text-align: center;
+    }
+    #Qr {
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        top: 45%;
+        left: 10%;
+    }
+    #App {
+        width: 100px;
+        height: 75px;
+        position: absolute;
+        top: 45%;
+        left: 22%;
+    }
+    #div_5 ul {
+        position: absolute;
+        top: 30%;
+        right: 10px;
+        list-style-type: none;
+    }
+    #div_5 li {
+        color: white;
+        font-size: 0.7em;
+        padding-bottom: 1em;
+        background-image: url(File/Tick.svg);
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        padding-left: 2rem;
+    }
+    #Phone {
+        height: 325px;
+        position: absolute;
+        top: -20%;
+        left: 42%;
+    }
+      iframe{
+        overflow: hidden;
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+      }
+      #overlay-background{
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: none;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+
   }

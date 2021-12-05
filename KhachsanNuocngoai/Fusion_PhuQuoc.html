@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Grand.css">
+    <link rel="stylesheet" href="Fusion_PhuQuoc.css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="File/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="Grand.js" defer></script>
+    <script src="Fusion_PhuQuoc.js" defer></script>
     <title>UITour</title>
 </head>
 
@@ -18,49 +18,92 @@
         <nav class="header_menu">
             <img id="logo_uitour" src="File/logo.svg" alt="logo_uitour">
             <div id="header_menu__nav">
-                <a href="../Trangchu/Trangchu.html" class="itemSelected">Trang chủ</a>
-            <ul>
-                <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.html">Du lịch trong nước</a></li>
-                        <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.html">Du lịch nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul>
-                <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                    <ul>
-                        <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.html">Khách sạn trong nước</a></li>
-                        <li><a href="../KhachsanNuocngoai/Ks_nc.html">Khách sạn nước ngoài</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a href="../Code-TravelTips/index.html">Traval tips</a>
-            <a href="#">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-            <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-            <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
+                <ul>
+                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
+                                    trong nước</a></li>
+                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
+                                    nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
+                                alt="nav_tick"></a>
+                        <ul>
+                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
+                            </li>
+                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="../Code-TravelTips/index.php">Traval tips</a>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Liên hệ</a>
+                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
+            </div>
+
+        </nav>
+        <nav class="header_menu--ipad">
+            <div id="header_menu__nav--ipad">
+                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
+                <ul>
+                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
+                                    trong nước</a></li>
+                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
+                                    nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a id="header_hotel--ipad" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
+                                alt="nav_tick"></a>
+                        <ul>
+                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
+                            </li>
+                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a href="#">Khác <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
+                        <ul>
+                            <li><a href="../Code-TravelTips/index.php">Traval tips</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
+                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
             </div>
         </nav>
         <div class="div_domesticHotel"></div>
-        <p id="tag_domesticHotel">Grand Hotel Principe di Piemonte</p>
-        <img id="logo_header" src="File/grand.svg" alt="Header_picture_Home">
+        <div class="div_domesticHotel--ipad"></div>
+        <p id="tag_domesticHotel">Khu nghỉ dưỡng Fusion Phú Quốc</p>
+        <p id="tag_domesticHotel--ipad">Khu nghỉ dưỡng Fusion Phú Quốc</p>
+        <img id="logo_header" src="File/fusion.svg" alt="Header_picture_Home">
     </header>
     <main>
-        <h1>Grand Hotel Principe di Piemonte</h1>
+        <h1>Khu nghỉ dưỡng Fusion Phú Quốc</h1>
         <div id="content-down">
             <img src="File/star.svg" alt="Đánh giá">
-            <p id="hotel__content--point"><b style="color: black;">5.0</b></p>
-            <p>Tuyệt vời <span style="color: black;">| 142 đánh giá</span></p>
+            <p id="hotel__content--point"><b style="color: black;">4.8</b></p>
+            <p>Tuyệt vời <span style="color: black;">| 158 đánh giá</span></p>
         </div>
         <img id="hotel__content--location-logo" src="File/location.svg" alt="location">
-        <p id="hotel__content--location">Piazza Puccini 1,, Italy</p>
+        <p id="hotel__content--location">Bãi Dài, X. Gành Dầu, H. Phú Quốc, T. Kiên Giang</p>
         <div class="grid-container">
-            <img id="item1" src="File/fusion1 copy.png" alt="Fusion_PhuQuoc">
-            <img id="item2" src="File/fusion2 copy.png" alt="Fusion_PhuQuoc">
-            <img id="item3" src="File/fusion3 copy.png" alt="Fusion_PhuQuoc">
-            <img id="item4" src="File/fusion4 copy.png" alt="Fusion_PhuQuoc">
-            <img id="item5" src="File/fusion5 copy.png" alt="Fusion_PhuQuoc">
+            <img id="item1" src="File/fusion1.png" alt="Fusion_PhuQuoc">
+            <img id="item2" src="File/fusion2.png" alt="Fusion_PhuQuoc">
+            <img id="item3" src="File/fusion3.png" alt="Fusion_PhuQuoc">
+            <img id="item4" src="File/fusion4.png" alt="Fusion_PhuQuoc">
+            <img id="item5" src="File/fusion5.png" alt="Fusion_PhuQuoc">
         </div>
         <h2 class="tag-convenient">Tiện nghi khách sạn</h2>
         <div class="convenient" id="convenient1">
@@ -88,19 +131,20 @@
             <p>Dọn dẹp</p>
         </div>
         <h2 class="tag-infomation">Thông tin</h2>
-        <p class="tag-infomation" id="tag-infomation"><strong>Các tiện ích:</strong> Đừng
-            bỏ qua những dịch vụ, tiện nghi thể thao, giải trí tuyệt vời, bao gồm câu lạc bộ sức khỏe, hồ bơi ngoài trời
-            và xe đạp cho thuê. Khách sạn này còn có truy cập Internet không dây miễn phí, dịch vụ tư vấn/hỗ trợ khách
-            và trông trẻ/giữ trẻ (phụ phí). <br> <br>
-            <strong>Địa điểm tham quan:</strong>
-            Khoảng cách được làm tròn đến 0,1 km (hoặc dặm). <br>
-            Phố đi bộ Viareggio - 0,1 km <br>
-            Quảng trường Maria Luisa - 0,1 km <br>
-            Bãi biển Viareggio - 0,1 km <br>
-            Pineta di Ponente (Rừng thông) - 0,4 km <br>
-            Bảo tàng Nghệ thuật Hiện đại Matteucci - 1,3 km <br>
-            Tượng Burlamacco - 1,4 km <br>
-            Biệt thự Argentina - 1,5 km
+        <p class="tag-infomation" id="tag-infomation"><strong>Khu nghỉ dưỡng Fusion Phú Quốc</strong> là khu nghỉ dưỡng
+            5 sao, sẽ đi vào hoạt
+            động từ ngày 01/06/2017. Khu nghỉdưỡng mới này nằm trên hòn đảo hoang sơ với nước màu xanh trong vắt như pha
+            lê và trải dài trên bãi biển cátmịn màng. Từ đây, Quý khách sẽ chỉ mất một khoảng cách ngắn đến Vườn quốc
+            gia Phú Quốc, nơi Quý khách có thểkhám phá rừng ngập mặn, thác nước, các khu vực có rừng và núi đá.
+            <br><br>
+            Fusion Resort Phú Quốc với quy mô 107 phòng được thiết kế sang trọng, tinh tế, có không gian thoáng mát và
+            rất gần gũi với thiên nhiên. Tất cả các vật dụng trong phòng đều được bày trí và chọn lọc rất kỹ càng, đạt
+            chuẩn 5 sao.
+            <br><br>
+            Ngoài ra, Fusion Resort Phú Quốc cũng cung cấp các tiện ích cao cấp khác như: Dịch vụ massage, xông hơi, lớp
+            học yoga, phòng tập Gym, nhà hàng phục vụ các món ăn đặc trưng của địa phương và quốc tế, khu vui chơi dành
+            cho trẻ em,... Cùng với đội ngũ nhân viên được đào tạo chuyên nghiệp, Fusion Resort Phú Quốc sẽ mang đến cho
+            Quý khách một kỳ nghỉ trọn vẹn nhất.
         </p>
         <div class="wapper__content">
 
@@ -155,7 +199,7 @@
                             </div>
                         </div>
                         <div id="book-room">
-                            <p><b>10.050.000 / đêm</b></p>
+                            <p><b>2.850.000 / đêm</b></p>
                             <a href="#">
                                 <p id="book-room__datphong"><b>Đặt phòng</b></p>
                             </a>
@@ -198,7 +242,7 @@
                             </div>
                         </div>
                         <div id="book-room">
-                            <p><b>9.650.000 / đêm</b></p>
+                            <p><b>2.650.000 / đêm</b></p>
                             <a href="#">
                                 <p id="book-room__datphong"><b>Đặt phòng</b></p>
                             </a>
@@ -241,7 +285,7 @@
                             </div>
                         </div>
                         <div id="book-room">
-                            <p><b>9.700.000 / đêm</b></p>
+                            <p><b>2.750.000 / đêm</b></p>
                             <a href="#">
                                 <p id="book-room__datphong"><b>Đặt phòng</b></p>
                             </a>
@@ -402,10 +446,9 @@
         </div>
     </main>
     <footer>
-        <img src="File/timthumb_1.png" alt="teamwork_image">
-        <div class="transparent-shape"></div>
+        
         <div class="content">
-            <div class="information">
+            <div class="information" id="information">
                 <h2>Thông tin công ty</h2>
                 <p>Công ty được thành lập từ tháng 9 năm 2021 </p>
                 <p>Dẫn đầu danh sách ít khách du lịch nhất Việt Nam</p>
@@ -413,7 +456,7 @@
                 để cải thiện tiềm lực kinh tế</p>
                
             </div>
-            <div class="working-time">
+            <div class="working-time" id="working-time">
                 <h2>Thời gian làm việc</h2>
                 <p>Thứ 2: từ 6h00 - 17h00</p>
                 <p>Thứ 3: từ 6h00 - 17h00</p>
@@ -423,12 +466,12 @@
                 <p>Thứ 7: từ 6h00 - 17h00</p>
                 <p>Chủ nhật: từ 6h00 - 17h00</p>
             </div>
-            <div class="support">
+            <div class="support" id="support">
                 <h2>Hỗ trợ</h2>
                 <p>Quên mật khẩu?</p>
                 <p>FAQ</p>
             </div>
-            <div class="contact">
+            <div class="contact" id="contact">
                 <div class="address">
                     <span class="ti-location-pin"></span>
                     <h2>Địa chỉ</h2>
@@ -446,12 +489,16 @@
                 </div>
                 <hr>
                 <p>Kết nối với chúng tôi:</p>
-                <span class="ti-facebook"></span>
-                <span class="ti-google"></span>
-                <span class="ti-linkedin"></span>
+                <div class="icon">
+                    <span class="ti-facebook"></span>
+                    <span class="ti-google"></span>
+                    <span class="ti-linkedin"></span>
+                </div>
             </div>
+            <div id="copyright">Copyright &copy 2021 UITour Company</div>
+           
         </div>
-        <p id="copyright">Copyright &copy 2021 UITour Company</p>
+        
     </footer>
 </body>
 

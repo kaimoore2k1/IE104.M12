@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2021 at 01:06 PM
+-- Generation Time: Dec 04, 2021 at 05:25 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 7.3.31
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -126,9 +126,18 @@ CREATE TABLE `ct_blog` (
 CREATE TABLE `ct_hotel` (
   `CT_Hotel_Id` int(11) NOT NULL,
   `Hotel_Id` int(11) NOT NULL,
-  `Content` text COLLATE utf8_unicode_ci NOT NULL,
-  `Conten_CS` text COLLATE utf8_unicode_ci NOT NULL
+  `Content` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `Conten_CS` varchar(5000) COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `ct_hotel`
+--
+
+INSERT INTO `ct_hotel` (`CT_Hotel_Id`, `Hotel_Id`, `Content`, `Conten_CS`, `type`) VALUES
+(1, 1, '<p class=\"tag-infomation\" id=\"tag-infomation\"><strong>Khu nghỉ dưỡng Fusion Phú Quốc</strong> là khu nghỉ dưỡng\r\n            5 sao, sẽ đi vào hoạt\r\n            động từ ngày 01/06/2017. Khu nghỉdưỡng mới này nằm trên hòn đảo hoang sơ với nước màu xanh trong vắt như pha\r\n            lê và trải dài trên bãi biển cátmịn màng. Từ đây, Quý khách sẽ chỉ mất một khoảng cách ngắn đến Vườn quốc\r\n            gia Phú Quốc, nơi Quý khách có thểkhám phá rừng ngập mặn, thác nước, các khu vực có rừng và núi đá.\r\n            <br><br>\r\n            Fusion Resort Phú Quốc với quy mô 107 phòng được thiết kế sang trọng, tinh tế, có không gian thoáng mát và\r\n            rất gần gũi với thiên nhiên. Tất cả các vật dụng trong phòng đều được bày trí và chọn lọc rất kỹ càng, đạt\r\n            chuẩn 5 sao.\r\n            <br><br>\r\n            Ngoài ra, Fusion Resort Phú Quốc cũng cung cấp các tiện ích cao cấp khác như: Dịch vụ massage, xông hơi, lớp\r\n            học yoga, phòng tập Gym, nhà hàng phục vụ các món ăn đặc trưng của địa phương và quốc tế, khu vui chơi dành\r\n            cho trẻ em,... Cùng với đội ngũ nhân viên được đào tạo chuyên nghiệp, Fusion Resort Phú Quốc sẽ mang đến cho\r\n            Quý khách một kỳ nghỉ trọn vẹn nhất.\r\n        </p>', '<div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Thời gian nhận phòng</h4>\r\n                    <p style=\"font-size: 24px;\">14:00</p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Thời gian trả phòng</h4>\r\n                    <p style=\"font-size: 24px;\">12:00</p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Di chuyển</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">1. Máy bay là phương tiện đến Phú Quốc phổ biến nhất, hiện\r\n                        đang có 3\r\n                        hãng hàng không khai thác gồm Vietnam Airlines, Jetstar và VietJetAir. Thời gian bay khoảng: 2\r\n                        giờ 10 phút khởi hành từ Hà Nội, 60 phút từ TP.HCM, 65 phút từ Cần Thơ và 25 phút từ Rạch Giá.\r\n                        <br>\r\n                        Từ sân bay đến Fusion Phú Quốc mất khoảng 60 phút di chuyển bằng taxi. <br>\r\n                        2. Tàu hoặc Phà: <br>\r\n                        - Tuyến Rạch Giá – Phú Quốc hiện có 4 hãng khai thác gồm tàu Superdong 2-3-4 và tàu Savana\r\n                        Express, thời gian đi khoảng 2 giờ 30 phút. <br>\r\n                        - Phà: Khởi hành tại bến phà Thạnh Thới (Hà Tiên), dừng tại bến cảng Đá Chồng (Bãi Thơm, Phú\r\n                        Quốc), thời gian đi khoảng hơn 2 giờ.\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Hướng dẫn nhận phòng</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">- Quý khách vui lòng xuất trình giấy tờ tùy thân trùng tên\r\n                        với người đại diện trong Phiếu xác nhận đặt phòng của UITour để thủ tục nhận phòng được nhanh\r\n                        chóng. <br>\r\n                        - Khách sạn sẽ yêu cầu khoản tiền đặt cọc là 2,000,000VNĐ/phòng/đêm tại thời điểm nhận phòng,\r\n                        khuyến khích sử dụng tiền mặt hoặc thẻ tín dụng (Credit card).\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Hoạt động giải trí</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">- Từ Fusion Phú Quốc, quý khách có thể đến\r\n                        Vinpearland/Safari bằng taxi với thời gian khoảng 20 phút. Tại đây, quý khách sẽ được trải\r\n                        nghiệm công viên nước, khu vui chơi trong nhà, ngoài trời, thủy cung, khu biểu diễn, phố ẩm thực\r\n                        và phố mua sắm đầy thú vị. <br>\r\n                        - Ngoài ra, hệ thống sinh thái biển tự nhiên đa dạng thuộc quần đảo An Thới ở phía Nam hay hòn\r\n                        Móng Tay và Đồi Mồi ở Bắc Đảo là nơi lý tưởng để du khách khám phá thế giới đại dương, đặc biệt\r\n                        hơn cả là các dải san hô nơi dây được xếp vào bậc nhất Việt Nam về mức độ phong phú với 17 loại\r\n                        cứng, mềm và hải quỳ khác nhau. <br>\r\n                        - Mới đây nhất, Tập đoàn Sun Group đã khai trương tuyến cáp treo Hòn Thơm và quần thể giải trí\r\n                        biển Sun World Hon Thom Nature Park, với các trò chơi kéo dù, phao chuối, lặn ngắm san hô, đi bộ\r\n                        dưới đáy biển, kayak… hứa hẹn đem đến cho du khách một hành trình du ngoạn kỳ thú.\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Chính sách trẻ em (***)</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">- Trẻ em 0-11 tuổi: Miễn phí ăn sáng, ngủ chung giường với\r\n                        bố mẹ (tối đa 02 trẻ/phòng) <br>\r\n                        - Trẻ em 12-15 tuổi: Phụ thu 1.100.000vnđ/trẻ/đêm (bao gồm ăn sáng, kê giường phụ) <br>\r\n                        - Trẻ em 16 tuổi trở lên hoặc người lớn thứ ba: Phụ thu 1.650.000/khách/đêm (gồm ăn sáng, kê\r\n                        giường phụ, liệu trình spa) <br>\r\n                        *Mỗi phòng kê được tối đa 1 giường phụ.\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Lưu ý</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">Ngoài ăn sáng buffet theo giờ cố định, khách hàng có thể\r\n                        ăn sáng chọn món theo yêu cầu (Không giới hạn thời gian, phục vụ tại phòng/nhà hàng/hồ bơi)\r\n                    </p>\r\n                </div>', 1),
+(2, 8, '<p class=\"tag-infomation\" id=\"tag-infomation\"><strong>Các tiện ích:</strong> Đừng\r\n            bỏ qua những dịch vụ, tiện nghi thể thao, giải trí tuyệt vời, bao gồm câu lạc bộ sức khỏe, hồ bơi ngoài trời\r\n            và xe đạp cho thuê. Khách sạn này còn có truy cập Internet không dây miễn phí, dịch vụ tư vấn/hỗ trợ khách\r\n            và trông trẻ/giữ trẻ (phụ phí). <br> <br>\r\n            <strong>Địa điểm tham quan:</strong>\r\n            Khoảng cách được làm tròn đến 0,1 km (hoặc dặm). <br>\r\n            Phố đi bộ Viareggio - 0,1 km <br>\r\n            Quảng trường Maria Luisa - 0,1 km <br>\r\n            Bãi biển Viareggio - 0,1 km <br>\r\n            Pineta di Ponente (Rừng thông) - 0,4 km <br>\r\n            Bảo tàng Nghệ thuật Hiện đại Matteucci - 1,3 km <br>\r\n            Tượng Burlamacco - 1,4 km <br>\r\n            Biệt thự Argentina - 1,5 km\r\n        </p>', '<div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Thời gian nhận phòng</h4>\r\n                    <p style=\"font-size: 24px;\">14:00</p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Thời gian trả phòng</h4>\r\n                    <p style=\"font-size: 24px;\">12:00</p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Di chuyển</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">1. Máy bay là phương tiện đến Phú Quốc phổ biến nhất, hiện\r\n                        đang có 3\r\n                        hãng hàng không khai thác gồm Vietnam Airlines, Jetstar và VietJetAir. Thời gian bay khoảng: 2\r\n                        giờ 10 phút khởi hành từ Hà Nội, 60 phút từ TP.HCM, 65 phút từ Cần Thơ và 25 phút từ Rạch Giá.\r\n                        <br>\r\n                        Từ sân bay đến Fusion Phú Quốc mất khoảng 60 phút di chuyển bằng taxi. <br>\r\n                        2. Tàu hoặc Phà: <br>\r\n                        - Tuyến Rạch Giá – Phú Quốc hiện có 4 hãng khai thác gồm tàu Superdong 2-3-4 và tàu Savana\r\n                        Express, thời gian đi khoảng 2 giờ 30 phút. <br>\r\n                        - Phà: Khởi hành tại bến phà Thạnh Thới (Hà Tiên), dừng tại bến cảng Đá Chồng (Bãi Thơm, Phú\r\n                        Quốc), thời gian đi khoảng hơn 2 giờ.\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Hướng dẫn nhận phòng</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">- Quý khách vui lòng xuất trình giấy tờ tùy thân trùng tên\r\n                        với người đại diện trong Phiếu xác nhận đặt phòng của UITour để thủ tục nhận phòng được nhanh\r\n                        chóng. <br>\r\n                        - Khách sạn sẽ yêu cầu khoản tiền đặt cọc là 2,000,000VNĐ/phòng/đêm tại thời điểm nhận phòng,\r\n                        khuyến khích sử dụng tiền mặt hoặc thẻ tín dụng (Credit card).\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Hoạt động giải trí</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">- Từ Fusion Phú Quốc, quý khách có thể đến\r\n                        Vinpearland/Safari bằng taxi với thời gian khoảng 20 phút. Tại đây, quý khách sẽ được trải\r\n                        nghiệm công viên nước, khu vui chơi trong nhà, ngoài trời, thủy cung, khu biểu diễn, phố ẩm thực\r\n                        và phố mua sắm đầy thú vị. <br>\r\n                        - Ngoài ra, hệ thống sinh thái biển tự nhiên đa dạng thuộc quần đảo An Thới ở phía Nam hay hòn\r\n                        Móng Tay và Đồi Mồi ở Bắc Đảo là nơi lý tưởng để du khách khám phá thế giới đại dương, đặc biệt\r\n                        hơn cả là các dải san hô nơi dây được xếp vào bậc nhất Việt Nam về mức độ phong phú với 17 loại\r\n                        cứng, mềm và hải quỳ khác nhau. <br>\r\n                        - Mới đây nhất, Tập đoàn Sun Group đã khai trương tuyến cáp treo Hòn Thơm và quần thể giải trí\r\n                        biển Sun World Hon Thom Nature Park, với các trò chơi kéo dù, phao chuối, lặn ngắm san hô, đi bộ\r\n                        dưới đáy biển, kayak… hứa hẹn đem đến cho du khách một hành trình du ngoạn kỳ thú.\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Chính sách trẻ em (***)</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">- Trẻ em 0-11 tuổi: Miễn phí ăn sáng, ngủ chung giường với\r\n                        bố mẹ (tối đa 02 trẻ/phòng) <br>\r\n                        - Trẻ em 12-15 tuổi: Phụ thu 1.100.000vnđ/trẻ/đêm (bao gồm ăn sáng, kê giường phụ) <br>\r\n                        - Trẻ em 16 tuổi trở lên hoặc người lớn thứ ba: Phụ thu 1.650.000/khách/đêm (gồm ăn sáng, kê\r\n                        giường phụ, liệu trình spa) <br>\r\n                        *Mỗi phòng kê được tối đa 1 giường phụ.\r\n                    </p>\r\n                </div>\r\n                <div id=\"chinhsach\">\r\n                    <h4 style=\"font-size: 24px;\">Lưu ý</h4>\r\n                    <p style=\"font-size: 24px; width: 850px;\">Ngoài ăn sáng buffet theo giờ cố định, khách hàng có thể\r\n                        ăn sáng chọn món theo yêu cầu (Không giới hạn thời gian, phục vụ tại phòng/nhà hàng/hồ bơi)\r\n                    </p>\r\n                </div>', 2);
 
 -- --------------------------------------------------------
 
@@ -190,12 +199,29 @@ INSERT INTO `evaluate` (`Evaluate_Id`, `User_Id`, `CT_Tour_Id`, `CT_Hotel_Id`, `
 
 CREATE TABLE `hotel` (
   `Hotel_Id` int(11) NOT NULL,
+  `header_description` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `Name_Hotel` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
   `Location` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(11) NOT NULL,
-  `Description_Hotel` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`Description_Hotel`)),
-  `img_hotel` blob NOT NULL
+  `Price` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
+  `Description_Hotel` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `Highlight` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `img_hotel` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `hotel`
+--
+
+INSERT INTO `hotel` (`Hotel_Id`, `header_description`, `Name_Hotel`, `Location`, `Price`, `Description_Hotel`, `Highlight`, `img_hotel`, `type`) VALUES
+(1, 'Thiên nhiên giao hòa | Nghỉ dưỡng 3N2Đ + Đưa đón sân bay + Spa từ 2.850.000 VND/Khách', 'Khu nghỉ dưỡng Fusion Phú Quốc', 'Bãi Dài, X. Gành Dầu, H. Phú Quốc, T. Kiên Giang', '2.850.000', '<p id=\"hotel__content--highlight1\">Gần gũi với thiên nhiên</p>\r\n                        <p id=\"hotel__content--highlight2\">Chụp ảnh đẹp</p>', 'Bãi biển riêng | Signature Spa | 1+', 'Fusion_PhuQuoc.png', 1),
+(2, 'Lạc bước xứ Âu | Nghỉ dưỡng 3N2Đ + Ăn sáng + Set Lẩu từ 1.799.000 VND/Khách', 'Silk Path Grand Resort & Spa Sapa', 'Đồi Quan 6, Tổ 10, Sapa, Việt Nam', '1.799.000', '<p id=\"hotel__content--highlight1\">Gần gũi với thiên nhiên</p>\r\n                        <p id=\"hotel__content--highlight2\">Chụp ảnh đẹp</p>', 'Kiến trúc đông dương | Signature Spa | 1+', 'Resort_Sapa.png', 1),
+(3, 'Hơi thở đại ngàn | Nghỉ dưỡng 2N1Đ + Đưa đón + Spa từ 1.699.000 VND/Khách', 'Khu nghĩ dưỡng Ecolodge Sapa', 'Thanh Kim, Sapa, Lào Cai, Việt Nam', '1.699.000', '<p id=\"hotel__content--highlight1\">Gần gũi với thiên nhiên</p>\r\n                        <p id=\"hotel__content--highlight2\">Hiện đại</p>', 'Bungalow | Xe đưa đón miễn phí | 1+', 'Ecolodge-sapa.png', 1),
+(4, 'Du thuyền mát mẻ | Nghỉ dưỡng 3N2Đ + Hải sản + Thắng cảnh Hạ Long từ 6.950.000 VND/Khách', 'Du thuyền Ambassador Hạ Long', 'Cảng tàu khách quốc tế Hạ Long, Hạ Long, Quảng Ninh', '6.950.000', '<p id=\"hotel__content--highlight1\">Thương hiệu quốc tế</p>\r\n                        <p id=\"hotel__content--highlight2\">Châu Âu</p>', 'Lớn nhất Vịnh | Bể ngâm Jacuzzi | 1+', 'duthuyen.png', 1),
+(5, 'Thiên nhiên giao hòa | Nghỉ dưỡng 2N1Đ + Đưa đón + Thuế phí + Ăn sáng từ 4.950.000 VND/Khách', 'De La Paix', 'Via Giuseppe Cattori 18, Switzerland', '4.950.000', '<p id=\"hotel__content--highlight1\">Gần gũi với thiên nhiên</p>\r\n                        <p id=\"hotel__content--highlight2\">Thư giãn</p>', 'Ở hồ Lugano | Lugano', 'DeLaPaix.png', 2),
+(6, 'Thiên nhiên giao hòa | Nghỉ dưỡng 2N1Đ + Đưa đón + Thuế phí + Ăn sáng từ 1.850.000 VND/Khách', 'Hotel Amalia Olympia', 'Ancient Olympia,, Greece', '1.850.000', '<p id=\"hotel__content--highlight1\">Gần gũi với thiên nhiên</p>\r\n                        <p id=\"hotel__content--highlight2\">Chụp ảnh đẹp</p>', 'Gần Bảo tàng Archimede', 'amalya.png', 2),
+(7, 'Thiên nhiên giao hòa | Nghỉ dưỡng 2N1Đ + Đưa đón + Thuế phí + Ăn sáng từ 4.250.000 VND/Khách', 'Vila Gale Ampalius', 'Avenida Praia Da Marina,, Portugal', '4.250.000', '<p id=\"hotel__content--highlight1\">Gần gũi với thiên nhiên</p>\r\n                        <p id=\"hotel__content--highlight2\">Hiện đại</p>', 'Ở biển Vilamoura', 'vila.png', 2),
+(8, 'Thiên nhiên giao hòa | Nghỉ dưỡng 2N1Đ + Đưa đón + Thuế phí + Ăn sáng từ 4.950.000 VND/Khách', 'Grand Hotel Principe di Piemonte', 'Piazza Puccini 1,, Italy', '4.950.000', '<p id=\"hotel__content--highlight1\">Thương hiệu quốc tế</p>\r\n                        <p id=\"hotel__content--highlight2\">Châu Âu</p>', 'Ở Verisilia | Viareggi', 'grand.png', 2);
 
 -- --------------------------------------------------------
 
@@ -237,13 +263,26 @@ INSERT INTO `img_source` (`Img_Id`, `Img_Src`, `Titile`, `Blog_Id`, `Ct_Blog_Id`
 
 CREATE TABLE `phong` (
   `Phong_Id` int(11) NOT NULL,
-  `CT_Hotel_Id` int(11) NOT NULL,
+  `Hotel_Id` int(11) NOT NULL,
   `Name_Phong` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `Price` int(11) NOT NULL,
+  `Price` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
   `Area` int(11) NOT NULL,
   `Facing` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `Description` text COLLATE utf8_unicode_ci NOT NULL
+  `Description` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `phong`
+--
+
+INSERT INTO `phong` (`Phong_Id`, `Hotel_Id`, `Name_Phong`, `Price`, `Area`, `Facing`, `Description`, `type`) VALUES
+(1, 1, 'Phòng Bungalow 1 Giường Lớn', '2.650.000', 34, 'Hướng hồ', '<ul>\r\n                                <li style=\"color: #00a637d3;\">Bữa sáng miễn phí</li>\r\n                                <li style=\"width: 380px;\">Khách lớn hơn 12 tuổi sẽ được xem như người lớn\r\n                                    Trẻ em dưới 6 tuổi có thể lưu trú miễn phí\r\n                                    Trẻ em ở các tuổi còn lại lưu trú có thể mất phí</li>\r\n                                <li style=\"color: #c99000d5;\">Xác nhận trong 30 phút</li>\r\n                            </ul>', 1),
+(2, 1, 'Phòng Junior Suite 1 Giường Lớn', '2.850.000', 35, 'Hướng hồ', '<ul>\r\n                                <li style=\"color: #00a637d3;\">Bữa sáng miễn phí</li>\r\n                                <li style=\"width: 380px;\">Khách lớn hơn 12 tuổi sẽ được xem như người lớn\r\n                                    Trẻ em dưới 6 tuổi có thể lưu trú miễn phí\r\n                                    Trẻ em ở các tuổi còn lại lưu trú có thể mất phí</li>\r\n                                <li style=\"color: #c99000d5;\">Xác nhận trong 30 phút</li>\r\n                            </ul>', 1),
+(3, 1, 'Phòng Deluxe 1 Giường Lớn', '2.650.000', 32, 'Hướng vườn', '<ul>\r\n                                <li style=\"color: #00a637d3;\">Bữa sáng miễn phí</li>\r\n                                <li style=\"width: 380px;\">Khách lớn hơn 12 tuổi sẽ được xem như người lớn\r\n                                    Trẻ em dưới 6 tuổi có thể lưu trú miễn phí\r\n                                    Trẻ em ở các tuổi còn lại lưu trú có thể mất phí</li>\r\n                                <li style=\"color: #c99000d5;\">Xác nhận trong 30 phút</li>\r\n                            </ul>', 1),
+(4, 8, 'Phòng Junior Suite 1 Giường Lớn', '10.050.000', 35, 'Hướng hồ', '<ul>\r\n                                <li style=\"color: #00a637d3;\">Bữa sáng miễn phí</li>\r\n                                <li style=\"width: 380px;\">Khách lớn hơn 12 tuổi sẽ được xem như người lớn\r\n                                    Trẻ em dưới 6 tuổi có thể lưu trú miễn phí\r\n                                    Trẻ em ở các tuổi còn lại lưu trú có thể mất phí</li>\r\n                                <li style=\"color: #c99000d5;\">Xác nhận trong 30 phút</li>\r\n                            </ul>', 2),
+(5, 8, 'Phòng Deluxe 1 Giường Lớn', '9.650.000', 32, 'Hướng vườn', '<ul>\r\n                                <li style=\"color: #00a637d3;\">Bữa sáng miễn phí</li>\r\n                                <li style=\"width: 380px;\">Khách lớn hơn 12 tuổi sẽ được xem như người lớn\r\n                                    Trẻ em dưới 6 tuổi có thể lưu trú miễn phí\r\n                                    Trẻ em ở các tuổi còn lại lưu trú có thể mất phí</li>\r\n                                <li style=\"color: #c99000d5;\">Xác nhận trong 30 phút</li>\r\n                            </ul>', 2),
+(6, 8, 'Phòng Bungalow 1 Giường Lớn', '9.700.000', 34, 'Hướng hồ', '<ul>\r\n                                <li style=\"color: #00a637d3;\">Bữa sáng miễn phí</li>\r\n                                <li style=\"width: 380px;\">Khách lớn hơn 12 tuổi sẽ được xem như người lớn\r\n                                    Trẻ em dưới 6 tuổi có thể lưu trú miễn phí\r\n                                    Trẻ em ở các tuổi còn lại lưu trú có thể mất phí</li>\r\n                                <li style=\"color: #c99000d5;\">Xác nhận trong 30 phút</li>\r\n                            </ul>', 2);
 
 -- --------------------------------------------------------
 
@@ -381,13 +420,6 @@ ALTER TABLE `img_source`
   ADD KEY `Blog_Id` (`Blog_Id`);
 
 --
--- Indexes for table `phong`
---
-ALTER TABLE `phong`
-  ADD PRIMARY KEY (`Phong_Id`),
-  ADD KEY `CT_Hotel_Id` (`CT_Hotel_Id`);
-
---
 -- Indexes for table `tour`
 --
 ALTER TABLE `tour`
@@ -437,53 +469,13 @@ ALTER TABLE `ct_blog`
 -- AUTO_INCREMENT for table `ct_hotel`
 --
 ALTER TABLE `ct_hotel`
-  MODIFY `CT_Hotel_Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `CT_Hotel_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ct_tour`
 --
 ALTER TABLE `ct_tour`
   MODIFY `CT_Tour_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `evaluate`
---
-ALTER TABLE `evaluate`
-  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `hotel`
---
-ALTER TABLE `hotel`
-  MODIFY `Hotel_Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `phong`
---
-ALTER TABLE `phong`
-  MODIFY `Phong_Id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tour`
---
-ALTER TABLE `tour`
-  MODIFY `Tour_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `ct_blog`
---
-ALTER TABLE `ct_blog`
-  ADD CONSTRAINT `ct_blog_ibfk_1` FOREIGN KEY (`Blog_Id`) REFERENCES `blog` (`Blog_Id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

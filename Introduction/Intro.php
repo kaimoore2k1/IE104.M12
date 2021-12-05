@@ -79,5 +79,11 @@
         </section>
     </main>
     <?php include "../Footer/footer.html" ?>
+    <script>
+        const decor_dulich = document.querySelector('#decor--gioithieu')
+
+        decor_dulich.classList.add('itemSelected')
+        document.querySelector('#decor--trangchu').classList.remove('itemSelected')
+    </script>
 </body>
 </html>
