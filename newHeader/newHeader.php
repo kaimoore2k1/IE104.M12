@@ -15,7 +15,7 @@
 <body>
     <header>
         <nav class="header_menu">
-            <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour">
+            <img id="logo_uitour" src="../Trangchu/File/logo_header.png" alt="logo_uitour" onclick="goback_mainpage()">
             <div id="header_menu__nav">
                 <a href="../Trangchu/Trangchu.php" id="decor--trangchu">Trang chủ</a>
             <ul>
@@ -40,7 +40,7 @@
             <?php if (isset($_SESSION['ID']) && $_SESSION['ID']){ ?>
                     <form class="user_infor" method="POST" name="dangxuat" action="../newHeader/xulydangxuat.php">
                         <img id="user_infor_id" src="../default-avatar.png" alt="avt_user">
-                        <p><?php echo $_SESSION['FirstName'].' '.$_SESSION['LastName']; ?></p>
+                        <p style="font-size: 14px;"><?php echo $_SESSION['FirstName'].' '.$_SESSION['LastName']; ?></p>
                         <button name="dang_xuat" class="dang_xuat" id="sign_up">Đăng xuất</button>
                     </form>
                 <?php }
@@ -88,6 +88,11 @@
         <iframe id="sign-up__overlay" src="../sign-up/sign-up.php" width="420px" height="620px" frameborder="0"></iframe>
     </div>
     <script src="../Trangchu/Trangchu.js"></script>
+    <script>
+        function goback_mainpage() {
+            window.location.href = "../Trangchu/Trangchu.php"
+        }
+    </script>
 </body>
 
 </html>

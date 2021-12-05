@@ -93,6 +93,7 @@ header {
     width: 120px;
     position: absolute;
     left: 8rem;
+    cursor: pointer;
     top: 15px;
 }
 #logo_header {

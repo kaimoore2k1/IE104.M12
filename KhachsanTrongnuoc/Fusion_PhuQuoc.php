@@ -1,10 +1,5 @@
 <?php
-    $host = "localhost";
-    $host_user ="root";
-    $host_password = "";
-    $database = "ie104.m12";
-
-    $conn = new mysqli($host, $host_user, $host_password, $database);
+    require "../connect.php";
     
     $sql = "SELECT * FROM phong where type=1";
     $kq = $conn->query($sql);
@@ -24,80 +19,13 @@
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="File/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="Fusion_PhuQuoc.js" defer></script>
+    <script src="../KhachsanTrongnuoc/Fusion_PhuQuoc.js" defer></script>
     <title>UITour</title>
 </head>
 
 <body>
 <header>
-        <nav class="header_menu">
-            <img id="logo_uitour" src="File/logo.svg" alt="logo_uitour">
-            <div id="header_menu__nav">
-                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
-                <ul>
-                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                        <ul>
-                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
-                                    trong nước</a></li>
-                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
-                                    nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a id="header_hotel" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
-                                alt="nav_tick"></a>
-                        <ul>
-                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
-                            </li>
-                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <a href="../Code-TravelTips/index.php">Traval tips</a>
-                <a href="../Introduction/Intro.php">Giới thiệu</a>
-                <a href="../Contact/Contact.php">Liên hệ</a>
-                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
-            </div>
-
-        </nav>
-        <nav class="header_menu--ipad">
-            <div id="header_menu__nav--ipad">
-                <a href="../Trangchu/Trangchu.php" class="itemSelected">Trang chủ</a>
-                <ul>
-                    <li><a href="#">Du lịch <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                        <ul>
-                            <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.php">Du lịch
-                                    trong nước</a></li>
-                            <li><a href="../DuLichNuocNgoai/DuLichNuocNgoai__Tour/DuLichNuocNgoai__Tour.php">Du lịch
-                                    nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a id="header_hotel--ipad" href="#">Khách sạn <img class="nav_tick" src="File/nav_tick.svg"
-                                alt="nav_tick"></a>
-                        <ul>
-                            <li><a id="domestic_hotel" href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a>
-                            </li>
-                            <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><a href="#">Khác <img class="nav_tick" src="File/nav_tick.svg" alt="nav_tick"></a>
-                        <ul>
-                            <li><a href="../Code-TravelTips/index.php">Traval tips</a></li>
-                            <li><a href="../Introduction/Intro.php">Giới thiệu</a></li>
-                            <li><a href="../Contact/Contact.php">Liên hệ</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <button id="sign_in" onclick="openSignInOvp()">Đăng nhập</button>
-                <button id="sign_up" onclick="openSignUpOvp()">Đăng ký</button>
-            </div>
-        </nav>
+    <?php include"../newHeader/newHeader.php" ?> 
         <div class="div_domesticHotel"></div>
         <div class="div_domesticHotel--ipad"></div>
         <p id="tag_domesticHotel">Khu nghỉ dưỡng Fusion Phú Quốc</p>
