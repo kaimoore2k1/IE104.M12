@@ -27,7 +27,7 @@
             </div>
             <input type="submit" value="Đăng ký" name='dangky' class="sign-up">
         </form>
-        <p class="sign-in">Bạn đã có tài khoản?<a href="\sign-in\sign-in.php">Đăng nhập</a></p>
+        <p class="sign-in">Bạn đã có tài khoản?<a href="..\sign-in\sign-in.php">Đăng nhập</a></p>
     </main>
 </body>
 

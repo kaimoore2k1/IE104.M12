@@ -89,7 +89,7 @@
             </form>
 
             <div class="singIn__signUp"></div>
-                <p>Bạn chưa có tài khoản? <a href="/sign-up/sign-up.php">Đăng ký ngay</a></p>
+                <p>Bạn chưa có tài khoản? <a href="../sign-up/sign-up.php">Đăng ký ngay</a></p>
             </div>
     </div> 
 </body>
