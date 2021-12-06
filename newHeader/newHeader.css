@@ -182,11 +182,20 @@ header {
     .header_menu {
         display: none;
     }
-    
+    .itemSelected {
+        border-bottom: 3px solid rgb(64, 64, 255);
+        border-radius: 1px;
+        color: rgb(64, 64, 255) !important;
+    }
 }
 @media only screen and (min-width: 768px) {
     .header_menu--ipad {
         display: none;
+    }
+    .itemSelected {
+        border-bottom: 3px solid rgb(64, 64, 255);
+        border-radius: 1px;
+        color: rgb(64, 64, 255) !important;
     }
 }
 
@@ -216,8 +225,3 @@ header {
     left: 130px !important;
 }
 
-.itemSelected {
-    border-bottom: 3px solid rgb(64, 64, 255);
-    border-radius: 1px;
-    color: rgb(64, 64, 255) !important;
-}
