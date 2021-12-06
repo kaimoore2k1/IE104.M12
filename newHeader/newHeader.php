@@ -52,7 +52,7 @@
         </nav>
         <nav class="header_menu--ipad">
             <div id="header_menu__nav--ipad">
-                <a href="../Trangchu/Trangchu.php" id="decor--trangchu">Trang chủ</a>
+                <a href="../Trangchu/Trangchu.php" id="decor--trangchu" >Trang chủ</a>
                 <ul>
                     <li><a href="#" id="decor--dulich">Du lịch <i class="fas fa-sort-down nav_tick"></i></a>
                         <ul>
