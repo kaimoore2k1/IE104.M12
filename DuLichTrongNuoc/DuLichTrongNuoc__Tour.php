@@ -32,7 +32,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $type_name; ?></title>
     <link rel="stylesheet" href="DuLichTrongNuoc__Tour/DuLichTrongNuoc__Tour.css">
-    <script src="https://kit.fontawesome.com/54f0cb7e4a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
     <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
@@ -75,7 +74,7 @@
                 <div class="searchBar__tour">
                     <div class="number-right treem number_box-decor">
                         <i class="fas fa-minus treemMinus"></i>
-                        <span></span>
+                        <span></span> 
                         <i class="fas fa-plus treemPlus"></i>
                     </div>
                     <p><strong>Loại Tour</strong></p>
