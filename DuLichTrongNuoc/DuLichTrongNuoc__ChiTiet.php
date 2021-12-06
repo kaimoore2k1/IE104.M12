@@ -197,7 +197,7 @@
                 </div>
             <?php } ?>
             <?php if (isset($_SESSION['ID']) && $_SESSION['ID']){ ?>
-                <form action="xulycomment.php?id=12" class="user_comment" method="POST">
+                <form action="xulycomment.php?id=<?php echo $get_idTour; ?>" class="user_comment" method="POST">
                     <p>Viết bình luận</p>
                     <textarea name="comment_content"></textarea> <br>
                     <input type="submit" value="Bình luận"> <br> 
