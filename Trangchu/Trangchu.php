@@ -31,21 +31,21 @@
         <section class="section1">
             <h2 class="section1__heading">Các dịch vụ được cung cấp</h2>
             <div class="section1__list">
-                <a href="#" class="section1__list__item">
+                <a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x00" class="section1__list__item">
                     <picture>
                     <source srcset="File/DuLichS.png" media="(max-width: 768px)">
                     <source srcset="File/DuLichR.png">
                     <img src="File/DuLichS.png" alt="Flowers">
                     </picture>
                 </a>
-                <a href="#" class="section1__list__item">
+                <a href="../KhachsanTrongnuoc/Ks_tn.php" class="section1__list__item">
                 <picture>
                     <source srcset="File/LuuTruS.png" media="(max-width: 768px)">
                     <source srcset="File/LuuTruR.png">
                     <img src="File/LuuTruS.png" alt="Flowers">
                     </picture>
                 </a>
-                <a href="#" class="section1__list__item">
+                <a href="../Code-Traveltips/Traveltips.php" class="section1__list__item">
                 <picture>
                     <source srcset="File/GiaiTriS.png" media="(max-width: 768px)">
                     <source srcset="File/GiaiTriR.png">

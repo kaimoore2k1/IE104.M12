@@ -13,7 +13,7 @@ body {
     font-size: 14px !important;
 }
 header {
-    width: 1520px;
+    width: 100%;
     position: relative;
 }
 #h_p1 {
