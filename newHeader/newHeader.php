@@ -54,7 +54,7 @@
             <div id="header_menu__nav--ipad">
                 <a href="../Trangchu/Trangchu.php" id="decor--trangchu">Trang chủ</a>
                 <ul>
-                    <li><a href="#" id="decor--dulich">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                    <li><a href="#" id="decor--dulich">Du lịch <i class="fas fa-sort-down nav_tick"></i></a>
                         <ul>
                             <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x00">Du lịch trong nước</a></li>
                             <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x01">Du lịch nước ngoài</a></li>
@@ -62,7 +62,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="#" id="decor--khachsan">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                    <li><a href="#" id="decor--khachsan">Khách sạn <i class="fas fa-sort-down nav_tick"></i></a>
                         <ul>
                             <li><a href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
                             <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
@@ -70,7 +70,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li><a href="#">Khác <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                    <li><a href="#">Khác <i class="fas fa-sort-down nav_tick"></i></a>
                         <ul>
                             <li><a href="../Code-TravelTips/TravelTips.php" id="decor--traveltips">Travel tips</a></li>
                             <li><a href="../Introduction/Intro.php" id="decor--gioithieu">Giới thiệu</a></li>
