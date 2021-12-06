@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2021 at 01:19 PM
+-- Generation Time: Dec 06, 2021 at 04:46 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -191,8 +191,7 @@ CREATE TABLE `evaluate` (
 --
 
 INSERT INTO `evaluate` (`Evaluate_Id`, `User_Id`, `CT_Tour_Id`, `CT_Hotel_Id`, `Content`, `Rating`, `Time`) VALUES
-(1, 1, 12, 0, 'Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.', 5, '2021-12-02'),
-(5, 1, 12, 0, 'Test chức năng bình luận', 5, '2021-12-02');
+(1, 1, 12, 0, 'Mình rất hài lòng về khoản Dịch vụ của Công ty, tận tình phục vụ khách hàng, phản hồi nhanh chóng, chuyến đi Đà Lạt lần này rất đáng nhớ và đặc biệt là giá cả rất phải chăng.', 5, '2021-12-02');
 
 -- --------------------------------------------------------
 
@@ -423,6 +422,12 @@ ALTER TABLE `img_source`
   ADD KEY `Blog_Id` (`Blog_Id`);
 
 --
+-- Indexes for table `phong`
+--
+ALTER TABLE `phong`
+  ADD PRIMARY KEY (`Phong_Id`);
+
+--
 -- Indexes for table `tour`
 --
 ALTER TABLE `tour`
@@ -479,6 +484,30 @@ ALTER TABLE `ct_hotel`
 --
 ALTER TABLE `ct_tour`
   MODIFY `CT_Tour_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `evaluate`
+--
+ALTER TABLE `evaluate`
+  MODIFY `Evaluate_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `hotel`
+--
+ALTER TABLE `hotel`
+  MODIFY `Hotel_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `phong`
+--
+ALTER TABLE `phong`
+  MODIFY `Phong_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `tour`
+--
+ALTER TABLE `tour`
+  MODIFY `Tour_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
