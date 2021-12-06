@@ -1,4 +1,4 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
 }
@@ -15,7 +15,7 @@ header {
     position: relative;
     width: 1520px;
     margin: 0 auto;
-}
+} */
 .header_menu {
     background-color: white;
     position: fixed;
@@ -26,7 +26,10 @@ header {
     margin-left: 300px;
 }
 .nav_tick {
-    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    bottom: 11px;
+    right: 2px;
 }
 .header_menu a {
   text-decoration: none;

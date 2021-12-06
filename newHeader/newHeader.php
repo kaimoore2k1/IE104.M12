@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../newHeader/newHeader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>UITour</title>
 </head>
 
@@ -19,7 +20,7 @@
             <div id="header_menu__nav">
                 <a href="../Trangchu/Trangchu.php" id="decor--trangchu">Trang chủ</a>
             <ul>
-                <li><a href="#" id="decor--dulich">Du lịch <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                <li><a href="#" id="decor--dulich">Du lịch <i class="fas fa-sort-down nav_tick"></i></a>
                     <ul>
                         <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x00">Du lịch trong nước</a></li>
                         <li><a href="../DuLichTrongNuoc/DuLichTrongNuoc__Tour.php?type=0x01">Du lịch nước ngoài</a></li>
@@ -27,7 +28,7 @@
                 </li>
             </ul>
             <ul>
-                <li><a href="#" id="decor--khachsan">Khách sạn <img class="nav_tick" src="../Trangchu/File/nav_tick.svg" alt="nav_tick"></a>
+                <li><a href="#" id="decor--khachsan">Khách sạn <i class="fas fa-sort-down nav_tick"></i></a>
                     <ul>
                         <li><a href="../KhachsanTrongnuoc/Ks_tn.php">Khách sạn trong nước</a></li>
                         <li><a href="../KhachsanNuocngoai/Ks_nc.php">Khách sạn nước ngoài</a></li>
