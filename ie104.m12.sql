@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8111
--- Generation Time: Dec 05, 2021 at 08:48 AM
+-- Host: 127.0.0.1
+-- Generation Time: Dec 06, 2021 at 01:19 PM
 -- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- PHP Version: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -339,7 +339,7 @@ CREATE TABLE `user` (
   `Last_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `First_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `User_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `User_Password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `User_Password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -348,7 +348,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`User_Id`, `Last_Name`, `First_Name`, `User_Name`, `User_Password`, `Email`) VALUES
-(1, 'Moore', 'Kai', 'kaimoore2001', 'asdfgghjkl', 'kaimoore@gmail.com');
+(1, 'Moore', 'Kai', 'kaimoore2001', '846e077cfb2dc4f2d92954ef972bf488', 'kaimoore2001@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -479,6 +479,12 @@ ALTER TABLE `ct_hotel`
 --
 ALTER TABLE `ct_tour`
   MODIFY `CT_Tour_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `User_Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
