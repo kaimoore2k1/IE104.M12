@@ -18,7 +18,7 @@
         $username = addslashes($_POST['accountName']);
         $password = addslashes($_POST['psw']);
 
-  
+        $pw_security = md5($password);
         //check exist username in db
         $query = "SELECT * FROM user WHERE User_Name='$username';";
 
@@ -35,7 +35,7 @@
         $row = mysqli_fetch_array($result);
         
         //compare password
-        if ($password != $row['User_Password']) {
+        if ($pw_security != $row['User_Password']) {
             echo "<script>
                 alert('Tên đăng nhập hoặc mật khẩu không đúng!');
                 window.location= 'sign-in.php'

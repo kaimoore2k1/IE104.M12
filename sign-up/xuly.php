@@ -17,7 +17,7 @@
         $first_name = $_POST['first-name'];
         $username = trim($_POST['username']);
         $email = trim($_POST['email']);
-        $password = trim($_POST['password']);
+        $password = md5(trim($_POST['password']));
 
         //import data into db
         //

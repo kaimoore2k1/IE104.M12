@@ -188,11 +188,11 @@
             <?php while($row_cmt = $kq_cmt->fetch_assoc()) { ?>
                 <div class="danhgiachung__comment">
                     <div class="danhgiachung__comment__infor">
-                        <p><strong><?php echo $row_cmt['First_Name'].' '.$row_cmt['Last_Name']; ?></strong></p>
+                        <p><strong><?php echo htmlentities($row_cmt['First_Name']).' '.htmlentities($row_cmt['Last_Name']); ?></strong></p>
                         <img src="DuLichTrongNuoc__ChiTiet/5star.png" id="fivesao_img" class="fivesao_img--local">
                     </div>
                     <div class="danhgiachung__comment__content">
-                        <p><?php echo $row_cmt['Content']?></p>
+                        <p><?php echo htmlentities($row_cmt['Content'])?></p>
                     </div>
                 </div>
             <?php } ?>
