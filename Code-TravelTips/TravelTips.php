@@ -403,7 +403,7 @@
                 <?php while($row = $kq->fetch_assoc()) { ?>
                     <div class="block-element">
                     <div>
-                        <a href="/Code-TravelTips/TravelTips-CT/TravelTips_ct.html">
+                        <a href="">
                             <img src="../Code-TravelTips/<?php echo $row["Img_Src"] ?>" alt="<?php echo $row["Title_Img"] ?>" class="block-element__img">
                         </a>
                         

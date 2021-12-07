@@ -1,6 +1,6 @@
 <?php
-    require "../connect.php";
-    $username = addslashes($_POST['UserName']);
+    require "../connect.php"; 
+    $username = addslashes($_POST['UserName']); // \" \' \\ Hàm trả về chuổi mới sẽ không thay đổi chuỗi ban đầu
     $password = addslashes($_POST['Password']);
     
     $sql = "SELECT * FROM admin WHERE Admin_Username = '$username'";

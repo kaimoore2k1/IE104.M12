@@ -44,8 +44,8 @@
             <ul class="nav-links__ul">
                 <li class="nav-links__li active--css">
                     
-                    <a href="../Page-Admin/QuanLyTour.php" class=" nav-links__a">
-                        <i class="fas fa-plane-departure active--css"></i>  Quản lý Tour
+                    <a href="../Page-Admin/QuanLyTour.php" class=" nav-links__a active--css">
+                        <i class="fas fa-plane-departure "></i>  Quản lý Tour
                     </a>
                 </li> 
                 <li class="nav-links__li">

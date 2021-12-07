@@ -9,7 +9,7 @@
     }
     else
         $sql = "SELECT * from blog";
-    $kq = $conn->query($sql);
+    $kq = $conn->query($sql); //mysql_query($conn, $sql); thực thi câu lệnh truy vấn
 ?>
 
 <!DOCTYPE html>
@@ -111,12 +111,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while($row = $kq->fetch_assoc()) { ?>
+                        <?php while($row = $kq->fetch_assoc()) { ?> 
                             <tr>
                             <td class="counterCell"></td>
                             <td><?php echo $row["Title"] ?></td>
                             <?php
-                                /* echo "<script>alert(".str_word_count($cnt).")</script>" */
+                                
                                 if(str_word_count($row["Name_Blog"]) > 100) {
                                      $cnt = substr($row["Name_Blog"], 0, 100);
                                     echo "<td>".$cnt."..."."</td>";
@@ -127,7 +127,7 @@
                             ?>
                             <td><?php echo $row["Write_Time"] ?></td>
                             <?php
-                                /* echo "<script>alert(".str_word_count($cnt).")</script>" */
+                                
                                 if(str_word_count($row["Description_Blog"]) > 100) {
                                      $cnt = substr($row["Description_Blog"], 0, 100);
                                     echo "<td>".$cnt."..."."</td>";

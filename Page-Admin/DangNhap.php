@@ -17,7 +17,7 @@
         </div>
         <div class="col-md-4">
             <section>
-                <form id="account" method="POST" action="DangNhap--XuLy.php">
+                <form id="account" method="Post" action="DangNhap--XuLy.php">
                     <h2 class="h2--css">Chào mừng đến với UITour.</h2>
                     <hr />
                     <div class="form-group">

@@ -1,4 +1,4 @@
-<?php require"session_dangnhap.php"; ?>
+<?php require "session_dangnhap.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
